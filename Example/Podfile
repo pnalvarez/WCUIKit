@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'WCUIKit_Example' do
+  pod 'WCUIKit', :path => '../'
+
+  target 'WCUIKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
