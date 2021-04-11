@@ -1,0 +1,32 @@
+{
+  "name": "WCUIKit",
+  "version": "0.1.0",
+  "summary": "UI identity to WeCam app",
+  "description": "This framework is meant to have all the UI components that shall fit WeCam app",
+  "homepage": "https://github.com/pnalvarez/WCUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pnalvarez": "pedronalvarez@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/pnalvarez/WCUIKit.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "12.0"
+  },
+  "source_files": "WCUIKit/Classes/**/*",
+  "dependencies": {
+    "SDWebImage": [
+      "~> 5.0.2"
+    ],
+    "SnapKit": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

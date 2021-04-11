@@ -1,0 +1,29 @@
+PODS:
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
+  - SnapKit (4.2.0)
+  - WCUIKit (0.1.0):
+    - SDWebImage (~> 5.0.2)
+    - SnapKit
+
+DEPENDENCIES:
+  - WCUIKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - SnapKit
+
+EXTERNAL SOURCES:
+  WCUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  WCUIKit: 1963de1651bbfbf6c651e23ccda9a10441e56620
+
+PODFILE CHECKSUM: d862f6473b8fc78197a0319096e495ebb9e60af2
+
+COCOAPODS: 1.9.3
