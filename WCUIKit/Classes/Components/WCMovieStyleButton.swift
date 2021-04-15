@@ -10,13 +10,13 @@ import UIKit
 
 public class WCMovieStyleButton: UIButton {
     
-    private let disableColor = ThemeColors.mainRedColor.rawValue
+    private let disableColor = ThemeColors.emptyRedColor.rawValue
     private let enableColor = ThemeColors.mainRedColor.rawValue
-    private let textColor = ThemeColors.black.rawValue
+    private let textColor = ThemeColors.whiteThemeColor.rawValue
     
     private var movieStyle: String?
     
-    private(set) var isOn: Bool = false {
+    private var isOn: Bool = false {
         didSet {
             if isOn {
                 enableButton()

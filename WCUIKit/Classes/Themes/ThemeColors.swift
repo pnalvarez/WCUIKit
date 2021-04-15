@@ -30,7 +30,7 @@ public enum ThemeColors {
         case .emptyRedColor:
             return #colorLiteral(red: 0.8980392157, green: 0.04705882353, blue: 0.2352941176, alpha: 0.6)
         case .whiteThemeColor:
-            return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         case .alertGray:
             return #colorLiteral(red: 0.5882352941, green: 0.5803921569, blue: 0.5803921569, alpha: 1)
         case .backgroundGray:

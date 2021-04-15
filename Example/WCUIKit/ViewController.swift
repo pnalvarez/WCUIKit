@@ -13,13 +13,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let headerView = WCHeaderView(frame: .zero)
-        view.addSubview(headerView)
-        headerView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
+        let cathegoryView = CathegoryListView(frame: .zero)
+        cathegoryView.setup(viewModel: [CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "Romance", isOn: false)])
+        view.addSubview(cathegoryView)
+        cathegoryView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.left.right.equalToSuperview()
-            make.height.equalTo(48)
         }
+        cathegoryView.setup(viewModel: [CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "Romance", isOn: false)])
     }
 
     override func didReceiveMemoryWarning() {
