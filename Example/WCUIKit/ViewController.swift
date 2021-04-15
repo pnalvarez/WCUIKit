@@ -13,14 +13,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let label = UILabel(frame: .zero)
-        label.font = ThemeFonts.RobotoBold(20).rawValue
-        label.text = "Text"
-        label.textAlignment = .center
-        view.addSubview(label)
-        label.snp.makeConstraints { make in
-            make.centerX.centerY.equalToSuperview()
-            make.width.equalToSuperview()
+        let headerView = WCHeaderView(frame: .zero)
+        view.addSubview(headerView)
+        headerView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(20)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(48)
         }
     }
 

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class OptionFilterButton: UIButton {
+public class OptionFilterButton: UIButton {
     
-    init(frame: CGRect,
+    public init(frame: CGRect,
          option: String) {
         super.init(frame: frame)
         setTitle(option, for: .normal)

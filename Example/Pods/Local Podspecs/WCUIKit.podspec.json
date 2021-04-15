@@ -19,6 +19,7 @@
   "platforms": {
     "ios": "12.0"
   },
+  "resources": "WCUIKit/Assets/*.xcassets",
   "source_files": "WCUIKit/Classes/**/*",
   "dependencies": {
     "SDWebImage": [

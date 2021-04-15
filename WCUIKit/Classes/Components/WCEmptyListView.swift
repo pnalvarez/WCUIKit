@@ -65,7 +65,7 @@ public class WCEmptyListView: UIView {
     private var layout: Layout
     private var text: String
     
-    init(frame: CGRect,
+    public init(frame: CGRect,
          layout: Layout = .large,
          text: String) {
         self.text = text

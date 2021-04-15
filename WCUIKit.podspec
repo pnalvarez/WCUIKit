@@ -33,6 +33,9 @@ Pod::Spec.new do |s|
   s.resources = 'WCUIKit/Assets/*.xcassets'
 
   s.source_files = 'WCUIKit/Classes/**/*'
+  s.resource_bundles = {
+      'WCUIKit' => ['WCUIKit/Assets/*.{xcassets}']
+  }
   
   s.dependency 'SDWebImage', '~> 5.0.2'
   s.dependency 'SnapKit'
