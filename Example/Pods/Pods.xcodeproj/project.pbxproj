@@ -50,6 +50,7 @@
 		3C49237ABF1CC83635F1D0BA74EE3DE8 /* SDDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A267566E47E0C8335D13FAD5AD1E38F /* SDDiskCache.m */; };
 		3D074AA7E6C8CB30B879378BAF6FE9C2 /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = FB48AF870DC86016346C88BC7B8D2A42 /* SDImageGraphics.m */; };
 		3E05153D7ED2768CCE755D51CD3C8184 /* SDWebImageError.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D9D25AC723F52B14749667E0EC7D6E /* SDWebImageError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F3EF31F262A6D0F00887EA0 /* BaseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */; };
 		3F503CE52627D5960066AB19 /* CathegoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */; };
 		3F503CEE2627D5AD0066AB19 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CEB2627D5AD0066AB19 /* UITableViewCell+.swift */; };
 		3F503CEF2627D5AD0066AB19 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CEC2627D5AD0066AB19 /* UITableView+.swift */; };
@@ -58,9 +59,8 @@
 		3F503CFB2627D5BF0066AB19 /* Resettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CF72627D5BF0066AB19 /* Resettable.swift */; };
 		3F503CFC2627D5BF0066AB19 /* TableViewSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CF82627D5BF0066AB19 /* TableViewSectionProtocol.swift */; };
 		3F503CFD2627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CF92627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift */; };
-		3F503D052627D5D70066AB19 /* BaseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503D042627D5D60066AB19 /* BaseSection.swift */; };
 		3F503D0C2627D6330066AB19 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503D0B2627D6330066AB19 /* ReusableView.swift */; };
-		3F503D132627D6EF0066AB19 /* CathegoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503D122627D6EF0066AB19 /* CathegoryListView.swift */; };
+		3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */; };
 		3F9847112623BF4B000BE5BC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9846FE2623BF4B000BE5BC /* Roboto-Medium.ttf */; };
 		3F9847122623BF4B000BE5BC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9846FF2623BF4B000BE5BC /* Roboto-Light.ttf */; };
 		3F9847132623BF4B000BE5BC /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9847002623BF4B000BE5BC /* RobotoCondensed-Bold.ttf */; };
@@ -337,6 +337,7 @@
 		3C46D31B3593FA6EDEB591ABD86C11D2 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
 		3C6C69246F7D71CE1BF5F456EE6AF8D0 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		3F09054BE5262F22536C317D8C26099B /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseSection.swift; path = WCUIKit/Classes/Sections/BaseSection.swift; sourceTree = "<group>"; };
 		3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CathegoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F503CEB2627D5AD0066AB19 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		3F503CEC2627D5AD0066AB19 /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
@@ -345,9 +346,8 @@
 		3F503CF72627D5BF0066AB19 /* Resettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resettable.swift; sourceTree = "<group>"; };
 		3F503CF82627D5BF0066AB19 /* TableViewSectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSectionProtocol.swift; sourceTree = "<group>"; };
 		3F503CF92627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilderProtocol.swift; sourceTree = "<group>"; };
-		3F503D042627D5D60066AB19 /* BaseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSection.swift; sourceTree = "<group>"; };
 		3F503D0B2627D6330066AB19 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		3F503D122627D6EF0066AB19 /* CathegoryListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CathegoryListView.swift; sourceTree = "<group>"; };
+		3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCCathegoryListView.swift; sourceTree = "<group>"; };
 		3F9846FE2623BF4B000BE5BC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3F9846FF2623BF4B000BE5BC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		3F9847002623BF4B000BE5BC /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
@@ -610,9 +610,6 @@
 		2DBDC68D153DD17BE04C0C2734121BF2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3F503D122627D6EF0066AB19 /* CathegoryListView.swift */,
-				3F503D0B2627D6330066AB19 /* ReusableView.swift */,
-				3F503CE32627D5960066AB19 /* Cells */,
 				2C6B13890177406E4D304EE8E68E1AF1 /* DefaultBottomSheet.swift */,
 				1C88E7D97657896AEDF9A7C70EB265B2 /* NetworkStatusView.swift */,
 				7161F95D2D04043E6AF588761EBAB7FE /* OnGoingProjectDisplayView.swift */,
@@ -623,11 +620,13 @@
 				6E58717990053AC7A0B9B60E7D513D76 /* ProfileResumeButton.swift */,
 				B801A9CC403755785E55F1D915CC9979 /* ProjectDataTextField.swift */,
 				DB18090ACA39E0528D2B95B58F177038 /* ProjectDataTextView.swift */,
+				3F503D0B2627D6330066AB19 /* ReusableView.swift */,
 				401B0DAA2EE9A3DACD3521B8D0FCFF1A /* SearchDisplayView.swift */,
 				EFA4383371876119CBA56D54DC1C8E8F /* SelectionFilterView.swift */,
 				1E83AB35C520913226FF5C89BE1B4DF8 /* UserDisplayView.swift */,
 				883D90B0699AB11B50AFA4825E19D953 /* WCActionButton.swift */,
 				E815F34587936BA90B80548B4E83331E /* WCBackButton.swift */,
+				3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */,
 				E10FA79AC07330BAD75DBC3204F87C7E /* WCCloseButton.swift */,
 				D16726EBADA0B4E7FEFEEE8732B2FB36 /* WCEmptyListView.swift */,
 				467D8C26D40C029587F3AF6C8F4A9709 /* WCHeaderView.swift */,
@@ -638,6 +637,7 @@
 				805A4B1B0DBE6D334FA4969EEE0BFF22 /* WCProgressView.swift */,
 				BC51FA50BD3796086CC6374E7772BDEB /* WCSearchButton.swift */,
 				CB22248CD72607F4D451B96AF18E6F4A /* WCSearchTextField.swift */,
+				3F503CE32627D5960066AB19 /* Cells */,
 			);
 			name = Components;
 			path = WCUIKit/Classes/Components;
@@ -680,7 +680,6 @@
 		3F503D032627D5D60066AB19 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				3F503D042627D5D60066AB19 /* BaseSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -805,6 +804,7 @@
 			isa = PBXGroup;
 			children = (
 				3F503D032627D5D60066AB19 /* Sections */,
+				3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */,
 				2DBDC68D153DD17BE04C0C2734121BF2 /* Components */,
 				6C3F15B6DF820210E72316C6BE15F018 /* Extensions */,
 				F468DA4EFCAAF2F934C324E5AC0A04F0 /* Pod */,
@@ -1358,7 +1358,7 @@
 				3F503CFC2627D5BF0066AB19 /* TableViewSectionProtocol.swift in Sources */,
 				DB47DD5FD1D24EE05E318861931A76F3 /* OnGoingProjectFeedResumeButton.swift in Sources */,
 				FF4DC86AB43CCBFDBAE258236EAEA92F /* OpionSelectorView.swift in Sources */,
-				3F503D132627D6EF0066AB19 /* CathegoryListView.swift in Sources */,
+				3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */,
 				72F7DC3E4159F1A5EEBEB2AA9007D08C /* OptionFilterButton.swift in Sources */,
 				609A6463EB52867060A14D110E2B034C /* OptionView.swift in Sources */,
 				4C2FFBE8A24A7C5A03340E1A4A5F67C0 /* ProfileResumeButton.swift in Sources */,
@@ -1370,6 +1370,7 @@
 				809BFB40797E31075C4B6B2139260AC7 /* ThemeColors.swift in Sources */,
 				76EA50A89D0AFBAD866374580A2E608E /* ThemeFonts.swift in Sources */,
 				8D095C58F7698BDD9910DEC5E6086353 /* UIImage+.swift in Sources */,
+				3F3EF31F262A6D0F00887EA0 /* BaseSection.swift in Sources */,
 				3F503CEF2627D5AD0066AB19 /* UITableView+.swift in Sources */,
 				3F503CFA2627D5BF0066AB19 /* TableViewFactory.swift in Sources */,
 				E4873B0A618FC877E4956B9794104215 /* UserDisplayView.swift in Sources */,
@@ -1379,7 +1380,6 @@
 				3F503CE52627D5960066AB19 /* CathegoryCollectionViewCell.swift in Sources */,
 				3F503CFD2627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift in Sources */,
 				FF81A84E197AE705FB78C12CDAE308DA /* WCCloseButton.swift in Sources */,
-				3F503D052627D5D70066AB19 /* BaseSection.swift in Sources */,
 				69EDF8443A6DDE0D77B6D4917181F406 /* WCEmptyListView.swift in Sources */,
 				76C542B4770C0D97FBA2C2611BE3585B /* WCHeaderView.swift in Sources */,
 				45A7DE6F41C397CA4581DA57FE5D3545 /* WCInputTextField.swift in Sources */,

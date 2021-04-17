@@ -10,23 +10,30 @@ import UIKit
 import WCUIKit
 
 class ViewController: UIViewController {
+    
+    let cathegoryView = WCCathegoryListView(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cathegoryView = CathegoryListView(frame: .zero)
-        cathegoryView.setup(viewModel: [CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "Romance", isOn: false)])
+        cathegoryView.delegate = self
+        cathegoryView.setup(cathegories: ["Romance", "Ação", "Romance", "Ação", "Romance", "Ação", "Romance", "Ação", "Romance", "Ação"])
         view.addSubview(cathegoryView)
         cathegoryView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.left.right.equalToSuperview()
         }
-        cathegoryView.setup(viewModel: [CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "", isOn: true),CathegoryListView.CathegoryViewModel(text: "Romance", isOn: false)])
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
+extension ViewController: WCCathegoryListViewDelegate {
+    
+    func didSelectCathegory(atIndex index: Int) {
+    
+    }
 }
 

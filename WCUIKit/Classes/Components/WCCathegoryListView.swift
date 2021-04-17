@@ -7,27 +7,17 @@
 
 import UIKit
 
-public protocol CathegoryListViewDelegate: class {
+public protocol WCCathegoryListViewDelegate: class {
     func didSelectCathegory(atIndex index: Int)
 }
 
-public class CathegoryListView: UIView {
-    
-    public struct CathegoryViewModel {
-        let text: String
-        let isOn: Bool
-        
-        public init(text: String, isOn: Bool) {
-            self.text = text
-            self.isOn = isOn
-        }
-    }
+public class WCCathegoryListView: UIView {
     
     private enum Constants {
         static let height: CGFloat = 479
     }
     
-    private var viewModel: [CathegoryViewModel]? {
+    private var cathegories: [String]? {
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -47,42 +37,76 @@ public class CathegoryListView: UIView {
         return view
     }()
     
-    public weak var delegate: CathegoryListViewDelegate?
+    public weak var delegate: WCCathegoryListViewDelegate?
     
     public override func layoutSubviews() {
         super.layoutSubviews()
         applyViewCode()
     }
     
-    public func setup(viewModel: [CathegoryViewModel]) {
-        self.viewModel = viewModel
+    public func setup(cathegories: [String]) {
+        self.cathegories = cathegories
+    }
+    
+    public func swapState(atPosition position: Int) {
+        let cell = collectionView.cellForItem(at: IndexPath(row: position, section: 0), type: CathegoryCollectionViewCell.self)
+        let state = cell.state
+        switch state {
+        case .enable:
+            cell.state = .disable
+            break
+        case .disable:
+            cell.state = .enable
+        }
+    }
+    
+    public func setState(atPosition position: Int, enabled: Bool) {
+        let cell = collectionView.cellForItem(at: IndexPath(row: position, section: 0), type: CathegoryCollectionViewCell.self)
+        cell.state = enabled ? .enable : .disable
+    }
+    
+    public func clearCathegories() {
+        if let count = cathegories?.count {
+            for i in 0..<count {
+                let cell = collectionView.cellForItem(at: IndexPath(row: i, section: 0), type: CathegoryCollectionViewCell.self)
+                cell.state = .disable
+            }
+        }
     }
 }
 
-extension CathegoryListView: UICollectionViewDelegate {
+extension WCCathegoryListView: UICollectionViewDelegate {
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath, type: CathegoryCollectionViewCell.self)
+        let state = cell.state
+        switch state {
+        case .enable:
+            cell.state = .disable
+            break
+        case .disable:
+            cell.state = .enable
+        }
         delegate?.didSelectCathegory(atIndex: indexPath.row)
     }
 }
 
-extension CathegoryListView: UICollectionViewDataSource {
+extension WCCathegoryListView: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.count ?? 0
+        return cathegories?.count ?? 0
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(indexPath: indexPath, type: CathegoryCollectionViewCell.self)
-        guard let cathegory = viewModel?[indexPath.row] else { return UICollectionViewCell() }
-        cell.setup(movieStyle: cathegory.text)
-        cell.state = cathegory.isOn ? .enable : .disable
+        guard let cathegory = cathegories?[indexPath.row] else { return UICollectionViewCell() }
+        cell.setup(movieStyle: cathegory)
         return cell
     }
     
 }
 
-extension CathegoryListView: UICollectionViewDelegateFlowLayout {
+extension WCCathegoryListView: UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
@@ -109,7 +133,7 @@ extension CathegoryListView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension CathegoryListView: ViewCodeProtocol {
+extension WCCathegoryListView: ViewCodeProtocol {
     
     public func buildViewHierarchy() {
         addSubview(collectionView)
