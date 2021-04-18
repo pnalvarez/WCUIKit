@@ -48,6 +48,14 @@ public class WCCathegoryListView: UIView {
         self.cathegories = cathegories
     }
     
+    public func setSelectedCells(atPositions indexArray: [Int]) {
+        clearCathegories()
+        for index in indexArray {
+            let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0), type: CathegoryCollectionViewCell.self)
+            cell.state = .enable
+        }
+    }
+    
     public func swapState(atPosition position: Int) {
         let cell = collectionView.cellForItem(at: IndexPath(row: position, section: 0), type: CathegoryCollectionViewCell.self)
         let state = cell.state

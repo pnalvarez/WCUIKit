@@ -19,6 +19,7 @@ public class WCCloseButton: UIButton {
                          compatibleWith: nil),
                  for: .normal)
         addTarget(self, action: #selector(closeAction), for: .touchUpInside)
+        applyViewCode()
     }
     
     @objc
@@ -27,6 +28,19 @@ public class WCCloseButton: UIButton {
             navigationController.dismiss(animated: true, completion: nil)
         } else {
             associatedViewController?.dismiss(animated: true, completion: nil)
+        }
+    }
+}
+
+extension WCCloseButton: ViewCodeProtocol {
+    
+    public func buildViewHierarchy() {
+        
+    }
+    
+    public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.width.equalTo(31)
         }
     }
 }

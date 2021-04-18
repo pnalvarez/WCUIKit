@@ -16,8 +16,12 @@ public class WCActionButton: UIButton {
         }
     }
     
-    override public init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
         backgroundColor = ThemeColors.mainRedColor.rawValue
         layer.cornerRadius = 4
         setTitleColor(ThemeColors.whiteThemeColor.rawValue, for: .normal)
