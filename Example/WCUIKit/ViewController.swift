@@ -23,6 +23,11 @@ class ViewController: UIViewController {
             make.left.right.equalToSuperview()
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        cathegoryView.setSelectedCells(atPositions: [0,1,2])
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
