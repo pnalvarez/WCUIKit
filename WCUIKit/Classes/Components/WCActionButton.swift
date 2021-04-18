@@ -26,6 +26,7 @@ public class WCActionButton: UIButton {
         layer.cornerRadius = 4
         setTitleColor(ThemeColors.whiteThemeColor.rawValue, for: .normal)
         titleLabel?.font = ThemeFonts.RobotoRegular(16).rawValue
+        titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     required init?(coder: NSCoder) {
