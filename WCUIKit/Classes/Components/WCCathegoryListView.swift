@@ -21,6 +21,7 @@ public class WCCathegoryListView: UIView {
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                self.layoutIfNeeded()
             }
         }
     }
