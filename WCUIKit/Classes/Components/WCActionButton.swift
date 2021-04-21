@@ -22,6 +22,10 @@ public class WCActionButton: UIButton {
                 return ThemeColors.emptyRedColor.rawValue
             }
         }
+        
+        var isUserInteractionEnabled: Bool {
+            return self == .enabled
+        }
     }
     
     public var text: String? {
@@ -33,16 +37,17 @@ public class WCActionButton: UIButton {
     public var enableState: State = .enabled {
         didSet {
             backgroundColor = enableState.backgroundColor
+            isUserInteractionEnabled = enableState.isUserInteractionEnabled
         }
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = ThemeColors.mainRedColor.rawValue
     }
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        backgroundColor = ThemeColors.mainRedColor.rawValue
         layer.cornerRadius = 4
         setTitleColor(ThemeColors.whiteThemeColor.rawValue, for: .normal)
         titleLabel?.font = ThemeFonts.RobotoRegular(16).rawValue

@@ -11,15 +11,71 @@ import UIKit
 public class WCEmptyListView: UIView {
     
     public enum Layout {
+        case smallest
         case small
         case large
         
         public var centralContainerYOffset: CGFloat {
             switch self {
-            case .small:
+            case .small, .smallest:
                 return Constants.smallContainerYOffset
             case .large:
                 return Constants.largeContainerYOffset
+            }
+        }
+        
+        public var centralContainerHeight: CGFloat {
+            switch self {
+            case .smallest:
+                return Constants.smallestHeight
+            case .small:
+                return Constants.smallHeight
+            case .large:
+                return Constants.largeHeight
+            }
+        }
+        
+        public var centralContainerWidth: CGFloat {
+            switch self {
+            case .smallest:
+                return Constants.smallestWidth
+            case .small:
+                return Constants.smallWidth
+            case .large:
+                return Constants.largeWidth
+            }
+        }
+        
+        public var topCircleTrailing: CGFloat {
+            switch self {
+            case .smallest:
+                return Constants.smallestTopCircleTrailing
+            case .small:
+                return Constants.smallTopCircleTrailing
+            case .large:
+                return Constants.largeTopCircleTrailing
+            }
+        }
+        
+        public var bottomCircleTrailing: CGFloat {
+            switch self {
+            case .smallest:
+                return Constants.smallestBottomCircleTrailing
+            case .small:
+                return Constants.smallBottomCircleTrailing
+            case .large:
+                return Constants.largeTopCircleTrailing
+            }
+        }
+        
+        public var smallestCircleDimension: CGFloat {
+            switch self {
+            case .smallest:
+                return Constants.smallestSmallestCircleDimension
+            case .small:
+                return Constants.smallSmallestCircleDimension
+            case .large:
+                return Constants.largeSmallestCircleDimension
             }
         }
     }
@@ -27,6 +83,21 @@ public class WCEmptyListView: UIView {
     private enum Constants {
         static let smallContainerYOffset: CGFloat = -10
         static let largeContainerYOffset: CGFloat = -40
+        static let smallestHeight: CGFloat = 40
+        static let smallHeight: CGFloat = 46
+        static let largeHeight: CGFloat = 46
+        static let smallestWidth: CGFloat = 200
+        static let smallWidth: CGFloat = 301
+        static let largeWidth: CGFloat = 301
+        static let smallestTopCircleTrailing: CGFloat = -11
+        static let smallestBottomCircleTrailing: CGFloat = -5
+        static let smallTopCircleTrailing: CGFloat = -36
+        static let smallBottomCircleTrailing: CGFloat = -30
+        static let largeTopCircleTrailing: CGFloat = -36
+        static let largeBottomCircleTrailing: CGFloat = -30
+        static let smallestSmallestCircleDimension: CGFloat = 10
+        static let smallSmallestCircleDimension: CGFloat = 20
+        static let largeSmallestCircleDimension: CGFloat = 20
     }
     
     private lazy var centralContainer: UIView = {
@@ -103,8 +174,8 @@ extension WCEmptyListView: ViewCodeProtocol {
         centralContainer.snp.makeConstraints { make in
             make.centerY.equalToSuperview().offset(layout.centralContainerYOffset)
             make.centerX.equalToSuperview()
-            make.width.equalTo(301)
-            make.height.equalTo(46)
+            make.width.equalTo(layout.centralContainerWidth)
+            make.height.equalTo(layout.centralContainerHeight)
         }
         centralLbl.snp.makeConstraints { make in
             make.center.equalToSuperview()
@@ -112,13 +183,13 @@ extension WCEmptyListView: ViewCodeProtocol {
         }
         topCircleView.snp.makeConstraints { make in
             make.top.equalTo(centralContainer.snp.bottom).offset(15)
-            make.right.equalTo(centralContainer.snp.right).offset(-36)
+            make.right.equalTo(centralContainer.snp.right).offset(layout.topCircleTrailing)
             make.height.width.equalTo(31)
         }
         smallestCircleView.snp.makeConstraints { make in
             make.top.equalTo(centralContainer.snp.bottom).offset(6)
             make.right.equalTo(centralContainer.snp.right).offset(-30)
-            make.height.width.equalTo(20)
+            make.height.width.equalTo(layout.smallestCircleDimension)
         }
         bottomCircleView.snp.makeConstraints { make in
             make.top.equalTo(topCircleView.snp.bottom).offset(6)
@@ -129,8 +200,8 @@ extension WCEmptyListView: ViewCodeProtocol {
     
     public func configureViews() {
         centralLbl.text = text
-        topCircleView.isHidden = layout == .small
-        bottomCircleView.isHidden = layout == .small
+        topCircleView.isHidden = layout != .large
+        bottomCircleView.isHidden = layout != .large
         smallestCircleView.isHidden = layout == .large
     }
 }
