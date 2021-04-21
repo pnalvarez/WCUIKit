@@ -337,7 +337,7 @@
 		3C46D31B3593FA6EDEB591ABD86C11D2 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
 		3C6C69246F7D71CE1BF5F456EE6AF8D0 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		3F09054BE5262F22536C317D8C26099B /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseSection.swift; path = WCUIKit/Classes/Sections/BaseSection.swift; sourceTree = "<group>"; };
+		3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseSection.swift; path = ../WCUIKit/Classes/Sections/BaseSection.swift; sourceTree = "<group>"; };
 		3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CathegoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F503CEB2627D5AD0066AB19 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		3F503CEC2627D5AD0066AB19 /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
@@ -680,6 +680,7 @@
 		3F503D032627D5D60066AB19 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -804,7 +805,6 @@
 			isa = PBXGroup;
 			children = (
 				3F503D032627D5D60066AB19 /* Sections */,
-				3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */,
 				2DBDC68D153DD17BE04C0C2734121BF2 /* Components */,
 				6C3F15B6DF820210E72316C6BE15F018 /* Extensions */,
 				F468DA4EFCAAF2F934C324E5AC0A04F0 /* Pod */,

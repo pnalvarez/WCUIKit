@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FBDC4AF2630DBC2007FA4F1 /* AllComponentsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4AE2630DBC2007FA4F1 /* AllComponentsLibrary.swift */; };
+		3FBDC4B42630DCE4007FA4F1 /* WCActionButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */; };
+		3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */; };
+		3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		35B59E4A399A049A12986DF9 /* Pods-WCUIKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCUIKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-WCUIKit_Tests/Pods-WCUIKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3FBDC4AE2630DBC2007FA4F1 /* AllComponentsLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllComponentsLibrary.swift; sourceTree = "<group>"; };
+		3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCActionButtonController.swift; sourceTree = "<group>"; };
+		3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCCathegoryListViewController.swift; sourceTree = "<group>"; };
+		3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProgressViewController.swift; sourceTree = "<group>"; };
 		5A4CD25557B56428788FA997 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WCUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +77,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FBDC4AD2630DBA0007FA4F1 /* Components Library */ = {
+			isa = PBXGroup;
+			children = (
+				3FBDC4AE2630DBC2007FA4F1 /* AllComponentsLibrary.swift */,
+			);
+			name = "Components Library";
+			sourceTree = "<group>";
+		};
+		3FBDC4B22630DC2F007FA4F1 /* Components ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */,
+				3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */,
+				3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */,
+			);
+			name = "Components ViewControllers";
+			sourceTree = "<group>";
+		};
+		3FBDC4BF2630DD88007FA4F1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,10 +130,9 @@
 		607FACD21AFB9204008FA782 /* Example for WCUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				3FBDC4BF2630DD88007FA4F1 /* Main */,
+				3FBDC4B22630DC2F007FA4F1 /* Components ViewControllers */,
+				3FBDC4AD2630DBA0007FA4F1 /* Components Library */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -338,7 +374,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				3FBDC4B42630DCE4007FA4F1 /* WCActionButtonController.swift in Sources */,
+				3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				3FBDC4AF2630DBC2007FA4F1 /* AllComponentsLibrary.swift in Sources */,
+				3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

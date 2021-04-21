@@ -41,6 +41,11 @@ public class WCProgressView: UIView {
     
     public weak var delegate: WCProgressViewDelegate?
     
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        applyViewCode()
+    }
+    
     @objc
     private func didChangeSliderValue() {
         percentage = slider.value / slider.maximumValue
