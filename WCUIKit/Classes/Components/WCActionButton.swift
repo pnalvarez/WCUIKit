@@ -10,9 +10,29 @@ import UIKit
 
 public class WCActionButton: UIButton {
     
+    public enum State {
+        case enabled
+        case disabled
+        
+        var backgroundColor: UIColor {
+            switch self {
+            case .enabled:
+                return ThemeColors.mainRedColor.rawValue
+            case .disabled:
+                return ThemeColors.emptyRedColor.rawValue
+            }
+        }
+    }
+    
     public var text: String? {
         didSet {
             setTitle(text, for: .normal)
+        }
+    }
+    
+    public var enableState: State = .enabled {
+        didSet {
+            backgroundColor = enableState.backgroundColor
         }
     }
     
