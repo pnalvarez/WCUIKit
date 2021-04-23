@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum AllComponentsLibrary {
+enum AllComponentsLibrary: CaseIterable {
     case actionButton
     case cathegoryListView
     case progressView

@@ -29,13 +29,14 @@ public class WCProgressView: UIView {
         view.textAlignment = .center
         view.textColor = .black
         view.font = ThemeFonts.RobotoRegular(16).rawValue
+        view.text = "\(Int(percentage * 100)) %"
         return view
     }()
     
-    public var percentage: Float? {
+    public var percentage: Float = 0.0 {
         didSet {
-            percentageLbl.text = "\(percentage ?? .zero * 100) %"
-            delegate?.didChangeValue(self, percentage: percentage ?? .zero)
+            percentageLbl.text = "\(Int(percentage * 100)) %"
+            delegate?.didChangeValue(self, percentage: percentage)
         }
     }
     
@@ -60,18 +61,15 @@ extension WCProgressView: ViewCodeProtocol {
     }
     
     public func setupConstraints() {
+        percentageLbl.snp.makeConstraints { make in
+            make.top.equalTo(slider.snp.bottom).offset(60)
+            make.left.right.equalToSuperview()
+        }
         slider.snp.makeConstraints { make in
-            slider.snp.makeConstraints { make in
-                make.centerY.equalToSuperview()
-                make.left.equalToSuperview().inset(57)
-                make.right.equalToSuperview().inset(52)
-                make.height.equalTo(11)
-            }
-            percentageLbl.snp.makeConstraints { make in
-                make.top.equalTo(slider.snp.bottom).offset(83)
-                make.centerX.equalToSuperview()
-                make.width.equalTo(50)
-            }
+            make.centerY.equalToSuperview()
+            make.left.equalToSuperview().inset(57)
+            make.right.equalToSuperview().inset(52)
+            make.height.equalTo(11)
         }
     }
 }

@@ -44,7 +44,7 @@ public class WCCathegoryListView: UIView {
         super.layoutSubviews()
         applyViewCode()
     }
-    
+                                   
     public func setup(cathegories: [String]) {
         self.cathegories = cathegories
     }
