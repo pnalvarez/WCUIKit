@@ -11,6 +11,8 @@
 		3FBDC4B42630DCE4007FA4F1 /* WCActionButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */; };
 		3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */; };
 		3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */; };
+		3FBDC58626333D20007FA4F1 /* WCProjectDataTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */; };
+		3FBDC5B926333FDA007FA4F1 /* WCProjectDataTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCActionButtonController.swift; sourceTree = "<group>"; };
 		3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCCathegoryListViewController.swift; sourceTree = "<group>"; };
 		3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProgressViewController.swift; sourceTree = "<group>"; };
+		3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProjectDataTextFieldController.swift; sourceTree = "<group>"; };
+		3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProjectDataTextViewController.swift; sourceTree = "<group>"; };
 		5A4CD25557B56428788FA997 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WCUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */,
 				3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */,
 				3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */,
+				3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */,
+				3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -373,12 +379,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBDC58626333D20007FA4F1 /* WCProjectDataTextFieldController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				3FBDC4B42630DCE4007FA4F1 /* WCActionButtonController.swift in Sources */,
 				3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				3FBDC4AF2630DBC2007FA4F1 /* AllComponentsLibrary.swift in Sources */,
 				3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */,
+				3FBDC5B926333FDA007FA4F1 /* WCProjectDataTextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

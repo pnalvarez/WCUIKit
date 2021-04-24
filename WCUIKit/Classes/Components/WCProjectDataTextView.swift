@@ -1,5 +1,5 @@
 //
-//  ProjectDataTextField.swift
+//  ProjectDataTextView.swift
 //  WeCam
 //
 //  Created by Pedro Alvarez on 04/02/21.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-public enum ProjectDataTextFieldState {
+public enum WCProjectDataTextViewState {
     case normal
     case error
 }
 
-public class ProjectDataTextField: UITextField {
+public class WCProjectDataTextView: UITextView {
     
-    public var textFieldState: ProjectDataTextFieldState = .normal {
+    public var textViewState: WCProjectDataTextFieldState = .normal {
         didSet {
-            switch textFieldState {
+            switch textViewState {
             case .normal:
                 layer.borderColor = ThemeColors.borderGray.rawValue.cgColor
             case .error:
@@ -26,8 +26,8 @@ public class ProjectDataTextField: UITextField {
         }
     }
     
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
+    override public func layoutSubviews() {
+        super.layoutSubviews()
         backgroundColor = ThemeColors.whiteThemeColor.rawValue
         textColor = .black
         font = ThemeFonts.RobotoRegular(16).rawValue
@@ -36,7 +36,25 @@ public class ProjectDataTextField: UITextField {
         textAlignment = .left
     }
     
+    override public init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+        applyViewCode()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension WCProjectDataTextView: ViewCodeProtocol {
+    
+    public func buildViewHierarchy() {
+        
+    }
+    
+    public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.equalTo(150)
+        }
     }
 }

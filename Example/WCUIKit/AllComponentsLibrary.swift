@@ -12,6 +12,8 @@ enum AllComponentsLibrary: CaseIterable {
     case actionButton
     case cathegoryListView
     case progressView
+    case projectDataTextField
+    case projectDataTextView
     
     var text: String {
         switch self {
@@ -21,6 +23,10 @@ enum AllComponentsLibrary: CaseIterable {
             return "Cathegory List"
         case .progressView:
             return "Progress View"
+        case .projectDataTextField:
+            return "Project Data Text Field"
+        case .projectDataTextView:
+            return "Project Data Text View"
         }
     }
     
@@ -32,6 +38,10 @@ enum AllComponentsLibrary: CaseIterable {
             return WCCathegoryListViewController()
         case .progressView:
             return WCProgressViewController()
+        case .projectDataTextField:
+            return WCProjectDataTextFieldController()
+        case .projectDataTextView:
+            return WCProjectDataTextViewController()
         }
     }
 }

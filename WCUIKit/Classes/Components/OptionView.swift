@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 public protocol OptionViewDelegate: class {
     func didTapOptionView(selectedOptionView: OptionView, enabled: Bool)
