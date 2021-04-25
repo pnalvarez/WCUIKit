@@ -34,4 +34,14 @@ public extension UITableView {
         let cell = cellForRow(at: indexPath) as! T
         return cell
     }
+    
+    func checkEmptyState(text: String, layout: WCEmptyListView.Layout) {
+        if visibleCells.isEmpty {
+            backgroundView = WCEmptyListView(frame: .zero,
+                                             layout: layout,
+                                             text: text)
+        } else {
+            backgroundView = nil
+        }
+    }
 }
