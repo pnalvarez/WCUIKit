@@ -88,7 +88,7 @@ public class WCEmptyListView: UIView {
         static let largeHeight: CGFloat = 46
         static let smallestWidth: CGFloat = 200
         static let smallWidth: CGFloat = 301
-        static let largeWidth: CGFloat = 350
+        static let largeWidth: CGFloat = 312
         static let smallestTopCircleTrailing: CGFloat = -11
         static let smallestBottomCircleTrailing: CGFloat = -5
         static let smallTopCircleTrailing: CGFloat = -36
