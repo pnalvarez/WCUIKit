@@ -19,10 +19,24 @@ public class WCBackButton: UIButton {
                          compatibleWith: nil),
                  for: .normal)
         addTarget(self, action: #selector(backAction), for: .touchUpInside)
+        applyViewCode()
     }
     
     @objc
     private func backAction() {
         associatedViewController?.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension WCBackButton: ViewCodeProtocol {
+    
+    public func buildViewHierarchy() {
+        
+    }
+    
+    public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.width.equalTo(31)
+        }
     }
 }

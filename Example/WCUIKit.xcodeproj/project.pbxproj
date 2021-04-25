@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F8E59A126339CF5009B38AA /* WCSearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E59A026339CF5009B38AA /* WCSearchDisplayViewController.swift */; };
+		3F8E59CF2633A52D009B38AA /* WCUserDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E59CE2633A52D009B38AA /* WCUserDisplayViewController.swift */; };
+		3F8E59F82633A855009B38AA /* WCBackButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E59F72633A855009B38AA /* WCBackButtonViewController.swift */; };
+		3F8E5A6C2634BF16009B38AA /* WCSecondaryButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E5A6B2634BF16009B38AA /* WCSecondaryButtonController.swift */; };
 		3FBDC4AF2630DBC2007FA4F1 /* AllComponentsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4AE2630DBC2007FA4F1 /* AllComponentsLibrary.swift */; };
 		3FBDC4B42630DCE4007FA4F1 /* WCActionButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */; };
 		3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */; };
@@ -35,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		35B59E4A399A049A12986DF9 /* Pods-WCUIKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCUIKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-WCUIKit_Tests/Pods-WCUIKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3F8E59A026339CF5009B38AA /* WCSearchDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayViewController.swift; sourceTree = "<group>"; };
+		3F8E59CE2633A52D009B38AA /* WCUserDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUserDisplayViewController.swift; sourceTree = "<group>"; };
+		3F8E59F72633A855009B38AA /* WCBackButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBackButtonViewController.swift; sourceTree = "<group>"; };
+		3F8E5A6B2634BF16009B38AA /* WCSecondaryButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSecondaryButtonController.swift; sourceTree = "<group>"; };
 		3FBDC4AE2630DBC2007FA4F1 /* AllComponentsLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllComponentsLibrary.swift; sourceTree = "<group>"; };
 		3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCActionButtonController.swift; sourceTree = "<group>"; };
 		3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCCathegoryListViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +105,10 @@
 				3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */,
 				3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */,
 				3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */,
+				3F8E59A026339CF5009B38AA /* WCSearchDisplayViewController.swift */,
+				3F8E59CE2633A52D009B38AA /* WCUserDisplayViewController.swift */,
+				3F8E59F72633A855009B38AA /* WCBackButtonViewController.swift */,
+				3F8E5A6B2634BF16009B38AA /* WCSecondaryButtonController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -379,14 +391,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F8E59A126339CF5009B38AA /* WCSearchDisplayViewController.swift in Sources */,
 				3FBDC58626333D20007FA4F1 /* WCProjectDataTextFieldController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				3FBDC4B42630DCE4007FA4F1 /* WCActionButtonController.swift in Sources */,
 				3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				3F8E5A6C2634BF16009B38AA /* WCSecondaryButtonController.swift in Sources */,
 				3FBDC4AF2630DBC2007FA4F1 /* AllComponentsLibrary.swift in Sources */,
 				3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */,
+				3F8E59CF2633A52D009B38AA /* WCUserDisplayViewController.swift in Sources */,
 				3FBDC5B926333FDA007FA4F1 /* WCProjectDataTextViewController.swift in Sources */,
+				3F8E59F82633A855009B38AA /* WCBackButtonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

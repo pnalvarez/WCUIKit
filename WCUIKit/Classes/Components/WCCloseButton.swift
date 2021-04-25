@@ -10,7 +10,37 @@ import UIKit
 
 public class WCCloseButton: UIButton {
     
+    public enum Layout {
+        case small
+        case medium
+
+        var dimension: CGFloat {
+            switch self {
+            case .small:
+                return Constants.smallDimension
+            case .medium:
+                return Constants.mediumDimension
+            }
+        }
+    }
+    
+    private enum Constants {
+        static let smallDimension: CGFloat = 14
+        static let mediumDimension: CGFloat = 31
+    }
+    
     public var associatedViewController: UIViewController?
+    public var layout: Layout
+    
+    public init(frame: CGRect,
+                layout: Layout = .medium) {
+        self.layout = layout
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
@@ -40,7 +70,7 @@ extension WCCloseButton: ViewCodeProtocol {
     
     public func setupConstraints() {
         snp.makeConstraints { make in
-            make.height.width.equalTo(31)
+            make.height.width.equalTo(layout.dimension)
         }
     }
 }

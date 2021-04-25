@@ -60,6 +60,7 @@
 		3F503CFD2627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CF92627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift */; };
 		3F503D0C2627D6330066AB19 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503D0B2627D6330066AB19 /* ReusableView.swift */; };
 		3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */; };
+		3F8E5A652634BDD6009B38AA /* WCSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */; };
 		3F9847112623BF4B000BE5BC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9846FE2623BF4B000BE5BC /* Roboto-Medium.ttf */; };
 		3F9847122623BF4B000BE5BC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9846FF2623BF4B000BE5BC /* Roboto-Light.ttf */; };
 		3F9847132623BF4B000BE5BC /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9847002623BF4B000BE5BC /* RobotoCondensed-Bold.ttf */; };
@@ -86,7 +87,7 @@
 		43CA92608F127EFB9247427E4701FA60 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A113A0C081D0641DD16B99E26B1046 /* UIImage+GIF.m */; };
 		447DD41B5CA1E121219ECA2B0B1B874F /* SDWebImageTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AC2E527A687866B1E6460E564F3C88 /* SDWebImageTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44AB83515CFF8FF4918CBD52B22DE20C /* SDImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DF27887175B5AF53D13C814C7B6BD3 /* SDImageLoader.m */; };
-		44E56CD43BBA4F887D63307CE8D0BBFA /* SearchDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401B0DAA2EE9A3DACD3521B8D0FCFF1A /* SearchDisplayView.swift */; };
+		44E56CD43BBA4F887D63307CE8D0BBFA /* WCSearchDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */; };
 		45A7DE6F41C397CA4581DA57FE5D3545 /* WCInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9327AECBF72802881C88C351F63F540 /* WCInputTextField.swift */; };
 		4955C693FE3E6F879065339EF9F7BA20 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE632A7405D536E3CAAA78F94C7E1CF /* SDWebImageDownloaderOperation.m */; };
 		4B2EFDE24B936A233E770BCACA7055C9 /* SDAnimatedImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 22BAD6D6A071F529E6FCD919E502133C /* SDAnimatedImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -210,7 +211,7 @@
 		E3134A5DCAD73B31584488AA4E02186B /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BD15AE1A0A6D50C87F849D978B013058 /* SDWebImagePrefetcher.m */; };
 		E35575B5F1532BB1E5BEA2215B491DBB /* WCUIKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF105447B2B2082C6A84A24B3037A087 /* WCUIKit.xcassets */; };
 		E3FB1238F43B0CE746E5207AA0E4CD6F /* SDImageGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 87972CB3B2EF4BA1A3B6E9A649EC6816 /* SDImageGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4873B0A618FC877E4956B9794104215 /* UserDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83AB35C520913226FF5C89BE1B4DF8 /* UserDisplayView.swift */; };
+		E4873B0A618FC877E4956B9794104215 /* WCUserDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */; };
 		E5BE56FD56550CB2990EA400C3EAAD35 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2358B4C18A471F602B7E35CA3CA16 /* SDWebImageDownloader.m */; };
 		E797B8F018A179A66CE750C2DD7CCE3C /* SDImageAPNGCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DF9E0EF2CF4E344DF6DDBC68F1D143 /* SDImageAPNGCoder.m */; };
 		E85BBB972867783044ADCD772438150F /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554DA27D736DC3FDE3D9D3DE2E3DF33 /* ConstraintRelatableTarget.swift */; };
@@ -301,7 +302,7 @@
 		1A3D0F2AB57D30502759D6D54A946C41 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B3A0D6702F9622DB3B04904869A2CD9 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		1C88E7D97657896AEDF9A7C70EB265B2 /* NetworkStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NetworkStatusView.swift; sourceTree = "<group>"; };
-		1E83AB35C520913226FF5C89BE1B4DF8 /* UserDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDisplayView.swift; sourceTree = "<group>"; };
+		1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCUserDisplayView.swift; sourceTree = "<group>"; };
 		1EE4804554C60631ACF9E0EF8B949054 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
 		1F2042991669013E01EDAA21EB5859D8 /* SDImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOCoder.m; path = SDWebImage/SDImageIOCoder.m; sourceTree = "<group>"; };
 		1FA8ABAC4B1E37C81AA08A7BDB665F5F /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
@@ -345,6 +346,7 @@
 		3F503CF92627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilderProtocol.swift; sourceTree = "<group>"; };
 		3F503D0B2627D6330066AB19 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCCathegoryListView.swift; sourceTree = "<group>"; };
+		3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSecondaryButton.swift; sourceTree = "<group>"; };
 		3F9846FE2623BF4B000BE5BC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3F9846FF2623BF4B000BE5BC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		3F9847002623BF4B000BE5BC /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
@@ -364,7 +366,7 @@
 		3F98470E2623BF4B000BE5BC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3F98470F2623BF4B000BE5BC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		3F9847102623BF4B000BE5BC /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		401B0DAA2EE9A3DACD3521B8D0FCFF1A /* SearchDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchDisplayView.swift; sourceTree = "<group>"; };
+		401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayView.swift; sourceTree = "<group>"; };
 		416A156201EE974E311CAEF6137B7F6F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		429239181AD9414DF0303C5A6A62EEB0 /* WCUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCUIKit-prefix.pch"; sourceTree = "<group>"; };
 		43C5021EA5DAD7B24B07811F5152E960 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
@@ -610,11 +612,11 @@
 				8696E8CD26973B256A1519B47BA7CC6D /* OptionFilterButton.swift */,
 				FFAB1007B451E3ADCC95268320B2E893 /* OptionView.swift */,
 				B801A9CC403755785E55F1D915CC9979 /* WCProjectDataTextField.swift */,
+				3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */,
 				DB18090ACA39E0528D2B95B58F177038 /* WCProjectDataTextView.swift */,
-				3F503D0B2627D6330066AB19 /* ReusableView.swift */,
-				401B0DAA2EE9A3DACD3521B8D0FCFF1A /* SearchDisplayView.swift */,
+				401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */,
 				EFA4383371876119CBA56D54DC1C8E8F /* SelectionFilterView.swift */,
-				1E83AB35C520913226FF5C89BE1B4DF8 /* UserDisplayView.swift */,
+				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
 				883D90B0699AB11B50AFA4825E19D953 /* WCActionButton.swift */,
 				E815F34587936BA90B80548B4E83331E /* WCBackButton.swift */,
 				3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */,
@@ -823,6 +825,7 @@
 		7BDDBB195DBDAF025E2D721808DC36ED /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3F503D0B2627D6330066AB19 /* ReusableView.swift */,
 				3F503CF72627D5BF0066AB19 /* Resettable.swift */,
 				3F503CF92627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift */,
 				3F503CF62627D5BF0066AB19 /* TableViewFactory.swift */,
@@ -1353,7 +1356,7 @@
 				96E688ABE3728EFDD095054F4E7296DF /* WCProjectDataTextField.swift in Sources */,
 				09BD05EB08C3DBE81E1DBDD02A700FCD /* WCProjectDataTextView.swift in Sources */,
 				3F503D0C2627D6330066AB19 /* ReusableView.swift in Sources */,
-				44E56CD43BBA4F887D63307CE8D0BBFA /* SearchDisplayView.swift in Sources */,
+				44E56CD43BBA4F887D63307CE8D0BBFA /* WCSearchDisplayView.swift in Sources */,
 				C2B971F1B43AF55B8161271901390059 /* SelectionFilterView.swift in Sources */,
 				809BFB40797E31075C4B6B2139260AC7 /* ThemeColors.swift in Sources */,
 				76EA50A89D0AFBAD866374580A2E608E /* ThemeFonts.swift in Sources */,
@@ -1361,8 +1364,9 @@
 				3F3EF31F262A6D0F00887EA0 /* BaseSection.swift in Sources */,
 				3F503CEF2627D5AD0066AB19 /* UITableView+.swift in Sources */,
 				3F503CFA2627D5BF0066AB19 /* TableViewFactory.swift in Sources */,
-				E4873B0A618FC877E4956B9794104215 /* UserDisplayView.swift in Sources */,
+				E4873B0A618FC877E4956B9794104215 /* WCUserDisplayView.swift in Sources */,
 				CB67D2587F7E5FC225332A8532BADBD4 /* ViewCodeProtocol.swift in Sources */,
+				3F8E5A652634BDD6009B38AA /* WCSecondaryButton.swift in Sources */,
 				133665E6DD42BE5B17BAC13273A1D9BF /* WCActionButton.swift in Sources */,
 				26E17C0ECCB0FA17F30115D42EF22E1C /* WCBackButton.swift in Sources */,
 				3F503CE52627D5960066AB19 /* CathegoryCollectionViewCell.swift in Sources */,

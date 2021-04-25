@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SearchDisplayView: UIView {
+public class WCSearchDisplayView: UIView {
     
     private lazy var photoImageView: WCListItemImageView = {
         let view = WCListItemImageView(frame: .zero)
@@ -34,11 +34,20 @@ public class SearchDisplayView: UIView {
     }()
     
     private var name: String?
-    private var image: String?
+    private var imageURL: String?
     private var secondaryInfo: String?
+    public var imageName: String? {
+        didSet {
+            photoImageView.setImage(named: imageName ?? "")
+        }
+    }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
         applyViewCode()
     }
     
@@ -46,15 +55,16 @@ public class SearchDisplayView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setup(name: String, image: String, secondaryInfo: String) {
+    public func setup(name: String = "", imageURL: String = "", secondaryInfo: String = "") {
         self.name = name
-        self.image = image
+        self.imageURL = imageURL
         self.secondaryInfo = secondaryInfo
         applyViewCode()
     }
+
 }
 
-extension SearchDisplayView: ViewCodeProtocol {
+extension WCSearchDisplayView: ViewCodeProtocol {
     
     public func buildViewHierarchy() {
         addSubview(photoImageView)
@@ -63,10 +73,14 @@ extension SearchDisplayView: ViewCodeProtocol {
     }
     
     public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.equalTo(64)
+        }
         photoImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(4)
             make.left.equalToSuperview().inset(37)
             make.width.equalTo(56)
+            make.bottom.equalToSuperview().inset(4)
         }
         nameLbl.snp.makeConstraints { make in
             make.centerY.equalToSuperview().offset(-15)
@@ -82,7 +96,7 @@ extension SearchDisplayView: ViewCodeProtocol {
     
     public func configureViews() {
         backgroundColor = ThemeColors.backgroundGray.rawValue
-        photoImageView.setImage(withURL: image ?? "")
+        photoImageView.setImage(withURL: imageURL ?? "")
         nameLbl.text = name
         secondaryInfoLbl.text = secondaryInfo
     }

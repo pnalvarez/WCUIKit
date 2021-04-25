@@ -14,6 +14,10 @@ enum AllComponentsLibrary: CaseIterable {
     case progressView
     case projectDataTextField
     case projectDataTextView
+    case searchDisplayView
+    case userDisplayView
+    case backButton
+    case secondaryButton
     
     var text: String {
         switch self {
@@ -27,6 +31,14 @@ enum AllComponentsLibrary: CaseIterable {
             return "Project Data Text Field"
         case .projectDataTextView:
             return "Project Data Text View"
+        case .searchDisplayView:
+            return "Search Display View"
+        case .userDisplayView:
+            return "User Display View Controller"
+        case .backButton:
+            return "Back Button"
+        case .secondaryButton:
+            return "Secondary Button"
         }
     }
     
@@ -42,6 +54,14 @@ enum AllComponentsLibrary: CaseIterable {
             return WCProjectDataTextFieldController()
         case .projectDataTextView:
             return WCProjectDataTextViewController()
+        case .searchDisplayView:
+            return WCSearchDisplayViewController()
+        case .userDisplayView:
+            return WCUserDisplayViewController()
+        case .backButton:
+            return WCBackButtonViewController()
+        case .secondaryButton:
+            return WCSecondaryButtonController()
         }
     }
 }

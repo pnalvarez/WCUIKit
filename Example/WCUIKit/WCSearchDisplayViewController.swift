@@ -1,5 +1,5 @@
 //
-//  WCProjectDataTextViewController.swift
+//  WCSearchDisplayViewController.swift
 //  WCUIKit_Example
 //
 //  Created by Pedro Alvarez on 23/04/21.
@@ -9,29 +9,29 @@
 import UIKit
 import WCUIKit
 
-final class WCProjectDataTextViewController: UIViewController {
+final class WCSearchDisplayViewController: UIViewController {
     
-    private lazy var textView: WCProjectDataTextView = {
-        let view = WCProjectDataTextView(frame: .zero, textContainer: nil, layout: .medium)
-        view.textViewState = .normal
+    private lazy var testView: WCSearchDisplayView = {
+        let view = WCSearchDisplayView(frame: .zero)
         return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        testView.setup(name: "Name", imageURL: "logo-apenas", secondaryInfo: "Secondary Info")
         view.backgroundColor = .white
         applyViewCode()
     }
 }
 
-extension WCProjectDataTextViewController: ViewCodeProtocol {
+extension WCSearchDisplayViewController: ViewCodeProtocol {
     
     func buildViewHierarchy() {
-        view.addSubview(textView)
+        view.addSubview(testView)
     }
     
     func setupConstraints() {
-        textView.snp.makeConstraints { make in
+        testView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.left.right.equalToSuperview().inset(24)
         }

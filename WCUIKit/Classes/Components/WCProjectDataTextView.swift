@@ -15,6 +15,27 @@ public enum WCProjectDataTextViewState {
 
 public class WCProjectDataTextView: UITextView {
     
+    public enum Layout {
+        case medium
+        case big
+        
+        var height: CGFloat {
+            switch self {
+            case .medium:
+                return Constants.mediumHeight
+            case .big:
+                return Constants.bigHeight
+            }
+        }
+    }
+    
+    private enum Constants {
+        static let mediumHeight: CGFloat = 80
+        static let bigHeight: CGFloat = 150
+    }
+    
+    private var layout: Layout
+    
     public var textViewState: WCProjectDataTextFieldState = .normal {
         didSet {
             switch textViewState {
@@ -36,7 +57,10 @@ public class WCProjectDataTextView: UITextView {
         textAlignment = .left
     }
     
-    override public init(frame: CGRect, textContainer: NSTextContainer?) {
+    public init(frame: CGRect,
+                         textContainer: NSTextContainer?,
+                         layout: Layout = .medium) {
+        self.layout = layout
         super.init(frame: frame, textContainer: textContainer)
         applyViewCode()
     }
@@ -54,7 +78,7 @@ extension WCProjectDataTextView: ViewCodeProtocol {
     
     public func setupConstraints() {
         snp.makeConstraints { make in
-            make.height.equalTo(150)
+            make.height.equalTo(layout.height)
         }
     }
 }

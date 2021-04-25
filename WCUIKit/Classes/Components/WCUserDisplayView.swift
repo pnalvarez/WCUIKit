@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-public class UserDisplayView: UIView {
+public class WCUserDisplayView: UIView {
     
     public enum LayoutType {
         case small
@@ -74,10 +74,8 @@ public class UserDisplayView: UIView {
         static let infoTopMarginLarge: CGFloat = 12
     }
     
-    private lazy var photoImageView: UIImageView = {
-        let view = UIImageView(frame: .zero)
-        view.contentMode = .scaleToFill
-        view.clipsToBounds = true
+    private lazy var photoImageView: WCListItemImageView = {
+        let view = WCListItemImageView(frame: .zero)
         return view
     }()
     
@@ -159,7 +157,7 @@ public class UserDisplayView: UIView {
     }
 }
 
-extension UserDisplayView: ViewCodeProtocol {
+extension WCUserDisplayView: ViewCodeProtocol {
      
     public func buildViewHierarchy() {
         addSubview(photoImageView)
@@ -168,6 +166,9 @@ extension UserDisplayView: ViewCodeProtocol {
     }
     
     public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.equalTo(98)
+        }
         photoImageView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(photoMargin)
             make.left.equalToSuperview().inset(photoLeftMargin)
@@ -195,6 +196,6 @@ extension UserDisplayView: ViewCodeProtocol {
         ocupationLbl.text = ocupation
         nameLbl.font = ThemeFonts.RobotoBold(fontSize).rawValue
         ocupationLbl.font = ThemeFonts.RobotoRegular(fontSize).rawValue
-        photoImageView.sd_setImage(with: URL(string: photo ?? ""), completed: nil)
+        photoImageView.setImage(withURL: photo ?? "")
     }
 }

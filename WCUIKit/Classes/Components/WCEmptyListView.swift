@@ -82,13 +82,13 @@ public class WCEmptyListView: UIView {
     
     private enum Constants {
         static let smallContainerYOffset: CGFloat = -10
-        static let largeContainerYOffset: CGFloat = -40
+        static let largeContainerYOffset: CGFloat = -60
         static let smallestHeight: CGFloat = 40
         static let smallHeight: CGFloat = 46
         static let largeHeight: CGFloat = 46
         static let smallestWidth: CGFloat = 200
         static let smallWidth: CGFloat = 301
-        static let largeWidth: CGFloat = 301
+        static let largeWidth: CGFloat = 350
         static let smallestTopCircleTrailing: CGFloat = -11
         static let smallestBottomCircleTrailing: CGFloat = -5
         static let smallTopCircleTrailing: CGFloat = -36

@@ -23,14 +23,19 @@ public class WCListItemImageView: UIImageView {
         clipsToBounds = true
         layer.cornerRadius = frame.width / 2
         contentMode = .scaleAspectFill
-        sd_imageIndicator = SDWebImageActivityIndicator.gray
         applyViewCode()
     }
     
     public func setImage(withURL url: String) {
+        sd_imageIndicator = SDWebImageActivityIndicator.gray
         sd_setImage(with: URL(string: url), completed: { _,_,_,_ in
             self.delegate?.didLoadImage?(imageView: self)
         })
+    }
+    
+    public func setImage(named string: String) {
+        sd_imageIndicator = nil
+        image = UIImage(named: string)
     }
 }
 
