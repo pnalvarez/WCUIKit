@@ -74,11 +74,11 @@ extension WCInternetErrorConnectionView: ViewCodeProtocol {
         alertContainerImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalTo(messageLbl.snp.top).offset(-37)
-            make.height.width.equalTo(140)
+            make.height.width.equalTo(100)
         }
         exclamationImageView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.height.equalTo(80)
+            make.height.equalTo(60)
             make.width.equalTo(20)
         }
         messageLbl.snp.makeConstraints { make in

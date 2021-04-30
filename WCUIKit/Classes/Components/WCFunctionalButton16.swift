@@ -27,5 +27,6 @@ public class WCFunctionalButton16: UIButton {
         super.layoutSubviews()
         titleLabel?.font = ThemeFonts.RobotoBold(16).rawValue
         setTitleColor(ThemeColors.mainRedColor.rawValue, for: .normal)
+        setTitleColor(ThemeColors.disconnectedRed.rawValue, for: .highlighted)
     }
 }
