@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '13.0'
   s.resources = 'WCUIKit/Assets/*.xcassets'
 
   s.source_files = 'WCUIKit/Classes/**/*'

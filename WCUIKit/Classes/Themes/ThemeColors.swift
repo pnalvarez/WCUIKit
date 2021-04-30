@@ -22,6 +22,9 @@ public enum ThemeColors {
     case borderGray
     case e3e0e0
     case e5dfdf
+    case c4c4c4
+    case hex969494
+    case hex707070
     
     public var rawValue: UIColor {
         switch self {
@@ -53,6 +56,12 @@ public enum ThemeColors {
             return #colorLiteral(red: 0.8901960784, green: 0.8784313725, blue: 0.8784313725, alpha: 1)
         case .e5dfdf:
             return #colorLiteral(red: 0.8980392157, green: 0.8745098039, blue: 0.8745098039, alpha: 1)
+        case .c4c4c4:
+            return #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        case .hex969494:
+            return #colorLiteral(red: 0.5882352941, green: 0.5803921569, blue: 0.5803921569, alpha: 1)
+        case .hex707070:
+            return #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
         }
     }
 }

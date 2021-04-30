@@ -60,6 +60,8 @@
 		3F503CFD2627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CF92627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift */; };
 		3F503D0C2627D6330066AB19 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503D0B2627D6330066AB19 /* ReusableView.swift */; };
 		3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */; };
+		3F7A0E98263B83E60067B354 /* WCInternetErrorConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A0E97263B83E60067B354 /* WCInternetErrorConnectionView.swift */; };
+		3F7A0E9A263B86820067B354 /* WCFunctionalButton16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A0E99263B86820067B354 /* WCFunctionalButton16.swift */; };
 		3F8E5A652634BDD6009B38AA /* WCSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */; };
 		3F9847112623BF4B000BE5BC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9846FE2623BF4B000BE5BC /* Roboto-Medium.ttf */; };
 		3F9847122623BF4B000BE5BC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9846FF2623BF4B000BE5BC /* Roboto-Light.ttf */; };
@@ -80,6 +82,7 @@
 		3F9847212623BF4B000BE5BC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F98470E2623BF4B000BE5BC /* Roboto-Bold.ttf */; };
 		3F9847222623BF4B000BE5BC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F98470F2623BF4B000BE5BC /* Roboto-Thin.ttf */; };
 		3F9847232623BF4B000BE5BC /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9847102623BF4B000BE5BC /* Roboto-Black.ttf */; };
+		3FC3CAC226351A1A007DFF99 /* WCSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */; };
 		41A17DCE3C993697D925585A26297D1C /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E75C6BE6F86DD2A12E90D87DD4C3A /* SDWebImageIndicator.m */; };
 		4268E348E6D5E9037A640ADC8E065009 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FEA217B25169EE510A476D78A0F8A /* ConstraintMakerEditable.swift */; };
 		42927E3270EBE2D3F27F2BAA1750736E /* SDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3842FB5E68D2D8C5B8CFEC2214632815 /* SDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -346,6 +349,8 @@
 		3F503CF92627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilderProtocol.swift; sourceTree = "<group>"; };
 		3F503D0B2627D6330066AB19 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCCathegoryListView.swift; sourceTree = "<group>"; };
+		3F7A0E97263B83E60067B354 /* WCInternetErrorConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCInternetErrorConnectionView.swift; sourceTree = "<group>"; };
+		3F7A0E99263B86820067B354 /* WCFunctionalButton16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCFunctionalButton16.swift; sourceTree = "<group>"; };
 		3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSecondaryButton.swift; sourceTree = "<group>"; };
 		3F9846FE2623BF4B000BE5BC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3F9846FF2623BF4B000BE5BC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -366,6 +371,7 @@
 		3F98470E2623BF4B000BE5BC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3F98470F2623BF4B000BE5BC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		3F9847102623BF4B000BE5BC /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSegmentedControl.swift; sourceTree = "<group>"; };
 		401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayView.swift; sourceTree = "<group>"; };
 		416A156201EE974E311CAEF6137B7F6F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		429239181AD9414DF0303C5A6A62EEB0 /* WCUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCUIKit-prefix.pch"; sourceTree = "<group>"; };
@@ -611,25 +617,28 @@
 				C389F8E9B8582DDA56B0856F7A63B368 /* OpionSelectorView.swift */,
 				8696E8CD26973B256A1519B47BA7CC6D /* OptionFilterButton.swift */,
 				FFAB1007B451E3ADCC95268320B2E893 /* OptionView.swift */,
-				B801A9CC403755785E55F1D915CC9979 /* WCProjectDataTextField.swift */,
-				3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */,
-				DB18090ACA39E0528D2B95B58F177038 /* WCProjectDataTextView.swift */,
-				401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */,
 				EFA4383371876119CBA56D54DC1C8E8F /* SelectionFilterView.swift */,
-				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
 				883D90B0699AB11B50AFA4825E19D953 /* WCActionButton.swift */,
 				E815F34587936BA90B80548B4E83331E /* WCBackButton.swift */,
 				3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */,
 				E10FA79AC07330BAD75DBC3204F87C7E /* WCCloseButton.swift */,
 				D16726EBADA0B4E7FEFEEE8732B2FB36 /* WCEmptyListView.swift */,
+				3F7A0E99263B86820067B354 /* WCFunctionalButton16.swift */,
 				467D8C26D40C029587F3AF6C8F4A9709 /* WCHeaderView.swift */,
 				E9327AECBF72802881C88C351F63F540 /* WCInputTextField.swift */,
+				3F7A0E97263B83E60067B354 /* WCInternetErrorConnectionView.swift */,
 				323DC1F6AE29A09C1F7F7A86AF5E8ED5 /* WCListItemImageView.swift */,
 				C23B5A6C259C5F4C40D1B24C305229E0 /* WCLoadingView.swift */,
 				383DA0E27F8BAEF16342930141850401 /* WCMovieStyleButton.swift */,
 				805A4B1B0DBE6D334FA4969EEE0BFF22 /* WCProgressView.swift */,
+				B801A9CC403755785E55F1D915CC9979 /* WCProjectDataTextField.swift */,
+				DB18090ACA39E0528D2B95B58F177038 /* WCProjectDataTextView.swift */,
 				BC51FA50BD3796086CC6374E7772BDEB /* WCSearchButton.swift */,
+				401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */,
 				CB22248CD72607F4D451B96AF18E6F4A /* WCSearchTextField.swift */,
+				3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */,
+				3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */,
+				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
 				3F503CE32627D5960066AB19 /* Cells */,
 			);
 			name = Components;
@@ -1348,6 +1357,7 @@
 			files = (
 				932FDAB0E578EA6C5E6ABAE55F3DC0BB /* DefaultBottomSheet.swift in Sources */,
 				8749A268E09A618E5F12AD34D8680E87 /* NetworkStatusView.swift in Sources */,
+				3FC3CAC226351A1A007DFF99 /* WCSegmentedControl.swift in Sources */,
 				3F503CFC2627D5BF0066AB19 /* TableViewSectionProtocol.swift in Sources */,
 				FF4DC86AB43CCBFDBAE258236EAEA92F /* OpionSelectorView.swift in Sources */,
 				3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */,
@@ -1381,8 +1391,10 @@
 				D8704950908DEC1761A97ABA1A09FE38 /* WCLoadingView.swift in Sources */,
 				5161584AC214CF010D4E537B14B8233C /* WCMovieStyleButton.swift in Sources */,
 				1B5AC760724E58F241D768BE8309A929 /* WCProgressView.swift in Sources */,
+				3F7A0E9A263B86820067B354 /* WCFunctionalButton16.swift in Sources */,
 				69435CDD94A0387E3E4569FFB1EF360A /* WCSearchButton.swift in Sources */,
 				3F503CEE2627D5AD0066AB19 /* UITableViewCell+.swift in Sources */,
+				3F7A0E98263B83E60067B354 /* WCInternetErrorConnectionView.swift in Sources */,
 				20F2C23E223B4BBD33F6DF3ED9AE01F3 /* WCSearchTextField.swift in Sources */,
 				333C76002C82E2B252A0B6CF92E560BF /* WCUIKit-dummy.m in Sources */,
 			);

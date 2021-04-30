@@ -18,6 +18,8 @@ enum AllComponentsLibrary: CaseIterable {
     case userDisplayView
     case backButton
     case secondaryButton
+    case wcsegmentedControl
+    case internetErrorConnectionView
     
     var text: String {
         switch self {
@@ -39,6 +41,10 @@ enum AllComponentsLibrary: CaseIterable {
             return "Back Button"
         case .secondaryButton:
             return "Secondary Button"
+        case .wcsegmentedControl:
+            return "WCSegmentedControl"
+        case .internetErrorConnectionView:
+            return "Internet Error Connection View"
         }
     }
     
@@ -62,6 +68,10 @@ enum AllComponentsLibrary: CaseIterable {
             return WCBackButtonViewController()
         case .secondaryButton:
             return WCSecondaryButtonController()
+        case .wcsegmentedControl:
+            return WCSegmentedControlController()
+        case .internetErrorConnectionView:
+            return WCInternetErrorConnectionController()
         }
     }
 }
