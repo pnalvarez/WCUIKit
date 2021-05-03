@@ -51,6 +51,10 @@ public class WCLoadingView: UIView {
         rotation.repeatCount = Float.greatestFiniteMagnitude
         movieImageView.layer.add(rotation, forKey: "rotationAnimation")
     }
+    
+    public func stopRotate() {
+        movieImageView.layer.removeAllAnimations()
+    }
 }
 
 extension WCLoadingView: ViewCodeProtocol {
