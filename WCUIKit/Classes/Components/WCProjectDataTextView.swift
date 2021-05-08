@@ -52,6 +52,7 @@ public class WCProjectDataTextView: UITextView {
         backgroundColor = ThemeColors.whiteThemeColor.rawValue
         textColor = .black
         font = ThemeFonts.RobotoRegular(16).rawValue
+        layer.borderColor = ThemeColors.borderGray.rawValue.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 4
         textAlignment = .left
