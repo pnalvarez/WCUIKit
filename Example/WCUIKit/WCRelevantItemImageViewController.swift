@@ -14,6 +14,7 @@ final class WCRelevanteItemImageViewController: UIViewController {
     private lazy var testView: WCRelevantItemImageView = {
         let view = WCRelevantItemImageView(frame: .zero)
         view.imageType = .local
+        view.delegate = self
         return view
     }()
     
@@ -21,6 +22,13 @@ final class WCRelevanteItemImageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         applyViewCode()
+    }
+}
+
+extension WCRelevanteItemImageViewController: WCRelevantItemImageViewDelegate {
+    
+    func didTapImageView(imageView: WCRelevantItemImageView) {
+        print("Tapped")
     }
 }
 

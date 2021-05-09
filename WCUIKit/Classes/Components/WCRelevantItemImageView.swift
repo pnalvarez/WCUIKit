@@ -11,6 +11,7 @@ import SDWebImage
 @objc
 public protocol WCRelevantItemImageViewDelegate: AnyObject {
     @objc optional func didLoadImage(imageView: WCRelevantItemImageView)
+    func didTapImageView(imageView: WCRelevantItemImageView)
 }
 
 public class WCRelevantItemImageView: UIImageView {
@@ -30,10 +31,12 @@ public class WCRelevantItemImageView: UIImageView {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
+        isUserInteractionEnabled = true
         clipsToBounds = true
         layer.cornerRadius = Constants.cornerRadius
         backgroundColor = ThemeColors.hexededed.rawValue
         contentMode = .scaleToFill
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap)))
         applyViewCode()
     }
     
@@ -48,6 +51,11 @@ public class WCRelevantItemImageView: UIImageView {
                 self.delegate?.didLoadImage?(imageView: self)
             })
         }
+    }
+    
+    @objc
+    private func didTap() {
+        delegate?.didTapImageView(imageView: self)
     }
 }
 
