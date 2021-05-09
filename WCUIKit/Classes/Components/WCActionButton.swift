@@ -10,6 +10,29 @@ import UIKit
 
 public class WCActionButton: UIButton {
     
+    public enum Layout {
+        case `default`
+        case small
+        
+        var fontSize: CGFloat {
+            switch self {
+            case .default:
+                return Constants.defaultFontSize
+            case .small:
+                return Constants.smallFontSize
+            }
+        }
+        
+        var height: CGFloat {
+            switch self {
+            case .default:
+                return Constants.defaultHeight
+            case .small:
+                return Constants.smallHeight
+            }
+        }
+    }
+    
     public enum State {
         case enabled
         case disabled
@@ -28,6 +51,13 @@ public class WCActionButton: UIButton {
         }
     }
     
+    private enum Constants {
+        static let defaultFontSize: CGFloat = 16
+        static let smallFontSize: CGFloat = 14
+        static let defaultHeight: CGFloat = 30
+        static let smallHeight: CGFloat = 25
+    }
+    
     public var text: String? {
         didSet {
             setTitle(text, for: .normal)
@@ -41,6 +71,12 @@ public class WCActionButton: UIButton {
         }
     }
     
+    public var layout: Layout = .default {
+        didSet {
+            layoutIfNeeded()
+        }
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = ThemeColors.mainRedColor.rawValue
@@ -50,11 +86,25 @@ public class WCActionButton: UIButton {
         super.layoutSubviews()
         layer.cornerRadius = 4
         setTitleColor(ThemeColors.whiteThemeColor.rawValue, for: .normal)
-        titleLabel?.font = ThemeFonts.RobotoBold(16).rawValue
+        titleLabel?.font = ThemeFonts.RobotoBold(layout.fontSize).rawValue
         titleLabel?.adjustsFontSizeToFitWidth = true
+        applyViewCode()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+}
+
+extension WCActionButton: ViewCodeProtocol {
+    
+    public func buildViewHierarchy() {
+        
+    }
+    
+    public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.equalTo(layout.height)
+        }
     }
 }
