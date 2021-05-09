@@ -190,7 +190,7 @@ extension WCUserDisplayView: ViewCodeProtocol {
         clipsToBounds = true
         backgroundColor = ThemeColors.backgroundGray.rawValue
         layer.borderWidth = 1
-        layer.borderColor = ThemeColors.e3e0e0.rawValue.cgColor
+        layer.borderColor = ThemeColors.hexe3e0e0.rawValue.cgColor
         layer.cornerRadius = 4
         nameLbl.text = name
         ocupationLbl.text = ocupation

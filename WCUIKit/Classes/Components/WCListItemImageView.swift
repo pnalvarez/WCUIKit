@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 @objc
-public protocol WCListItemImageViewDelegate: class {
+public protocol WCListItemImageViewDelegate: AnyObject {
     @objc optional func didLoadImage(imageView: WCListItemImageView)
 }
 

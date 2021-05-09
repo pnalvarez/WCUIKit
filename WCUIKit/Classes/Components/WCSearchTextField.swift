@@ -36,7 +36,7 @@ public class WCSearchTextField: UITextField {
         super.init(frame: frame)
         layer.cornerRadius = 4
         layer.borderWidth = 1
-        layer.borderColor = ThemeColors.e3e0e0.rawValue.cgColor
+        layer.borderColor = ThemeColors.hexe3e0e0.rawValue.cgColor
         font = ThemeFonts.RobotoRegular(14).rawValue
         textColor = .black
         textAlignment = .left

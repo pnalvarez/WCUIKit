@@ -45,6 +45,16 @@ public class WCInternetErrorConnectionView: UIView {
         return view
     }()
     
+    public override var isHidden: Bool {
+        didSet {
+            if !isHidden {
+                if let superview = self.superview {
+                    superview.bringSubviewToFront(self)
+                }
+            }
+        }
+    }
+    
     public weak var delegate: WCInternetErrorConnectionViewDelegate?
     
     override public func layoutSubviews() {

@@ -26,7 +26,7 @@ public class WCSecondaryButton: UIButton {
     public override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = 4
-        backgroundColor = ThemeColors.e3e0e0.rawValue
+        backgroundColor = ThemeColors.hexe3e0e0.rawValue
         setTitleColor(.black, for: .normal)
         titleLabel?.font = ThemeFonts.RobotoRegular(16).rawValue
         clipsToBounds = true

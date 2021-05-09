@@ -21,6 +21,7 @@ enum AllComponentsLibrary: CaseIterable {
     case wcsegmentedControl
     case internetErrorConnectionView
     case loadingView
+    case relevantImageView
     
     var text: String {
         switch self {
@@ -48,6 +49,8 @@ enum AllComponentsLibrary: CaseIterable {
             return "Internet Error Connection View"
         case .loadingView:
             return "Loading View"
+        case .relevantImageView:
+            return "Relevante Image View"
         }
     }
     
@@ -77,6 +80,8 @@ enum AllComponentsLibrary: CaseIterable {
             return WCInternetErrorConnectionController()
         case .loadingView:
             return WCLoadingViewController()
+        case .relevantImageView:
+            return WCRelevanteItemImageViewController()
         }
     }
 }

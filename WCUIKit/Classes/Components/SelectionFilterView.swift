@@ -94,7 +94,7 @@ extension SelectionFilterView: ViewCodeProtocol {
     
     public func configureViews() {
         layer.borderWidth = 1
-        layer.borderColor = ThemeColors.e3e0e0.rawValue.cgColor
+        layer.borderColor = ThemeColors.hexe3e0e0.rawValue.cgColor
         layer.cornerRadius = 4
         backgroundColor = .white
         clipsToBounds = true

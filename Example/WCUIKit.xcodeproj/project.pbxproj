@@ -19,6 +19,7 @@
 		3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */; };
 		3FBDC58626333D20007FA4F1 /* WCProjectDataTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */; };
 		3FBDC5B926333FDA007FA4F1 /* WCProjectDataTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */; };
+		3FC38C64264760DB0017599D /* WCRelevantItemImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C63264760DB0017599D /* WCRelevantItemImageViewController.swift */; };
 		3FC3CADD26351BF6007DFF99 /* WCSegmentedControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3CADC26351BF6007DFF99 /* WCSegmentedControlController.swift */; };
 		3FC3CB1926362AAB007DFF99 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB0626362AAA007DFF99 /* Roboto-Medium.ttf */; };
 		3FC3CB1A26362AAB007DFF99 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB0726362AAA007DFF99 /* Roboto-Light.ttf */; };
@@ -73,6 +74,7 @@
 		3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProgressViewController.swift; sourceTree = "<group>"; };
 		3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProjectDataTextFieldController.swift; sourceTree = "<group>"; };
 		3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProjectDataTextViewController.swift; sourceTree = "<group>"; };
+		3FC38C63264760DB0017599D /* WCRelevantItemImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRelevantItemImageViewController.swift; sourceTree = "<group>"; };
 		3FC3CADC26351BF6007DFF99 /* WCSegmentedControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSegmentedControlController.swift; sourceTree = "<group>"; };
 		3FC3CB0626362AAA007DFF99 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3FC3CB0726362AAA007DFF99 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				3FC3CADC26351BF6007DFF99 /* WCSegmentedControlController.swift */,
 				3F7A0E9B263B89060067B354 /* WCInternetErrorConnectionController.swift */,
 				3F3825EE263F8187006B6DCE /* WCLoadingViewController.swift */,
+				3FC38C63264760DB0017599D /* WCRelevantItemImageViewController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				3F8E59CF2633A52D009B38AA /* WCUserDisplayViewController.swift in Sources */,
 				3F7A0E9C263B89060067B354 /* WCInternetErrorConnectionController.swift in Sources */,
 				3FBDC5B926333FDA007FA4F1 /* WCProjectDataTextViewController.swift in Sources */,
+				3FC38C64264760DB0017599D /* WCRelevantItemImageViewController.swift in Sources */,
 				3F8E59F82633A855009B38AA /* WCBackButtonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
