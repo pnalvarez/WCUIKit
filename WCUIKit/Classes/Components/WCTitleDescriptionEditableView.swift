@@ -8,7 +8,7 @@
 import UIKit
 
 public protocol WCTitleDescriptionEditableViewDelegate: AnyObject {
-    func didTapSave(titleDescriptionView: WCTitleDescriptionEditableView)
+    func didTapSave(title: String, description: String, titleDescriptionView: WCTitleDescriptionEditableView)
 }
 
 public class WCTitleDescriptionEditableView: UIView {
@@ -137,7 +137,7 @@ public class WCTitleDescriptionEditableView: UIView {
         if state == .default {
             state = .editing
         } else if state == .editing {
-            delegate?.didTapSave(titleDescriptionView: self)
+            delegate?.didTapSave(title: titleTextField.text ?? "", description: sinopsisTextView.text ?? "",titleDescriptionView: self)
         }
     }
 }

@@ -42,7 +42,7 @@ extension WCTitleDescriptionEditableViewController: ViewCodeProtocol {
 
 extension WCTitleDescriptionEditableViewController: WCTitleDescriptionEditableViewDelegate {
     
-    func didTapSave(titleDescriptionView: WCTitleDescriptionEditableView) {
+    func didTapSave(title: String, description: String, titleDescriptionView: WCTitleDescriptionEditableView) {
         testView.state = .default
     }
 }

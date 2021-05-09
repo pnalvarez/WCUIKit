@@ -86,6 +86,7 @@
 		3FC38C6226475E780017599D /* WCRelevantItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6126475E780017599D /* WCRelevantItemImageView.swift */; };
 		3FC38C66264768AD0017599D /* WCTitleDescriptionEditableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */; };
 		3FC38C6826476CC40017599D /* WCSmallAuxiliarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */; };
+		3FC38C7026479BAA0017599D /* WCBulletEditableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6F26479BAA0017599D /* WCBulletEditableItemView.swift */; };
 		3FC3CAC226351A1A007DFF99 /* WCSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */; };
 		41A17DCE3C993697D925585A26297D1C /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E75C6BE6F86DD2A12E90D87DD4C3A /* SDWebImageIndicator.m */; };
 		4268E348E6D5E9037A640ADC8E065009 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FEA217B25169EE510A476D78A0F8A /* ConstraintMakerEditable.swift */; };
@@ -377,6 +378,7 @@
 		3FC38C6126475E780017599D /* WCRelevantItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRelevantItemImageView.swift; sourceTree = "<group>"; };
 		3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTitleDescriptionEditableView.swift; sourceTree = "<group>"; };
 		3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSmallAuxiliarButton.swift; sourceTree = "<group>"; };
+		3FC38C6F26479BAA0017599D /* WCBulletEditableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBulletEditableItemView.swift; sourceTree = "<group>"; };
 		3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSegmentedControl.swift; sourceTree = "<group>"; };
 		401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayView.swift; sourceTree = "<group>"; };
 		416A156201EE974E311CAEF6137B7F6F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
@@ -649,6 +651,7 @@
 				3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */,
 				3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */,
 				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
+				3FC38C6F26479BAA0017599D /* WCBulletEditableItemView.swift */,
 			);
 			name = Components;
 			path = WCUIKit/Classes/Components;
@@ -1384,6 +1387,7 @@
 				3F503CEF2627D5AD0066AB19 /* UITableView+.swift in Sources */,
 				3F7CC80026437B4C00513E3C /* WCContentView.swift in Sources */,
 				3F503CFA2627D5BF0066AB19 /* TableViewFactory.swift in Sources */,
+				3FC38C7026479BAA0017599D /* WCBulletEditableItemView.swift in Sources */,
 				E4873B0A618FC877E4956B9794104215 /* WCUserDisplayView.swift in Sources */,
 				CB67D2587F7E5FC225332A8532BADBD4 /* ViewCodeProtocol.swift in Sources */,
 				3FC38C6226475E780017599D /* WCRelevantItemImageView.swift in Sources */,

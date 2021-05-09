@@ -11,11 +11,14 @@ public class WCContentView: UIView {
     
     public enum ColorStyle {
         case white
+        case red
         
         var color: ThemeColors {
             switch self {
             case .white:
                 return .whiteThemeColor
+            case .red:
+                return .mainRedColor
             }
         }
     }

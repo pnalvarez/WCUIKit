@@ -24,6 +24,7 @@ enum AllComponentsLibrary: CaseIterable {
     case relevantImageView
     case smallAuxiliarButton
     case titleDescriptionEditable
+    case bulletEditableItem
     
     var text: String {
         switch self {
@@ -57,6 +58,8 @@ enum AllComponentsLibrary: CaseIterable {
             return "Small Auxiliar Button"
         case .titleDescriptionEditable:
             return "WCTitleDescriptionEditableText"
+        case .bulletEditableItem:
+            return "Bullet Editable Item"
         }
     }
     
@@ -92,6 +95,8 @@ enum AllComponentsLibrary: CaseIterable {
             return WCSmallAuxiliarButtonController()
         case .titleDescriptionEditable:
             return WCTitleDescriptionEditableViewController()
+        case .bulletEditableItem:
+            return WCBulletEditableItemViewController()
         }
     }
 }
