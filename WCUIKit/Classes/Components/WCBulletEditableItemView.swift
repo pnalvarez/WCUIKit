@@ -9,8 +9,8 @@ import UIKit
 
 @objc
 public protocol WCBulletEditableItemViewDelegate: AnyObject {
-    func didTapCancel(text: String, bulletEditableView: WCBulletEditableItemView)
-    @objc optional func didTapClose(bulletEditableView: WCBulletEditableItemView)
+    func didTapSave(text: String, bulletEditableView: WCBulletEditableItemView)
+    @objc optional func didTapCancel(bulletEditableView: WCBulletEditableItemView)
 }
 
 public class WCBulletEditableItemView: UIView {
@@ -136,7 +136,7 @@ public class WCBulletEditableItemView: UIView {
         if state == .default {
             state = .editing
         } else if state == .editing {
-            delegate?.didTapCancel(text: infoTextView.text ?? "", bulletEditableView: self)
+            delegate?.didTapSave(text: infoTextView.text ?? "", bulletEditableView: self)
         }
     }
 }

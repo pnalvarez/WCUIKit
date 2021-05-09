@@ -170,11 +170,11 @@ extension WCTitleDescriptionEditableView: ViewCodeProtocol {
             make.bottom.equalToSuperview().inset(26)
         }
         buttonStackView.snp.makeConstraints { make in
-            make.top.equalTo(sinopsisTextView.snp.bottom).offset(4)
+            make.bottom.equalToSuperview().inset(4)
             make.right.equalToSuperview().inset(4)
         }
         editButton.snp.makeConstraints { make in
-            make.width.equalTo(38)
+            make.width.equalTo(50)
         }
     }
     
