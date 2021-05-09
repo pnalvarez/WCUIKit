@@ -84,6 +84,8 @@
 		3F9847222623BF4B000BE5BC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F98470F2623BF4B000BE5BC /* Roboto-Thin.ttf */; };
 		3F9847232623BF4B000BE5BC /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9847102623BF4B000BE5BC /* Roboto-Black.ttf */; };
 		3FC38C6226475E780017599D /* WCRelevantItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6126475E780017599D /* WCRelevantItemImageView.swift */; };
+		3FC38C66264768AD0017599D /* WCTitleDescriptionEditableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */; };
+		3FC38C6826476CC40017599D /* WCSmallAuxiliarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */; };
 		3FC3CAC226351A1A007DFF99 /* WCSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */; };
 		41A17DCE3C993697D925585A26297D1C /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E75C6BE6F86DD2A12E90D87DD4C3A /* SDWebImageIndicator.m */; };
 		4268E348E6D5E9037A640ADC8E065009 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FEA217B25169EE510A476D78A0F8A /* ConstraintMakerEditable.swift */; };
@@ -373,6 +375,8 @@
 		3F98470F2623BF4B000BE5BC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		3F9847102623BF4B000BE5BC /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		3FC38C6126475E780017599D /* WCRelevantItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRelevantItemImageView.swift; sourceTree = "<group>"; };
+		3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTitleDescriptionEditableView.swift; sourceTree = "<group>"; };
+		3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSmallAuxiliarButton.swift; sourceTree = "<group>"; };
 		3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSegmentedControl.swift; sourceTree = "<group>"; };
 		401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayView.swift; sourceTree = "<group>"; };
 		416A156201EE974E311CAEF6137B7F6F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
@@ -614,6 +618,7 @@
 		2DBDC68D153DD17BE04C0C2734121BF2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3F503CE32627D5960066AB19 /* Cells */,
 				2C6B13890177406E4D304EE8E68E1AF1 /* DefaultBottomSheet.swift */,
 				C389F8E9B8582DDA56B0856F7A63B368 /* OpionSelectorView.swift */,
 				8696E8CD26973B256A1519B47BA7CC6D /* OptionFilterButton.swift */,
@@ -641,8 +646,9 @@
 				CB22248CD72607F4D451B96AF18E6F4A /* WCSearchTextField.swift */,
 				3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */,
 				3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */,
+				3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */,
+				3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */,
 				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
-				3F503CE32627D5960066AB19 /* Cells */,
 			);
 			name = Components;
 			path = WCUIKit/Classes/Components;
@@ -1363,6 +1369,7 @@
 				3F503CFC2627D5BF0066AB19 /* TableViewSectionProtocol.swift in Sources */,
 				FF4DC86AB43CCBFDBAE258236EAEA92F /* OpionSelectorView.swift in Sources */,
 				3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */,
+				3FC38C6826476CC40017599D /* WCSmallAuxiliarButton.swift in Sources */,
 				72F7DC3E4159F1A5EEBEB2AA9007D08C /* OptionFilterButton.swift in Sources */,
 				609A6463EB52867060A14D110E2B034C /* OptionView.swift in Sources */,
 				96E688ABE3728EFDD095054F4E7296DF /* WCProjectDataTextField.swift in Sources */,
@@ -1398,6 +1405,7 @@
 				3F7A0E9A263B86820067B354 /* WCFunctionalButton16.swift in Sources */,
 				69435CDD94A0387E3E4569FFB1EF360A /* WCSearchButton.swift in Sources */,
 				3F503CEE2627D5AD0066AB19 /* UITableViewCell+.swift in Sources */,
+				3FC38C66264768AD0017599D /* WCTitleDescriptionEditableView.swift in Sources */,
 				3F7A0E98263B83E60067B354 /* WCInternetErrorConnectionView.swift in Sources */,
 				20F2C23E223B4BBD33F6DF3ED9AE01F3 /* WCSearchTextField.swift in Sources */,
 				333C76002C82E2B252A0B6CF92E560BF /* WCUIKit-dummy.m in Sources */,
