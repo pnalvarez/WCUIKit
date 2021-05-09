@@ -30,7 +30,7 @@ public class WCCloseButton: UIButton {
     }
     
     private enum Constants {
-        static let smallDimension: CGFloat = 14
+        static let smallDimension: CGFloat = 25
         static let mediumDimension: CGFloat = 31
     }
     

@@ -7,8 +7,10 @@
 
 import UIKit
 
+@objc
 public protocol WCTitleDescriptionEditableViewDelegate: AnyObject {
     func didTapSave(title: String, description: String, titleDescriptionView: WCTitleDescriptionEditableView)
+    @objc optional func didTapCancel(titleDescriptionView: WCTitleDescriptionEditableView)
 }
 
 public class WCTitleDescriptionEditableView: UIView {

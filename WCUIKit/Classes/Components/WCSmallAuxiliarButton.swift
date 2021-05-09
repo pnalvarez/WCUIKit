@@ -11,7 +11,7 @@ public class WCSmallAuxiliarButton: UIButton {
     
     private enum Constants {
         static let cornerRadius: CGFloat = 4
-        static let height: CGFloat = 14
+        static let height: CGFloat = 25
     }
     
     public var text: String? {

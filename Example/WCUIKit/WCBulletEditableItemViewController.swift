@@ -28,7 +28,7 @@ final class WCBulletEditableItemViewController: UIViewController {
 
 extension WCBulletEditableItemViewController: WCBulletEditableItemViewDelegate {
     
-    func didTapSave(text: String, bulletEditableView: WCBulletEditableItemView) {
+    func didTapCancel(text: String, bulletEditableView: WCBulletEditableItemView) {
         
     }
 }

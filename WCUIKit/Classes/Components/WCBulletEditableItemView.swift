@@ -9,7 +9,7 @@ import UIKit
 
 @objc
 public protocol WCBulletEditableItemViewDelegate: AnyObject {
-    func didTapSave(text: String, bulletEditableView: WCBulletEditableItemView)
+    func didTapCancel(text: String, bulletEditableView: WCBulletEditableItemView)
     @objc optional func didTapClose(bulletEditableView: WCBulletEditableItemView)
 }
 
@@ -69,8 +69,8 @@ public class WCBulletEditableItemView: UIView {
         return view
     }()
     
-    private lazy var infoTextField: UITextField = {
-        let view = UITextField(frame: .zero)
+    private lazy var infoTextView: UITextView = {
+        let view = UITextView(frame: .zero, textContainer: nil)
         view.font = ThemeFonts.RobotoRegular(16).rawValue
         view.layer.borderWidth = 0
         view.isUserInteractionEnabled = false
@@ -84,7 +84,7 @@ public class WCBulletEditableItemView: UIView {
         view.axis = .horizontal
         view.alignment = .center
         view.distribution = .fill
-        view.spacing = 3
+        view.spacing = 8
         return view
     }()
     
@@ -128,7 +128,7 @@ public class WCBulletEditableItemView: UIView {
         editButton.text = state.auxiliarButtonText
         editButton.isHidden = state.editButtonIsHidden
         closeButton.isHidden = state.closeButtonIsHidden
-        infoTextField.isUserInteractionEnabled = state.interactionEnabled
+        infoTextView.isUserInteractionEnabled = state.interactionEnabled
     }
     
     @objc
@@ -136,7 +136,7 @@ public class WCBulletEditableItemView: UIView {
         if state == .default {
             state = .editing
         } else if state == .editing {
-            delegate?.didTapSave(text: infoTextField.text ?? "", bulletEditableView: self)
+            delegate?.didTapCancel(text: infoTextView.text ?? "", bulletEditableView: self)
         }
     }
 }
@@ -146,7 +146,7 @@ extension WCBulletEditableItemView: ViewCodeProtocol {
     public func buildViewHierarchy() {
         addSubview(bulletView)
         addSubview(mainTextLbl)
-        infoContainer.addSubview(infoTextField)
+        infoContainer.addSubview(infoTextView)
         buttonStackView.addArrangedSubview(editButton)
         buttonStackView.addArrangedSubview(closeButton)
         infoContainer.addSubview(buttonStackView)
@@ -154,6 +154,9 @@ extension WCBulletEditableItemView: ViewCodeProtocol {
     }
     
     public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.equalTo(140)
+        }
         bulletView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.left.equalToSuperview()
@@ -167,24 +170,23 @@ extension WCBulletEditableItemView: ViewCodeProtocol {
         infoContainer.snp.makeConstraints { make in
             make.top.equalTo(bulletView.snp.bottom).offset(12)
             make.left.right.equalToSuperview()
-            make.height.equalTo(36)
-        }
-        infoTextField.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
+            make.bottom.equalToSuperview()
+        } 
+        infoTextView.snp.makeConstraints { make in
+            make.top.right.equalToSuperview()
             make.left.equalToSuperview().inset(4)
-            make.right.equalTo(buttonStackView.snp.left).offset(4)
+            make.bottom.equalToSuperview().inset(40)
         }
         buttonStackView.snp.makeConstraints { make in
-            make.centerY.equalTo(infoTextField)
-            make.right.equalToSuperview().inset(3)
+            make.bottom.right.equalToSuperview().inset(4)
         }
         editButton.snp.makeConstraints { make in
-            make.width.equalTo(28)
+            make.width.equalTo(50)
         }
     }
     
     public func configureViews() {
         mainTextLbl.text = headerText
-        infoTextField.text = needingText
+        infoTextView.text = needingText
     }
 }
