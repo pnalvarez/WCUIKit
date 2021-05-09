@@ -8,7 +8,7 @@
 import UIKit
 
 public protocol WCTitleDescriptionEditableViewDelegate: AnyObject {
-    
+    func didTapSave(titleDescriptionView: WCTitleDescriptionEditableView)
 }
 
 public class WCTitleDescriptionEditableView: UIView {
@@ -16,6 +16,7 @@ public class WCTitleDescriptionEditableView: UIView {
     public enum State {
         case `default`
         case editing
+        case disabled
         
         var auxiliarButtonText: String {
             switch self {
@@ -23,11 +24,17 @@ public class WCTitleDescriptionEditableView: UIView {
                 return "Editar"
             case .editing:
                 return "Salvar"
+            case .disabled:
+                return ""
             }
         }
         
         var closeButtonIsHidden: Bool {
-            return self == .default
+            return self != .editing
+        }
+        
+        var editButtonIsHidden: Bool {
+            return self == .disabled
         }
         
         var interactionEnabled: Bool {
@@ -82,15 +89,95 @@ public class WCTitleDescriptionEditableView: UIView {
         return view
     }()
     
+    private lazy var editButton: WCSmallAuxiliarButton = {
+        let view = WCSmallAuxiliarButton(frame: .zero)
+        view.addTarget(self, action: #selector(didTapEditButton), for: .touchUpInside)
+        return view
+    }()
+    
+    private lazy var closeButton: WCCloseButton = {
+        let view = WCCloseButton(frame: .zero, layout: .small)
+        view.context = .component(callback: {
+            self.state = .default
+        })
+        return view
+    }()
+    
+    public var state: State = .default {
+        didSet {
+            updateStateUI()
+        }
+    }
+    
+    private var title: String?
+    private var descriptionText: String?
+    public weak var delegate: WCTitleDescriptionEditableViewDelegate?
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        updateStateUI()
+    }
+    
+    public func setup(title: String, description: String) {
+        self.title = title
+        self.descriptionText = description
+        applyViewCode()
+    }
+    
+    private func updateStateUI() {
+        editButton.text = state.auxiliarButtonText
+        editButton.isHidden = state.editButtonIsHidden
+        closeButton.isHidden = state.closeButtonIsHidden
+        titleTextField.isUserInteractionEnabled = state.interactionEnabled
+        sinopsisTextView.isUserInteractionEnabled = state.interactionEnabled
+    }
+    
+    @objc
+    private func didTapEditButton() {
+        if state == .default {
+            state = .editing
+        } else if state == .editing {
+            delegate?.didTapSave(titleDescriptionView: self)
+        }
+    }
 }
 
 extension WCTitleDescriptionEditableView: ViewCodeProtocol {
     
     public func buildViewHierarchy() {
-        
+        containerView.addSubview(titleTextField)
+        containerView.addSubview(sinopsisTextView)
+        buttonStackView.addArrangedSubview(editButton)
+        buttonStackView.addArrangedSubview(closeButton)
+        containerView.addSubview(buttonStackView)
+        addSubview(containerView)
     }
     
     public func setupConstraints() {
-        
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        titleTextField.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(8)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(19)
+        }
+        sinopsisTextView.snp.makeConstraints { make in
+            make.top.equalTo(titleTextField.snp.bottom).offset(10)
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().inset(26)
+        }
+        buttonStackView.snp.makeConstraints { make in
+            make.top.equalTo(sinopsisTextView.snp.bottom).offset(4)
+            make.right.equalToSuperview().inset(4)
+        }
+        editButton.snp.makeConstraints { make in
+            make.width.equalTo(38)
+        }
+    }
+    
+    public func configureViews() {
+        titleTextField.text = title
+        sinopsisTextView.text = descriptionText
     }
 }

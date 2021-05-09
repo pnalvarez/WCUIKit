@@ -24,6 +24,11 @@ public class WCCloseButton: UIButton {
         }
     }
     
+    public enum Context {
+        case modal
+        case component(callback: () -> Void)
+    }
+    
     private enum Constants {
         static let smallDimension: CGFloat = 14
         static let mediumDimension: CGFloat = 31
@@ -31,6 +36,7 @@ public class WCCloseButton: UIButton {
     
     public var associatedViewController: UIViewController?
     public var layout: Layout
+    public var context: Context = .modal
     
     public init(frame: CGRect,
                 layout: Layout = .medium) {
@@ -54,10 +60,15 @@ public class WCCloseButton: UIButton {
     
     @objc
     private func closeAction() {
-        if let navigationController = associatedViewController?.navigationController {
-            navigationController.dismiss(animated: true, completion: nil)
-        } else {
-            associatedViewController?.dismiss(animated: true, completion: nil)
+        switch context {
+        case .modal:
+            if let navigationController = associatedViewController?.navigationController {
+                navigationController.dismiss(animated: true, completion: nil)
+            } else {
+                associatedViewController?.dismiss(animated: true, completion: nil)
+            }
+        case .component(let callback):
+            callback()
         }
     }
 }

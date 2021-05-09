@@ -20,6 +20,14 @@ public class WCSmallAuxiliarButton: UIButton {
         }
     }
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = ThemeColors.hexe3e0e0.rawValue
