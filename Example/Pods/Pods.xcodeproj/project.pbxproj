@@ -88,6 +88,8 @@
 		3FC38C6826476CC40017599D /* WCSmallAuxiliarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */; };
 		3FC38C7026479BAA0017599D /* WCBulletEditableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6F26479BAA0017599D /* WCBulletEditableItemView.swift */; };
 		3FC3CAC226351A1A007DFF99 /* WCSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */; };
+		3FD79FDA264C583900026340 /* WCOptionsToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */; };
+		3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */; };
 		41A17DCE3C993697D925585A26297D1C /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E75C6BE6F86DD2A12E90D87DD4C3A /* SDWebImageIndicator.m */; };
 		4268E348E6D5E9037A640ADC8E065009 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FEA217B25169EE510A476D78A0F8A /* ConstraintMakerEditable.swift */; };
 		42927E3270EBE2D3F27F2BAA1750736E /* SDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3842FB5E68D2D8C5B8CFEC2214632815 /* SDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -380,6 +382,8 @@
 		3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSmallAuxiliarButton.swift; sourceTree = "<group>"; };
 		3FC38C6F26479BAA0017599D /* WCBulletEditableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBulletEditableItemView.swift; sourceTree = "<group>"; };
 		3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSegmentedControl.swift; sourceTree = "<group>"; };
+		3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbar.swift; sourceTree = "<group>"; };
+		3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarCollectionViewCell.swift; sourceTree = "<group>"; };
 		401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayView.swift; sourceTree = "<group>"; };
 		416A156201EE974E311CAEF6137B7F6F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		429239181AD9414DF0303C5A6A62EEB0 /* WCUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCUIKit-prefix.pch"; sourceTree = "<group>"; };
@@ -620,38 +624,8 @@
 		2DBDC68D153DD17BE04C0C2734121BF2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3FD79FD8264C580600026340 /* Views */,
 				3F503CE32627D5960066AB19 /* Cells */,
-				2C6B13890177406E4D304EE8E68E1AF1 /* DefaultBottomSheet.swift */,
-				C389F8E9B8582DDA56B0856F7A63B368 /* OpionSelectorView.swift */,
-				8696E8CD26973B256A1519B47BA7CC6D /* OptionFilterButton.swift */,
-				FFAB1007B451E3ADCC95268320B2E893 /* OptionView.swift */,
-				EFA4383371876119CBA56D54DC1C8E8F /* SelectionFilterView.swift */,
-				883D90B0699AB11B50AFA4825E19D953 /* WCActionButton.swift */,
-				E815F34587936BA90B80548B4E83331E /* WCBackButton.swift */,
-				3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */,
-				E10FA79AC07330BAD75DBC3204F87C7E /* WCCloseButton.swift */,
-				3F7CC7FF26437B4C00513E3C /* WCContentView.swift */,
-				D16726EBADA0B4E7FEFEEE8732B2FB36 /* WCEmptyListView.swift */,
-				3F7A0E99263B86820067B354 /* WCFunctionalButton16.swift */,
-				467D8C26D40C029587F3AF6C8F4A9709 /* WCHeaderView.swift */,
-				E9327AECBF72802881C88C351F63F540 /* WCInputTextField.swift */,
-				3F7A0E97263B83E60067B354 /* WCInternetErrorConnectionView.swift */,
-				323DC1F6AE29A09C1F7F7A86AF5E8ED5 /* WCListItemImageView.swift */,
-				C23B5A6C259C5F4C40D1B24C305229E0 /* WCLoadingView.swift */,
-				383DA0E27F8BAEF16342930141850401 /* WCMovieStyleButton.swift */,
-				805A4B1B0DBE6D334FA4969EEE0BFF22 /* WCProgressView.swift */,
-				B801A9CC403755785E55F1D915CC9979 /* WCProjectDataTextField.swift */,
-				DB18090ACA39E0528D2B95B58F177038 /* WCProjectDataTextView.swift */,
-				3FC38C6126475E780017599D /* WCRelevantItemImageView.swift */,
-				BC51FA50BD3796086CC6374E7772BDEB /* WCSearchButton.swift */,
-				401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */,
-				CB22248CD72607F4D451B96AF18E6F4A /* WCSearchTextField.swift */,
-				3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */,
-				3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */,
-				3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */,
-				3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */,
-				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
-				3FC38C6F26479BAA0017599D /* WCBulletEditableItemView.swift */,
 			);
 			name = Components;
 			path = WCUIKit/Classes/Components;
@@ -687,6 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */,
+				3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -724,6 +699,45 @@
 			);
 			name = Fonts;
 			path = WCUIKit/Assets/Fonts;
+			sourceTree = "<group>";
+		};
+		3FD79FD8264C580600026340 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C6B13890177406E4D304EE8E68E1AF1 /* DefaultBottomSheet.swift */,
+				C389F8E9B8582DDA56B0856F7A63B368 /* OpionSelectorView.swift */,
+				8696E8CD26973B256A1519B47BA7CC6D /* OptionFilterButton.swift */,
+				FFAB1007B451E3ADCC95268320B2E893 /* OptionView.swift */,
+				EFA4383371876119CBA56D54DC1C8E8F /* SelectionFilterView.swift */,
+				883D90B0699AB11B50AFA4825E19D953 /* WCActionButton.swift */,
+				E815F34587936BA90B80548B4E83331E /* WCBackButton.swift */,
+				3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */,
+				E10FA79AC07330BAD75DBC3204F87C7E /* WCCloseButton.swift */,
+				3F7CC7FF26437B4C00513E3C /* WCContentView.swift */,
+				D16726EBADA0B4E7FEFEEE8732B2FB36 /* WCEmptyListView.swift */,
+				3F7A0E99263B86820067B354 /* WCFunctionalButton16.swift */,
+				467D8C26D40C029587F3AF6C8F4A9709 /* WCHeaderView.swift */,
+				E9327AECBF72802881C88C351F63F540 /* WCInputTextField.swift */,
+				3F7A0E97263B83E60067B354 /* WCInternetErrorConnectionView.swift */,
+				323DC1F6AE29A09C1F7F7A86AF5E8ED5 /* WCListItemImageView.swift */,
+				C23B5A6C259C5F4C40D1B24C305229E0 /* WCLoadingView.swift */,
+				383DA0E27F8BAEF16342930141850401 /* WCMovieStyleButton.swift */,
+				805A4B1B0DBE6D334FA4969EEE0BFF22 /* WCProgressView.swift */,
+				B801A9CC403755785E55F1D915CC9979 /* WCProjectDataTextField.swift */,
+				DB18090ACA39E0528D2B95B58F177038 /* WCProjectDataTextView.swift */,
+				3FC38C6126475E780017599D /* WCRelevantItemImageView.swift */,
+				BC51FA50BD3796086CC6374E7772BDEB /* WCSearchButton.swift */,
+				401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */,
+				CB22248CD72607F4D451B96AF18E6F4A /* WCSearchTextField.swift */,
+				3F8E5A642634BDD6009B38AA /* WCSecondaryButton.swift */,
+				3FC3CAC126351A1A007DFF99 /* WCSegmentedControl.swift */,
+				3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */,
+				3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */,
+				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
+				3FC38C6F26479BAA0017599D /* WCBulletEditableItemView.swift */,
+				3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		413B392E35714CBE2B97AA29B6656BE6 /* SnapKit */ = {
@@ -1394,6 +1408,7 @@
 				3F8E5A652634BDD6009B38AA /* WCSecondaryButton.swift in Sources */,
 				133665E6DD42BE5B17BAC13273A1D9BF /* WCActionButton.swift in Sources */,
 				26E17C0ECCB0FA17F30115D42EF22E1C /* WCBackButton.swift in Sources */,
+				3FD79FDA264C583900026340 /* WCOptionsToolbar.swift in Sources */,
 				3F503CE52627D5960066AB19 /* CathegoryCollectionViewCell.swift in Sources */,
 				3F503CFD2627D5BF0066AB19 /* TableViewCellBuilderProtocol.swift in Sources */,
 				FF81A84E197AE705FB78C12CDAE308DA /* WCCloseButton.swift in Sources */,
@@ -1401,6 +1416,7 @@
 				76C542B4770C0D97FBA2C2611BE3585B /* WCHeaderView.swift in Sources */,
 				45A7DE6F41C397CA4581DA57FE5D3545 /* WCInputTextField.swift in Sources */,
 				3F503CFB2627D5BF0066AB19 /* Resettable.swift in Sources */,
+				3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */,
 				67EFCFCCBE6AE41B0140E9325EB9267E /* WCListItemImageView.swift in Sources */,
 				3F503CF02627D5AD0066AB19 /* UICollectionView+.swift in Sources */,
 				D8704950908DEC1761A97ABA1A09FE38 /* WCLoadingView.swift in Sources */,
