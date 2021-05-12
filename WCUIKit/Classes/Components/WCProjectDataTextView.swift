@@ -31,7 +31,7 @@ public class WCProjectDataTextView: UITextView {
     
     private enum Constants {
         static let mediumHeight: CGFloat = 80
-        static let bigHeight: CGFloat = 150
+        static let bigHeight: CGFloat = 117
     }
     
     private var layout: Layout
@@ -51,7 +51,7 @@ public class WCProjectDataTextView: UITextView {
         super.layoutSubviews()
         backgroundColor = ThemeColors.whiteThemeColor.rawValue
         textColor = .black
-        font = ThemeFonts.RobotoRegular(16).rawValue
+        font = ThemeFonts.RobotoRegular(12).rawValue
         layer.borderColor = ThemeColors.borderGray.rawValue.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 4

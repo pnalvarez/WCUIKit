@@ -35,7 +35,7 @@ extension WCTitleDescriptionEditableViewController: ViewCodeProtocol {
         testView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.left.right.equalToSuperview().inset(60)
-            make.height.equalTo(180)
+            make.height.equalTo(220)
         }
     }
 }
