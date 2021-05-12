@@ -53,9 +53,9 @@ public class WCActionButton: UIButton {
     
     private enum Constants {
         static let defaultFontSize: CGFloat = 16
-        static let smallFontSize: CGFloat = 14
+        static let smallFontSize: CGFloat = 12
         static let defaultHeight: CGFloat = 30
-        static let smallHeight: CGFloat = 25
+        static let smallHeight: CGFloat = 20
     }
     
     public var text: String? {
