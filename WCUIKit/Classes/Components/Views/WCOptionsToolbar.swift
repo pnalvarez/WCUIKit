@@ -39,6 +39,7 @@ public class WCOptionsToolbar: UIView {
     private var fixedWidthMode: Bool = false {
         didSet {
             collectionView.bounces = !fixedWidthMode
+            collectionView.isScrollEnabled = !fixedWidthMode
         }
     }
     
@@ -119,6 +120,9 @@ extension WCOptionsToolbar: ViewCodeProtocol {
     }
     
     public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.equalTo(42)
+        }
         collectionView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
             make.right.left.equalToSuperview().inset(10)

@@ -34,7 +34,6 @@ extension WCOptionsToolbarController: ViewCodeProtocol {
         testView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.left.right.equalToSuperview()
-            make.height.equalTo(42)
         }
     }
 }

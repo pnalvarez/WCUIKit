@@ -17,15 +17,15 @@ class WCOptionsToolbarCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            titleLbl.textColor = isSelected ? ThemeColors.mainRedColor.rawValue : ThemeColors.hex707070.rawValue
+            titleLbl.textColor = isSelected ? ThemeColors.mainRedColor.rawValue : ThemeColors.hex969494.rawValue
             selectionView.backgroundColor = isSelected ? ThemeColors.mainRedColor.rawValue : ThemeColors.whiteThemeColor.rawValue
         }
     }
     
     private lazy var titleLbl: UILabel = {
         let view = UILabel(frame: .zero)
-        view.font = ThemeFonts.RobotoBold(15).rawValue
-        view.textColor = ThemeColors.hex707070.rawValue
+        view.font = ThemeFonts.RobotoBold(16).rawValue
+        view.textColor = ThemeColors.hex969494.rawValue
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
         view.numberOfLines = 0
