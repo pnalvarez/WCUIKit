@@ -25,6 +25,7 @@ enum AllComponentsLibrary: CaseIterable {
     case smallAuxiliarButton
     case titleDescriptionEditable
     case bulletEditableItem
+    case optionsToolbar
     
     var text: String {
         switch self {
@@ -60,6 +61,8 @@ enum AllComponentsLibrary: CaseIterable {
             return "WCTitleDescriptionEditableText"
         case .bulletEditableItem:
             return "Bullet Editable Item"
+        case .optionsToolbar:
+            return "Options Toolbar"
         }
     }
     
@@ -97,6 +100,8 @@ enum AllComponentsLibrary: CaseIterable {
             return WCTitleDescriptionEditableViewController()
         case .bulletEditableItem:
             return WCBulletEditableItemViewController()
+        case .optionsToolbar:
+            return WCOptionsToolbarController()
         }
     }
 }

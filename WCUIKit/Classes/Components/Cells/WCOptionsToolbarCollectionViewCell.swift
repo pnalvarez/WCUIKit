@@ -24,7 +24,7 @@ class WCOptionsToolbarCollectionViewCell: UICollectionViewCell {
     
     private lazy var titleLbl: UILabel = {
         let view = UILabel(frame: .zero)
-        view.font = ThemeFonts.RobotoRegular(12).rawValue
+        view.font = ThemeFonts.RobotoBold(15).rawValue
         view.textColor = ThemeColors.hex707070.rawValue
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -54,8 +54,7 @@ class WCOptionsToolbarCollectionViewCell: UICollectionViewCell {
     
     public func setup(title: String) {
         self.title = title
-        
-        //TO DO
+        applyViewCode()
     }
 }
 
