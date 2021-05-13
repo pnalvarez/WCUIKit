@@ -16,7 +16,7 @@ public class WCOptionsToolbar: UIView {
     private enum Constants {
         static let selectionViewHeightValue: CGFloat = 4
         static let cellWidthMultiplier: Int = 9
-        static let cellHeight: CGFloat = 30
+        static let cellHeight: CGFloat = 42
         static let padding: CGFloat = 6
     }
     
@@ -35,7 +35,12 @@ public class WCOptionsToolbar: UIView {
     
     public weak var delegate: WCOptionsToolbarDelegate?
     private var optionNames: [String]?
-    private var fixedWidthMode: Bool = false
+    
+    private var fixedWidthMode: Bool = false {
+        didSet {
+            collectionView.bounces = !fixedWidthMode
+        }
+    }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)

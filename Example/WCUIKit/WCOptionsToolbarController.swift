@@ -13,7 +13,7 @@ final class WCOptionsToolbarController: UIViewController {
     
     private lazy var testView: WCOptionsToolbar = {
         let view = WCOptionsToolbar(frame: .zero)
-        view.setupToolbarLayout(optionNames: ["Usuários", "Projetos em andamento", "Projetos finalizados"])
+        view.setupToolbarLayout(optionNames: ["Usuários", "Projetos em andamento", "Projetos finalizados"], fixedWidth: true)
         return view
     }()
     
