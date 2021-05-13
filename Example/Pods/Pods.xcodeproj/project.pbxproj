@@ -83,6 +83,8 @@
 		3F9847212623BF4B000BE5BC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F98470E2623BF4B000BE5BC /* Roboto-Bold.ttf */; };
 		3F9847222623BF4B000BE5BC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F98470F2623BF4B000BE5BC /* Roboto-Thin.ttf */; };
 		3F9847232623BF4B000BE5BC /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9847102623BF4B000BE5BC /* Roboto-Black.ttf */; };
+		3F9A8EE9264DD70E000C37A5 /* AutoSizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A8EE8264DD70E000C37A5 /* AutoSizable.swift */; };
+		3F9A8EED264DE005000C37A5 /* WCEditProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A8EEC264DE005000C37A5 /* WCEditProgressView.swift */; };
 		3FC38C6226475E780017599D /* WCRelevantItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6126475E780017599D /* WCRelevantItemImageView.swift */; };
 		3FC38C66264768AD0017599D /* WCTitleDescriptionEditableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */; };
 		3FC38C6826476CC40017599D /* WCSmallAuxiliarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */; };
@@ -377,6 +379,8 @@
 		3F98470E2623BF4B000BE5BC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3F98470F2623BF4B000BE5BC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		3F9847102623BF4B000BE5BC /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		3F9A8EE8264DD70E000C37A5 /* AutoSizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizable.swift; sourceTree = "<group>"; };
+		3F9A8EEC264DE005000C37A5 /* WCEditProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCEditProgressView.swift; sourceTree = "<group>"; };
 		3FC38C6126475E780017599D /* WCRelevantItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRelevantItemImageView.swift; sourceTree = "<group>"; };
 		3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTitleDescriptionEditableView.swift; sourceTree = "<group>"; };
 		3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSmallAuxiliarButton.swift; sourceTree = "<group>"; };
@@ -704,6 +708,7 @@
 		3FD79FD8264C580600026340 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F9A8EEC264DE005000C37A5 /* WCEditProgressView.swift */,
 				2C6B13890177406E4D304EE8E68E1AF1 /* DefaultBottomSheet.swift */,
 				C389F8E9B8582DDA56B0856F7A63B368 /* OpionSelectorView.swift */,
 				8696E8CD26973B256A1519B47BA7CC6D /* OptionFilterButton.swift */,
@@ -866,6 +871,7 @@
 				3F503CF62627D5BF0066AB19 /* TableViewFactory.swift */,
 				3F503CF82627D5BF0066AB19 /* TableViewSectionProtocol.swift */,
 				57D0162CFADBC71DE9F94FE46090721D /* ViewCodeProtocol.swift */,
+				3F9A8EE8264DD70E000C37A5 /* AutoSizable.swift */,
 			);
 			name = Protocols;
 			path = WCUIKit/Classes/Protocols;
@@ -1383,6 +1389,7 @@
 			files = (
 				932FDAB0E578EA6C5E6ABAE55F3DC0BB /* DefaultBottomSheet.swift in Sources */,
 				3FC3CAC226351A1A007DFF99 /* WCSegmentedControl.swift in Sources */,
+				3F9A8EE9264DD70E000C37A5 /* AutoSizable.swift in Sources */,
 				3F503CFC2627D5BF0066AB19 /* TableViewSectionProtocol.swift in Sources */,
 				FF4DC86AB43CCBFDBAE258236EAEA92F /* OpionSelectorView.swift in Sources */,
 				3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */,
@@ -1419,6 +1426,7 @@
 				3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */,
 				67EFCFCCBE6AE41B0140E9325EB9267E /* WCListItemImageView.swift in Sources */,
 				3F503CF02627D5AD0066AB19 /* UICollectionView+.swift in Sources */,
+				3F9A8EED264DE005000C37A5 /* WCEditProgressView.swift in Sources */,
 				D8704950908DEC1761A97ABA1A09FE38 /* WCLoadingView.swift in Sources */,
 				5161584AC214CF010D4E537B14B8233C /* WCMovieStyleButton.swift in Sources */,
 				1B5AC760724E58F241D768BE8309A929 /* WCProgressView.swift in Sources */,
