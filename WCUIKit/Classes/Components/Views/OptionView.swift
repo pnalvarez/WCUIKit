@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-public protocol OptionViewDelegate: class {
+public protocol OptionViewDelegate: AnyObject {
     func didTapOptionView(selectedOptionView: OptionView, enabled: Bool)
 }
 

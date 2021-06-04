@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol WCCathegoryListViewDelegate: class {
+public protocol WCCathegoryListViewDelegate: AnyObject {
     func didSelectCathegory(atIndex index: Int)
 }
 

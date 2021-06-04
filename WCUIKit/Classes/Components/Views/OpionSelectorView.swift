@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol OptionSelectorViewDelegate: class {
+protocol OptionSelectorViewDelegate: AnyObject {
     func didSelectOption(optionSelectorView: OptionSelectorView, index: Int)
 }
 

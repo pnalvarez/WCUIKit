@@ -34,7 +34,7 @@ extension WCProfileHeaderViewController: WCProfileHeaderViewDelegate {
     
     func didTapRelationInteractionButton(relationState: WCProfileHeaderView.RelationState,
                                          profileHeaderView: WCProfileHeaderView) {
-        print("Tapped")
+        testView.setup(relation: .connected)
     }
 }
 

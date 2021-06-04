@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol WCSearchTextFieldDelegate: class {
+public protocol WCSearchTextFieldDelegate: AnyObject {
     func didTapSearch(searchTextField: WCSearchTextField)
 }
 

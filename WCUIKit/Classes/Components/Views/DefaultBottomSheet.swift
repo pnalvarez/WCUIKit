@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DefaultBottomSheetDelegate: class {
+protocol DefaultBottomSheetDelegate: AnyObject {
     
 }
 

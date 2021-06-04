@@ -8,7 +8,7 @@
 import UIKit
 
 @available(iOS 13.0, *)
-public protocol WCSegmentedControlDelegate: class {
+public protocol WCSegmentedControlDelegate: AnyObject {
     func didChangeSelectedSegment(segmentedControl: WCSegmentedControl, selectedIndex: Int)
 }
 

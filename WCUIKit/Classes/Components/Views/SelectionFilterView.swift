@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol SelectionFilterViewDelegate: class {
+public protocol SelectionFilterViewDelegate: AnyObject {
     func didTapBottomSheetButton()
 }
 

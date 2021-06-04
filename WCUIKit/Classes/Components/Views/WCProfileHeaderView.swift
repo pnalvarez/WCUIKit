@@ -111,11 +111,11 @@ public class WCProfileHeaderView: UIView {
         }
     }
     
-    public func setup(profileImage: String,
-                      name: String,
-                      email: String,
-                      phoneNumber: String,
-                      ocupation: String,
+    public func setup(profileImage: String? = nil,
+                      name: String? = nil,
+                      email: String? = nil,
+                      phoneNumber: String? = nil,
+                      ocupation: String? = nil,
                       relation: RelationState = .nothing) {
         self.profileImage = profileImage
         self.name = name
@@ -179,10 +179,21 @@ extension WCProfileHeaderView: ViewCodeProtocol {
     
     public func configureViews() {
         backgroundColor = .white
-        nameLbl.text = name
-        ocupationLbl.text = ocupation
-        emailLbl.text = email
-        phoneNumberLbl.text = phoneNumber
-        profileImageView.setImage(withURL: profileImage ?? "")
+
+        if let name = name {
+            nameLbl.text = name
+        }
+        if let ocupation = ocupation {
+            ocupationLbl.text = ocupation
+        }
+        if let email = email {
+            emailLbl.text = email
+        }
+        if let phoneNumber = phoneNumber {
+            phoneNumberLbl.text = phoneNumber
+        }
+        if let profileImage = profileImage {
+            profileImageView.setImage(withURL: profileImage)
+        }
     }
 }
