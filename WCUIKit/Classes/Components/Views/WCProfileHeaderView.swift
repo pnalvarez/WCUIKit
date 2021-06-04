@@ -146,9 +146,6 @@ extension WCProfileHeaderView: ViewCodeProtocol {
     }
     
     public func setupConstraints() {
-        snp.makeConstraints { make in
-            make.height.equalTo(Constants.height)
-        }
         profileImageView.snp.makeConstraints { make in
             make.width.equalTo(84)
             make.centerY.equalToSuperview()
@@ -158,6 +155,7 @@ extension WCProfileHeaderView: ViewCodeProtocol {
             make.top.equalTo(profileImageView)
             make.left.equalTo(profileImageView.snp.right).offset(12)
             make.right.equalTo(interactionButton.snp.left).offset(-12)
+            make.bottom.equalToSuperview()
         }
         interactionButton.snp.makeConstraints { make in
             make.top.equalTo(profileImageView)
