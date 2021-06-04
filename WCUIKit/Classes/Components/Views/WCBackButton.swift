@@ -8,16 +8,13 @@
 
 import UIKit
 
-public class WCBackButton: UIButton {
+public class WCBackButton: WCSideInteractionButton {
     
     public weak var associatedViewController: UIViewController?
 
     override public func layoutSubviews() {
         super.layoutSubviews()
-        setImage(UIImage(named: "voltar 1",
-                         in: nil,
-                         compatibleWith: nil),
-                 for: .normal)
+        setImage("voltar 1")
         addTarget(self, action: #selector(backAction), for: .touchUpInside)
         applyViewCode()
     }
@@ -25,18 +22,5 @@ public class WCBackButton: UIButton {
     @objc
     private func backAction() {
         associatedViewController?.navigationController?.popViewController(animated: true)
-    }
-}
-
-extension WCBackButton: ViewCodeProtocol {
-    
-    public func buildViewHierarchy() {
-        
-    }
-    
-    public func setupConstraints() {
-        snp.makeConstraints { make in
-            make.height.width.equalTo(31)
-        }
     }
 }

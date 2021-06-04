@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol WCProgressViewDelegate: class {
+public protocol WCProgressViewDelegate: AnyObject {
     func didChangeValue(_ progressView: WCProgressView, percentage: Float)
 }
 

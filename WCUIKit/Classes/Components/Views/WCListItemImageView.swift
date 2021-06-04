@@ -18,10 +18,19 @@ public class WCListItemImageView: UIImageView {
     
     public weak var delegate: WCListItemImageViewDelegate?
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override public func layoutSubviews() {
         super.layoutSubviews()
         clipsToBounds = true
         layer.cornerRadius = frame.width / 2
+        backgroundColor = .gray
         contentMode = .scaleAspectFill
         applyViewCode()
     }
