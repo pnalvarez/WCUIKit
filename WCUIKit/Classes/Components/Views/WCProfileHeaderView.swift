@@ -10,6 +10,7 @@ import UIKit
 public protocol WCProfileHeaderViewDelegate: AnyObject {
     func didTapRelationInteractionButton(relationState: WCProfileHeaderView.RelationState,
                                          profileHeaderView: WCProfileHeaderView)
+    func didTapEditProfile(profileHeaderView: WCProfileHeaderView)
     func didTapInviteToProjects(profileHeaderView: WCProfileHeaderView)
     func didTapConnections(profileHeaderView: WCProfileHeaderView)
 }
@@ -46,15 +47,26 @@ public class WCProfileHeaderView: UIView {
                 return true
             }
         }
+        
+        var editProfileButtonVisible: Bool {
+            switch self {
+            case .loggedUser:
+                return true
+            default:
+                return false
+            }
+        }
     }
     
     private enum Strings {
         static let inviteToProjects = "Convidar para projetos"
         static let connectionsButtonText = "%@ conexões"
+        static let editProfile = "Editar perfil"
     }
     
     private enum Constants {
-        static let stackSpacing: CGFloat = 2
+        static let infoStackSpacing: CGFloat = 2
+        static let buttonStackSpacing: CGFloat = 12
         static let fontSize: CGFloat = 16
         static let height: CGFloat = 112
     }
@@ -66,7 +78,7 @@ public class WCProfileHeaderView: UIView {
     
     private lazy var profileStackView: UIStackView = {
         let view = UIStackView(frame: .zero)
-        view.spacing = Constants.stackSpacing
+        view.spacing = Constants.infoStackSpacing
         view.alignment = .center
         view.axis = .vertical
         view.distribution = .fill
@@ -107,9 +119,25 @@ public class WCProfileHeaderView: UIView {
         return view
     }()
     
+    private lazy var buttonStackView: UIStackView = {
+        let view = UIStackView(frame: .zero)
+        view.axis = .vertical
+        view.alignment = .center
+        view.distribution = .fill
+        view.spacing = Constants.buttonStackSpacing
+        return view
+    }()
+    
     private lazy var interactionButton: WCSideInteractionButton = {
         let view = WCSideInteractionButton(frame: .zero)
         view.addTarget(self, action: #selector(didTapInteractionButton), for: .touchUpInside)
+        return view
+    }()
+    
+    private lazy var editProfileButton: WCTertiaryButton = {
+        let view = WCTertiaryButton(frame: .zero)
+        view.text = Strings.editProfile
+        view.addTarget(self, action: #selector(didTapEditProfile), for: .touchUpInside)
         return view
     }()
     
@@ -174,8 +202,14 @@ public class WCProfileHeaderView: UIView {
         delegate?.didTapConnections(profileHeaderView: self)
     }
     
+    @objc
+    private func didTapEditProfile() {
+        delegate?.didTapEditProfile(profileHeaderView: self)
+    }
+    
     private func setupVisibility() {
         inviteToProjectsButton.isHidden = !relation.inviteToProjectsButtonVisible
+        editProfileButton.isHidden = !relation.editProfileButtonVisible
     }
 }
 
@@ -187,23 +221,24 @@ extension WCProfileHeaderView: ViewCodeProtocol {
         profileStackView.addArrangedSubview(ocupationLbl)
         profileStackView.addArrangedSubview(emailLbl)
         profileStackView.addArrangedSubview(phoneNumberLbl)
-        addSubview(inviteToProjectsButton)
+        buttonStackView.addArrangedSubview(inviteToProjectsButton)
+        buttonStackView.addArrangedSubview(editProfileButton)
+        buttonStackView.addArrangedSubview(connectionsButton)
         addSubview(profileStackView)
-        addSubview(connectionsButton)
+        addSubview(buttonStackView)
         addSubview(interactionButton)
     }
     
     public func setupConstraints() {
         profileImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(20)
             make.width.equalTo(84)
-            make.centerY.equalToSuperview()
             make.left.equalToSuperview().inset(24)
         }
         profileStackView.snp.makeConstraints { make in
             make.top.equalTo(profileImageView)
             make.left.equalTo(profileImageView.snp.right).offset(12)
             make.right.equalTo(interactionButton.snp.left).offset(-12)
-            make.bottom.equalToSuperview()
         }
         interactionButton.snp.makeConstraints { make in
             make.top.equalTo(profileImageView)
@@ -221,14 +256,17 @@ extension WCProfileHeaderView: ViewCodeProtocol {
         phoneNumberLbl.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
         }
-        inviteToProjectsButton.snp.makeConstraints { make in
+        buttonStackView.snp.makeConstraints { make in
             make.top.equalTo(profileStackView.snp.bottom).offset(26)
-            make.centerX.equalToSuperview()
+            make.left.right.bottom.equalToSuperview()
+        }
+        inviteToProjectsButton.snp.makeConstraints { make in
             make.width.equalTo(171)
         }
+        editProfileButton.snp.makeConstraints { make in
+            make.left.right.equalToSuperview().inset(32)
+        }
         connectionsButton.snp.makeConstraints { make in
-            make.top.equalTo(inviteToProjectsButton.snp.bottom).offset(12)
-            make.centerX.equalTo(inviteToProjectsButton)
             make.width.equalTo(171)
         }
     }

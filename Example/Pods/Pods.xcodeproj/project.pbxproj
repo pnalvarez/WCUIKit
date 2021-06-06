@@ -95,6 +95,7 @@
 		3FD79FDA264C583900026340 /* WCOptionsToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */; };
 		3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */; };
 		3FF94ADA2669AA6C0032C769 /* WCSideInteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */; };
+		3FF94ADE266D58200032C769 /* WCTertiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */; };
 		41A17DCE3C993697D925585A26297D1C /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E75C6BE6F86DD2A12E90D87DD4C3A /* SDWebImageIndicator.m */; };
 		4268E348E6D5E9037A640ADC8E065009 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FEA217B25169EE510A476D78A0F8A /* ConstraintMakerEditable.swift */; };
 		42927E3270EBE2D3F27F2BAA1750736E /* SDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3842FB5E68D2D8C5B8CFEC2214632815 /* SDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -394,6 +395,7 @@
 		3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbar.swift; sourceTree = "<group>"; };
 		3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSideInteractionButton.swift; sourceTree = "<group>"; };
+		3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTertiaryButton.swift; sourceTree = "<group>"; };
 		401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayView.swift; sourceTree = "<group>"; };
 		416A156201EE974E311CAEF6137B7F6F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		429239181AD9414DF0303C5A6A62EEB0 /* WCUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCUIKit-prefix.pch"; sourceTree = "<group>"; };
@@ -750,6 +752,7 @@
 				3F35C88A2657476A00EF741E /* WCProfileHeaderView.swift */,
 				3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */,
 				3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */,
+				3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1418,6 +1421,7 @@
 				C2B971F1B43AF55B8161271901390059 /* SelectionFilterView.swift in Sources */,
 				809BFB40797E31075C4B6B2139260AC7 /* ThemeColors.swift in Sources */,
 				76EA50A89D0AFBAD866374580A2E608E /* ThemeFonts.swift in Sources */,
+				3FF94ADE266D58200032C769 /* WCTertiaryButton.swift in Sources */,
 				8D095C58F7698BDD9910DEC5E6086353 /* UIImage+.swift in Sources */,
 				3F3EF31F262A6D0F00887EA0 /* BaseSection.swift in Sources */,
 				3F503CEF2627D5AD0066AB19 /* UITableView+.swift in Sources */,

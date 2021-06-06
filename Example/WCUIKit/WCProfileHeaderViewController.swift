@@ -24,17 +24,17 @@ final class WCProfileHeaderViewController: UIViewController {
                        email: "email@hotmail.com",
                        phoneNumber: "(11)34587353",
                        ocupation: "Artista",
-                       relation: .userSentRequest)
+                       relation: .loggedUser)
         view.backgroundColor = .white
         applyViewCode()
     }
 }
 
 extension WCProfileHeaderViewController: WCProfileHeaderViewDelegate {
-        
+    
     func didTapRelationInteractionButton(relationState: WCProfileHeaderView.RelationState,
                                          profileHeaderView: WCProfileHeaderView) {
-        testView.setup(relation: .connected)
+
     }
     
     func didTapInviteToProjects(profileHeaderView: WCProfileHeaderView) {
@@ -42,6 +42,10 @@ extension WCProfileHeaderViewController: WCProfileHeaderViewDelegate {
     }
     
     func didTapConnections(profileHeaderView: WCProfileHeaderView) {
+        
+    }
+    
+    func didTapEditProfile(profileHeaderView: WCProfileHeaderView) {
         
     }
 }
