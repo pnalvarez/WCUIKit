@@ -10,6 +10,8 @@ import UIKit
 public protocol WCProfileHeaderViewDelegate: AnyObject {
     func didTapRelationInteractionButton(relationState: WCProfileHeaderView.RelationState,
                                          profileHeaderView: WCProfileHeaderView)
+    func didTapInviteToProjects(profileHeaderView: WCProfileHeaderView)
+    func didTapConnections(profileHeaderView: WCProfileHeaderView)
 }
 
 public class WCProfileHeaderView: UIView {
@@ -35,6 +37,20 @@ public class WCProfileHeaderView: UIView {
                 return "fazer-conexao 1"
             }
         }
+        
+        var inviteToProjectsButtonVisible: Bool {
+            switch self {
+            case .loggedUser:
+                return false
+            default:
+                return true
+            }
+        }
+    }
+    
+    private enum Strings {
+        static let inviteToProjects = "Convidar para projetos"
+        static let connectionsButtonText = "%@ conexões"
     }
     
     private enum Constants {
@@ -97,6 +113,19 @@ public class WCProfileHeaderView: UIView {
         return view
     }()
     
+    private lazy var inviteToProjectsButton: WCSecondaryButton = {
+        let view = WCSecondaryButton(frame: .zero)
+        view.text = Strings.inviteToProjects
+        view.addTarget(self, action: #selector(didTapInviteToProjects), for: .touchUpInside)
+        return view
+    }()
+    
+    private lazy var connectionsButton: WCActionButton = {
+        let view = WCActionButton(frame: .zero)
+        view.addTarget(self, action: #selector(didTapConnectionsButton), for: .touchUpInside)
+        return view
+    }()
+    
     public weak var delegate: WCProfileHeaderViewDelegate?
     
     private var profileImage: String?
@@ -104,6 +133,7 @@ public class WCProfileHeaderView: UIView {
     private var email: String?
     private var phoneNumber: String?
     private var ocupation: String?
+    private var connectionsNumber: Int?
     
     private var relation: RelationState = .nothing {
         didSet {
@@ -116,6 +146,7 @@ public class WCProfileHeaderView: UIView {
                       email: String? = nil,
                       phoneNumber: String? = nil,
                       ocupation: String? = nil,
+                      connectionsNumber: Int = 0,
                       relation: RelationState = .nothing) {
         self.profileImage = profileImage
         self.name = name
@@ -123,6 +154,7 @@ public class WCProfileHeaderView: UIView {
         self.phoneNumber = phoneNumber
         self.ocupation = ocupation
         self.relation = relation
+        self.connectionsNumber = connectionsNumber
         applyViewCode()
     }
     
@@ -130,6 +162,20 @@ public class WCProfileHeaderView: UIView {
     private func didTapInteractionButton() {
         delegate?.didTapRelationInteractionButton(relationState: relation,
                                                   profileHeaderView: self)
+    }
+    
+    @objc
+    private func didTapInviteToProjects() {
+        delegate?.didTapInviteToProjects(profileHeaderView: self)
+    }
+    
+    @objc
+    private func didTapConnectionsButton() {
+        delegate?.didTapConnections(profileHeaderView: self)
+    }
+    
+    private func setupVisibility() {
+        inviteToProjectsButton.isHidden = !relation.inviteToProjectsButtonVisible
     }
 }
 
@@ -141,7 +187,9 @@ extension WCProfileHeaderView: ViewCodeProtocol {
         profileStackView.addArrangedSubview(ocupationLbl)
         profileStackView.addArrangedSubview(emailLbl)
         profileStackView.addArrangedSubview(phoneNumberLbl)
+        addSubview(inviteToProjectsButton)
         addSubview(profileStackView)
+        addSubview(connectionsButton)
         addSubview(interactionButton)
     }
     
@@ -173,6 +221,16 @@ extension WCProfileHeaderView: ViewCodeProtocol {
         phoneNumberLbl.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
         }
+        inviteToProjectsButton.snp.makeConstraints { make in
+            make.top.equalTo(profileStackView.snp.bottom).offset(26)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(171)
+        }
+        connectionsButton.snp.makeConstraints { make in
+            make.top.equalTo(inviteToProjectsButton.snp.bottom).offset(12)
+            make.centerX.equalTo(inviteToProjectsButton)
+            make.width.equalTo(171)
+        }
     }
     
     public func configureViews() {
@@ -193,5 +251,9 @@ extension WCProfileHeaderView: ViewCodeProtocol {
         if let profileImage = profileImage {
             profileImageView.setImage(withURL: profileImage)
         }
+        if let connectionsNumber = connectionsNumber {
+            connectionsButton.text = String(format: Strings.connectionsButtonText, "\(connectionsNumber)")
+        }
+        setupVisibility()
     }
 }

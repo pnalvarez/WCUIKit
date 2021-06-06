@@ -31,10 +31,18 @@ final class WCProfileHeaderViewController: UIViewController {
 }
 
 extension WCProfileHeaderViewController: WCProfileHeaderViewDelegate {
-    
+        
     func didTapRelationInteractionButton(relationState: WCProfileHeaderView.RelationState,
                                          profileHeaderView: WCProfileHeaderView) {
         testView.setup(relation: .connected)
+    }
+    
+    func didTapInviteToProjects(profileHeaderView: WCProfileHeaderView) {
+        
+    }
+    
+    func didTapConnections(profileHeaderView: WCProfileHeaderView) {
+        
     }
 }
 
