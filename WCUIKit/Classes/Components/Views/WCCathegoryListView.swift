@@ -150,7 +150,7 @@ extension WCCathegoryListView: ViewCodeProtocol {
     
     public func setupConstraints() {
         snp.makeConstraints { make in
-            make.height.equalTo(479)
+            make.height.equalTo(Constants.height)
         }
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()

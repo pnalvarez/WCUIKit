@@ -45,6 +45,7 @@
 		3FC3CB2B26362AAB007DFF99 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB1826362AAB007DFF99 /* Roboto-Black.ttf */; };
 		3FD79FDE264CB3FF00026340 /* WCOptionsToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDD264CB3FF00026340 /* WCOptionsToolbarController.swift */; };
 		3FF94ADC2669B1250032C769 /* WCProfileHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADB2669B1250032C769 /* WCProfileHeaderViewController.swift */; };
+		3FF94AE2267050380032C769 /* WCAuxiliarActionButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94AE1267050380032C769 /* WCAuxiliarActionButtonController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -105,6 +106,7 @@
 		3FC3CB1826362AAB007DFF99 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		3FD79FDD264CB3FF00026340 /* WCOptionsToolbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarController.swift; sourceTree = "<group>"; };
 		3FF94ADB2669B1250032C769 /* WCProfileHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProfileHeaderViewController.swift; sourceTree = "<group>"; };
+		3FF94AE1267050380032C769 /* WCAuxiliarActionButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCAuxiliarActionButtonController.swift; sourceTree = "<group>"; };
 		5A4CD25557B56428788FA997 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WCUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				3FC38C71264861C30017599D /* WCBulletEditableItemViewController.swift */,
 				3FD79FDD264CB3FF00026340 /* WCOptionsToolbarController.swift */,
 				3FF94ADB2669B1250032C769 /* WCProfileHeaderViewController.swift */,
+				3FF94AE1267050380032C769 /* WCAuxiliarActionButtonController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				3F8E5A6C2634BF16009B38AA /* WCSecondaryButtonController.swift in Sources */,
 				3FBDC4AF2630DBC2007FA4F1 /* AllComponentsLibrary.swift in Sources */,
+				3FF94AE2267050380032C769 /* WCAuxiliarActionButtonController.swift in Sources */,
 				3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */,
 				3F8E59CF2633A52D009B38AA /* WCUserDisplayViewController.swift in Sources */,
 				3F7A0E9C263B89060067B354 /* WCInternetErrorConnectionController.swift in Sources */,

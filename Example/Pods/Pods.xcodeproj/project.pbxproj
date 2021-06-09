@@ -96,6 +96,7 @@
 		3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */; };
 		3FF94ADA2669AA6C0032C769 /* WCSideInteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */; };
 		3FF94ADE266D58200032C769 /* WCTertiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */; };
+		3FF94AE026704D820032C769 /* WCAuxilarActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */; };
 		41A17DCE3C993697D925585A26297D1C /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E75C6BE6F86DD2A12E90D87DD4C3A /* SDWebImageIndicator.m */; };
 		4268E348E6D5E9037A640ADC8E065009 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FEA217B25169EE510A476D78A0F8A /* ConstraintMakerEditable.swift */; };
 		42927E3270EBE2D3F27F2BAA1750736E /* SDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3842FB5E68D2D8C5B8CFEC2214632815 /* SDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -396,6 +397,7 @@
 		3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSideInteractionButton.swift; sourceTree = "<group>"; };
 		3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTertiaryButton.swift; sourceTree = "<group>"; };
+		3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCAuxilarActionButton.swift; sourceTree = "<group>"; };
 		401B0DAA2EE9A3DACD3521B8D0FCFF1A /* WCSearchDisplayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayView.swift; sourceTree = "<group>"; };
 		416A156201EE974E311CAEF6137B7F6F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		429239181AD9414DF0303C5A6A62EEB0 /* WCUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCUIKit-prefix.pch"; sourceTree = "<group>"; };
@@ -753,6 +755,7 @@
 				3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */,
 				3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */,
 				3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */,
+				3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1444,6 +1447,7 @@
 				3F503CFB2627D5BF0066AB19 /* Resettable.swift in Sources */,
 				3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */,
 				3F35C88D26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift in Sources */,
+				3FF94AE026704D820032C769 /* WCAuxilarActionButton.swift in Sources */,
 				67EFCFCCBE6AE41B0140E9325EB9267E /* WCListItemImageView.swift in Sources */,
 				3F503CF02627D5AD0066AB19 /* UICollectionView+.swift in Sources */,
 				3F9A8EED264DE005000C37A5 /* WCEditProgressView.swift in Sources */,

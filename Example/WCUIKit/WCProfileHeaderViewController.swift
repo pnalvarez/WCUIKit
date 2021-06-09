@@ -34,7 +34,7 @@ extension WCProfileHeaderViewController: WCProfileHeaderViewDelegate {
     
     func didTapRelationInteractionButton(relationState: WCProfileHeaderView.RelationState,
                                          profileHeaderView: WCProfileHeaderView) {
-
+        
     }
     
     func didTapInviteToProjects(profileHeaderView: WCProfileHeaderView) {

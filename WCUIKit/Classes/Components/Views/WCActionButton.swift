@@ -56,6 +56,7 @@ public class WCActionButton: UIButton {
         static let smallFontSize: CGFloat = 12
         static let defaultHeight: CGFloat = 30
         static let smallHeight: CGFloat = 20
+        static let radius: CGFloat = 4
     }
     
     public var text: String? {
@@ -84,7 +85,7 @@ public class WCActionButton: UIButton {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = 4
+        layer.cornerRadius = Constants.radius
         setTitleColor(ThemeColors.whiteThemeColor.rawValue, for: .normal)
         titleLabel?.font = ThemeFonts.RobotoBold(layout.fontSize).rawValue
         titleLabel?.adjustsFontSizeToFitWidth = true
