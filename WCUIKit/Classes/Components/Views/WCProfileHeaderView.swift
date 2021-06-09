@@ -148,8 +148,8 @@ public class WCProfileHeaderView: UIView {
         return view
     }()
     
-    private lazy var connectionsButton: WCActionButton = {
-        let view = WCActionButton(frame: .zero)
+    private lazy var connectionsButton: WCPrimaryActionButton = {
+        let view = WCPrimaryActionButton(frame: .zero)
         view.addTarget(self, action: #selector(didTapConnectionsButton), for: .touchUpInside)
         return view
     }()

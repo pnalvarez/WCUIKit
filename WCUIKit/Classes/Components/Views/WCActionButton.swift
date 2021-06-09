@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WCActionButton: UIButton {
+public class WCPrimaryActionButton: WCBaseActionButton {
     
     public enum Layout {
         case `default`
@@ -33,36 +33,12 @@ public class WCActionButton: UIButton {
         }
     }
     
-    public enum State {
-        case enabled
-        case disabled
-        
-        var backgroundColor: UIColor {
-            switch self {
-            case .enabled:
-                return ThemeColors.mainRedColor.rawValue
-            case .disabled:
-                return ThemeColors.emptyRedColor.rawValue
-            }
-        }
-        
-        var isUserInteractionEnabled: Bool {
-            return self == .enabled
-        }
-    }
-    
     private enum Constants {
         static let defaultFontSize: CGFloat = 16
         static let smallFontSize: CGFloat = 12
         static let defaultHeight: CGFloat = 30
         static let smallHeight: CGFloat = 20
         static let radius: CGFloat = 4
-    }
-    
-    public var text: String? {
-        didSet {
-            setTitle(text, for: .normal)
-        }
     }
     
     public var enableState: State = .enabled {
@@ -97,7 +73,7 @@ public class WCActionButton: UIButton {
     }
 }
 
-extension WCActionButton: ViewCodeProtocol {
+extension WCPrimaryActionButton: ViewCodeProtocol {
     
     public func buildViewHierarchy() {
         

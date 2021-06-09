@@ -11,14 +11,14 @@ import WCUIKit
 
 final class WCActionButtonViewController: UIViewController {
     
-    private lazy var actionButton: WCActionButton = {
-        let view = WCActionButton(frame: .zero)
+    private lazy var actionButton: WCPrimaryActionButton = {
+        let view = WCPrimaryActionButton(frame: .zero)
         view.text = "Lucky Guy"
         return view
     }()
     
-    private lazy var smallActionButton: WCActionButton = {
-        let view = WCActionButton(frame: .zero)
+    private lazy var smallActionButton: WCPrimaryActionButton = {
+        let view = WCPrimaryActionButton(frame: .zero)
         view.layout = .small
         view.text = "Lucky Guy"
         return view
