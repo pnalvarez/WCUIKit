@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WCCloseButton: UIButton {
+public class WCCloseButton: WCBaseButton {
     
     public enum Layout {
         case small

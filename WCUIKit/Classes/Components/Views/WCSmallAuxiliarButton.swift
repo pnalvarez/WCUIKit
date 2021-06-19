@@ -7,17 +7,11 @@
 
 import UIKit
 
-public class WCSmallAuxiliarButton: UIButton {
+public class WCSmallAuxiliarButton: WCBaseButton {
     
     private enum Constants {
         static let cornerRadius: CGFloat = 4
         static let height: CGFloat = 25
-    }
-    
-    public var text: String? {
-        didSet {
-            setTitle(text, for: .normal)
-        }
     }
     
     public override init(frame: CGRect) {

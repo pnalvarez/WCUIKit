@@ -13,7 +13,7 @@ public protocol WCBulletEditableItemViewDelegate: AnyObject {
     @objc optional func didTapCancel(bulletEditableView: WCBulletEditableItemView)
 }
 
-public class WCBulletEditableItemView: UIView {
+public class WCBulletEditableItemView: WCUIView {
     
     public enum State {
         case `default`
@@ -116,6 +116,10 @@ public class WCBulletEditableItemView: UIView {
         super.layoutSubviews()
         bulletView.layer.cornerRadius = bulletView.frame.width / 2
         updateUI()
+    }
+    
+    override func customConfigs() {
+        defaultBackgroundColor = .clear
     }
     
     public func setup(headerText: String, needingText: String) {

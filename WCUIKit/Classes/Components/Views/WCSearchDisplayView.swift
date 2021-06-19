@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WCSearchDisplayView: UIView {
+public class WCSearchDisplayView: WCUIView {
     
     private lazy var photoImageView: WCListItemImageView = {
         let view = WCListItemImageView(frame: .zero)

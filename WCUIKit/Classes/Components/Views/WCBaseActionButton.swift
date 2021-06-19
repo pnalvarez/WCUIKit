@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WCBaseActionButton: UIButton {
+public class WCBaseActionButton: WCBaseButton {
     
     public enum State {
         case enabled
@@ -24,12 +24,6 @@ public class WCBaseActionButton: UIButton {
         
         var isUserInteractionEnabled: Bool {
             return self == .enabled
-        }
-    }
-    
-    public var text: String? {
-        didSet {
-            setTitle(text, for: .normal)
         }
     }
 }

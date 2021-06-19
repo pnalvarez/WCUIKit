@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-public class WCUserDisplayView: UIView {
+public class WCUserDisplayView: WCUIView {
     
     public enum LayoutType {
         case small

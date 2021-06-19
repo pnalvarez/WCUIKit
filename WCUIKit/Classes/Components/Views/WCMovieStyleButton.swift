@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WCMovieStyleButton: UIButton {
+public class WCMovieStyleButton: WCBaseButton {
     
     private let disableColor = ThemeColors.emptyRedColor.rawValue
     private let enableColor = ThemeColors.mainRedColor.rawValue

@@ -15,7 +15,7 @@ public protocol WCProfileHeaderViewDelegate: AnyObject {
     func didTapConnections(profileHeaderView: WCProfileHeaderView)
 }
 
-public class WCProfileHeaderView: UIView {
+public class WCProfileHeaderView: WCUIView {
     
     public enum RelationState {
         case loggedUser

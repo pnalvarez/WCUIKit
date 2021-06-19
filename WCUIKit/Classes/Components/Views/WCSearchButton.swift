@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WCSearchButton: UIButton {
+class WCSearchButton: WCBaseButton {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)

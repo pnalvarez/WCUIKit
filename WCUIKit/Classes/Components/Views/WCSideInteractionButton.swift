@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WCSideInteractionButton: UIButton {
+public class WCSideInteractionButton: WCBaseButton{
     
     private enum Constants {
         static let dimensions: CGFloat = 31

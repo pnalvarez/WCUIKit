@@ -11,7 +11,7 @@ public protocol WCOptionsToolbarDelegate: AnyObject {
     func optionsToolbar(selectedButton index: Int, optionsToolbar: WCOptionsToolbar)
 }
 
-public class WCOptionsToolbar: UIView {
+public class WCOptionsToolbar: WCUIView {
     
     private enum Constants {
         static let selectionViewHeightValue: CGFloat = 4

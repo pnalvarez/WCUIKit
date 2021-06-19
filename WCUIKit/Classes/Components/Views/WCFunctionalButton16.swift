@@ -7,13 +7,7 @@
 
 import UIKit
 
-public class WCFunctionalButton16: UIButton {
-    
-    var text: String? {
-        didSet {
-            setTitle(text, for: .normal)
-        }
-    }
+public class WCFunctionalButton16: WCBaseButton {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)

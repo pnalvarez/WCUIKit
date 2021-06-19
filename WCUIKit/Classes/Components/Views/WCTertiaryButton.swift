@@ -7,18 +7,12 @@
 
 import UIKit
 
-public class WCTertiaryButton: UIButton {
+public class WCTertiaryButton: WCBaseButton {
     
     private enum Constants {
         static let fontSize: CGFloat = 16
         static let borderWidth: CGFloat = 1
         static let height: CGFloat = 30
-    }
-    
-    public var text: String? {
-        didSet {
-            setTitle(text, for: .normal)
-        }
     }
     
     public override init(frame: CGRect) {

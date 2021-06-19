@@ -13,7 +13,7 @@ public protocol WCEditProgressViewDelegate: AnyObject {
     func didClose()
 }
 
-public class WCEditProgressView: UIView {
+public class WCEditProgressView: WCUIView {
     
     private lazy var notchView: UIView = {
         let view = UIView(frame: .zero)

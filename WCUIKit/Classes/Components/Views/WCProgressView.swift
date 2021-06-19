@@ -12,7 +12,7 @@ public protocol WCProgressViewDelegate: AnyObject {
     func didChangeValue(_ progressView: WCProgressView, percentage: Float)
 }
 
-public class WCProgressView: UIView {
+public class WCProgressView: WCUIView {
     
     private lazy var slider: UISlider = {
         let view = UISlider(frame: .zero)

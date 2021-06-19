@@ -13,7 +13,7 @@ public protocol WCTitleDescriptionEditableViewDelegate: AnyObject {
     @objc optional func didTapCancel(titleDescriptionView: WCTitleDescriptionEditableView)
 }
 
-public class WCTitleDescriptionEditableView: UIView {
+public class WCTitleDescriptionEditableView: WCUIView {
     
     public enum State {
         case `default`

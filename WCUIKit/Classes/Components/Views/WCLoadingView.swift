@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WCLoadingView: UIView {
+public class WCLoadingView: WCUIView {
     
     private let movieLogo = UIImage(named: "logo-apenas")
     private let loadingLogo = UIImage(named: "Loading...")

@@ -7,13 +7,7 @@
 
 import UIKit
 
-public class WCSecondaryButton: UIButton {
-    
-    public var text: String? {
-        didSet {
-            setTitle(text, for: .normal)
-        }
-    }
+public class WCSecondaryButton: WCBaseButton {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)

@@ -11,10 +11,15 @@ public protocol WCCathegoryListViewDelegate: AnyObject {
     func didSelectCathegory(atIndex index: Int)
 }
 
-public class WCCathegoryListView: UIView {
+public class WCCathegoryListView: WCUIView {
     
     private enum Constants {
         static let height: CGFloat = 479
+        static let cathegoryHeight: CGFloat = 87
+        static let cathegoryWidth: CGFloat = 3.7
+        static let horizontalMargin: CGFloat = 26
+        static let minimumLineSpacing: CGFloat = 10
+        static let interItemSpacing: CGFloat = 4
     }
     
     private var cathegories: [String]? {
@@ -43,6 +48,10 @@ public class WCCathegoryListView: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         applyViewCode()
+    }
+    
+    override func customConfigs() {
+        defaultBackgroundColor = .clear
     }
                                    
     public func setup(cathegories: [String]) {
@@ -121,24 +130,24 @@ extension WCCathegoryListView: UICollectionViewDelegateFlowLayout {
                                layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.width / 3.7, height: 87)
+        return CGSize(width: collectionView.frame.width / Constants.cathegoryWidth, height: Constants.cathegoryHeight)
     }
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return Constants.minimumLineSpacing
     }
     
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 4
+        return Constants.interItemSpacing
     }
     
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 0, left: 26, bottom: 0, right: 26)
+        return UIEdgeInsets.init(top: 0, left: Constants.horizontalMargin, bottom: 0, right: Constants.horizontalMargin)
     }
 }
 

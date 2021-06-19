@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WCEmptyListView: UIView {
+public class WCEmptyListView: WCUIView {
     
     public enum Layout {
         case smallest

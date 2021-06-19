@@ -11,7 +11,7 @@ public protocol WCInternetErrorConnectionViewDelegate: AnyObject {
     func didTapTryAgain()
 }
 
-public class WCInternetErrorConnectionView: UIView {
+public class WCInternetErrorConnectionView: WCUIView {
     
     private lazy var alertContainerImageView: UIImageView = {
         let view = UIImageView(frame: .zero)
