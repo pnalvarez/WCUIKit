@@ -17,10 +17,12 @@ public class WCDialogView: WCUIView {
     
     private enum Constants {
         static let labelSpacing: CGFloat = 12
-        static let buttonSpacing: CGFloat = 12
-        static let spacingBetweenStacks: CGFloat = 32
+        static let buttonSpacing: CGFloat = 16
+        static let spacingBetweenStacks: CGFloat = 24
         static let radius: CGFloat = 14
         static let buttonWidth: CGFloat = 150
+        static let horizontalMargin: CGFloat = 48
+        static let borderWidth: CGFloat = 0.5
     }
     
     private lazy var titleLbl: WCUILabelRobotoBold18 = {
@@ -45,13 +47,13 @@ public class WCDialogView: WCUIView {
         view.spacing = Constants.labelSpacing
         return view
     }()
-
+    
     private lazy var doneButton: WCDialogButton = {
         let view = WCDialogButton(frame: .zero)
         view.addTarget(self, action: #selector(doneCallback), for: .touchUpInside)
         return view
     }()
-
+    
     private lazy var cancelButton: WCAuxiliarActionButton = {
         let view = WCAuxiliarActionButton(frame: .zero)
         view.addTarget(self, action: #selector(cancelCallback), for: .touchUpInside)
@@ -67,15 +69,25 @@ public class WCDialogView: WCUIView {
         return view
     }()
     
+    private lazy var translucentBackgroundView: WCUIView = {
+        let view = WCUIView(frame: .zero)
+        view.backgroundColor = .gray
+        return view
+    }()
+    
     private var doneAction: (() -> Void)?
     private var cancelAction: (() -> Void)?
+    private var dialogType: DialogType = .successNotification
+    
+    private let defaultBorderColor = UIColor.black.cgColor
     
     public override func layoutSubviews() {
         super.layoutSubviews()
     }
     
     override func customConfigs() {
-        backgroundColor = .white
+        backgroundColor = ThemeColors.hexfdfefe.rawValue
+        layer.cornerRadius = Constants.radius
     }
     
     public func setup() {
@@ -84,17 +96,19 @@ public class WCDialogView: WCUIView {
                 topController = presentedViewController
             }
             self.bounds = UIScreen.main.bounds
-            topController.view.addSubview(self)
+            showTranslucentView(contentView: topController.view)
+            constraintWindowUI(in: topController.view)
         }
     }
     
-    public func show(in contentView: UIView,
+    public func show(dialogType: DialogType = .interaction,
                      title: String,
                      description: String,
                      doneText: String,
                      cancelText: String,
-                     doneAction: @escaping () -> Void,
-                     cancelAction: @escaping () -> Void) {
+                     doneAction: (() -> Void)? = nil,
+                     cancelAction: (() -> Void)? = nil) {
+        self.dialogType = dialogType
         self.doneAction = doneAction
         self.cancelAction = cancelAction
         setup()
@@ -111,9 +125,19 @@ public class WCDialogView: WCUIView {
         descriptionLbl.text = textDescription
         doneButton.text = buttonSuccessText
         cancelButton.text = buttonCancelText
+        
+        switch dialogType {
+        case .errorNotification:
+            titleLbl.textColor = ThemeColors.alertRed.rawValue
+        case .interaction:
+            titleLbl.textColor = ThemeColors.black.rawValue
+        case .successNotification:
+            titleLbl.textColor = ThemeColors.connectedGreen.rawValue
+        }
     }
     
     public func hide(completion: @escaping () -> Void) {
+        hideTranslucentView()
         fadeOut(0.1, completion: { _ in
             completion()
         })
@@ -138,6 +162,33 @@ public class WCDialogView: WCUIView {
             }
         }
     }
+    
+    private func constraintWindowUI(in contentView: UIView) {
+        contentView.addSubview(self)
+        self.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.left.right.equalToSuperview().inset(Constants.horizontalMargin)
+        }
+        applyViewCode()
+    }
+    
+    private func showTranslucentView(contentView: UIView) {
+        UIView.animate(withDuration: 0.1, animations: {
+            contentView.addSubview(self.translucentBackgroundView)
+            self.translucentBackgroundView.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+            self.translucentBackgroundView.alpha = 0.9
+        })
+    }
+    
+    private func hideTranslucentView() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.translucentBackgroundView.alpha = 0
+        }, completion: { _ in
+            self.translucentBackgroundView.removeFromSuperview()
+        })
+    }
 }
 
 extension WCDialogView: ViewCodeProtocol {
@@ -146,7 +197,11 @@ extension WCDialogView: ViewCodeProtocol {
         labelStackView.addArrangedSubview(titleLbl)
         labelStackView.addArrangedSubview(descriptionLbl)
         buttonStackView.addArrangedSubview(doneButton)
-        buttonStackView.addArrangedSubview(cancelButton)
+        
+        if dialogType == .interaction {
+            buttonStackView.addArrangedSubview(cancelButton)
+        }
+    
         addSubview(labelStackView)
         addSubview(buttonStackView)
     }
@@ -158,7 +213,14 @@ extension WCDialogView: ViewCodeProtocol {
         }
         buttonStackView.snp.makeConstraints { make in
             make.top.equalTo(labelStackView.snp.bottom).offset(Constants.spacingBetweenStacks)
-            make.left.right.bottom.equalToSuperview()
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().inset(12)
+        }
+        titleLbl.snp.makeConstraints { make in
+            make.right.left.equalToSuperview()
+        }
+        descriptionLbl.snp.makeConstraints { make in
+            make.right.left.equalToSuperview()
         }
         doneButton.snp.makeConstraints { make in
             make.width.equalTo(Constants.buttonWidth)

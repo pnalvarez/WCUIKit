@@ -96,6 +96,8 @@
 		3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */; };
 		3FD7E06B267EA07900D98DE2 /* WCUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E06A267EA07900D98DE2 /* WCUIView.swift */; };
 		3FD7E06D267EAEB600D98DE2 /* WCBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */; };
+		3FD7E071267EB95F00D98DE2 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E070267EB95F00D98DE2 /* UIColor+.swift */; };
+		3FD7E073267EBDDB00D98DE2 /* WCBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */; };
 		3FF94ADA2669AA6C0032C769 /* WCSideInteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */; };
 		3FF94ADE266D58200032C769 /* WCTertiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */; };
 		3FF94AE026704D820032C769 /* WCAuxilarActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */; };
@@ -404,6 +406,8 @@
 		3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FD7E06A267EA07900D98DE2 /* WCUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIView.swift; sourceTree = "<group>"; };
 		3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBaseButton.swift; sourceTree = "<group>"; };
+		3FD7E070267EB95F00D98DE2 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBlurView.swift; sourceTree = "<group>"; };
 		3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSideInteractionButton.swift; sourceTree = "<group>"; };
 		3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTertiaryButton.swift; sourceTree = "<group>"; };
 		3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCAuxilarActionButton.swift; sourceTree = "<group>"; };
@@ -654,7 +658,6 @@
 			children = (
 				3FD79FD8264C580600026340 /* Views */,
 				3F503CE32627D5960066AB19 /* Cells */,
-				3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */,
 			);
 			name = Components;
 			path = WCUIKit/Classes/Components;
@@ -773,8 +776,10 @@
 				3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */,
 				3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */,
 				3FD7E06A267EA07900D98DE2 /* WCUIView.swift */,
+				3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */,
 				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
 				3FF94AE7267838A20032C769 /* Labels */,
+				3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -897,6 +902,7 @@
 		6C3F15B6DF820210E72316C6BE15F018 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3FD7E070267EB95F00D98DE2 /* UIColor+.swift */,
 				3F503CED2627D5AD0066AB19 /* UICollectionView+.swift */,
 				3F503CEC2627D5AD0066AB19 /* UITableView+.swift */,
 				3F503CEB2627D5AD0066AB19 /* UITableViewCell+.swift */,
@@ -1489,6 +1495,7 @@
 				D8704950908DEC1761A97ABA1A09FE38 /* WCLoadingView.swift in Sources */,
 				5161584AC214CF010D4E537B14B8233C /* WCMovieStyleButton.swift in Sources */,
 				3FF94ADA2669AA6C0032C769 /* WCSideInteractionButton.swift in Sources */,
+				3FD7E073267EBDDB00D98DE2 /* WCBlurView.swift in Sources */,
 				1B5AC760724E58F241D768BE8309A929 /* WCProgressView.swift in Sources */,
 				3F7A0E9A263B86820067B354 /* WCFunctionalButton16.swift in Sources */,
 				69435CDD94A0387E3E4569FFB1EF360A /* WCSearchButton.swift in Sources */,
@@ -1498,6 +1505,7 @@
 				20F2C23E223B4BBD33F6DF3ED9AE01F3 /* WCSearchTextField.swift in Sources */,
 				3FD7E06D267EAEB600D98DE2 /* WCBaseButton.swift in Sources */,
 				333C76002C82E2B252A0B6CF92E560BF /* WCUIKit-dummy.m in Sources */,
+				3FD7E071267EB95F00D98DE2 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

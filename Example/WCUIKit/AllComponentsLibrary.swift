@@ -28,6 +28,7 @@ enum AllComponentsLibrary: CaseIterable {
     case optionsToolbar
     case profileHeader
     case auxiliarActionButton
+    case dialogView
     
     var text: String {
         switch self {
@@ -69,6 +70,8 @@ enum AllComponentsLibrary: CaseIterable {
             return "Profile Header"
         case .auxiliarActionButton:
             return "Auxiliar Action Button"
+        case .dialogView:
+            return "Dialog View"
         }
     }
     
@@ -112,6 +115,8 @@ enum AllComponentsLibrary: CaseIterable {
             return WCProfileHeaderViewController()
         case .auxiliarActionButton:
             return WCAuxiliarActionButtonController()
+        case .dialogView:
+            return WCDialogViewController()
         }
     }
 }

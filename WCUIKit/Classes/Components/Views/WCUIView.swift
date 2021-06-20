@@ -70,9 +70,9 @@ public class WCUIView: UIView {
     }
     
     private func commonInit() {
-        configureBackground()
-        configureShadow()
-        configureBorder()
+//        configureBackground()
+//        configureShadow()
+//        configureBorder()
     }
     
     private func configureBackground() {
