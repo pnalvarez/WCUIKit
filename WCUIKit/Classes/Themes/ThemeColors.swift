@@ -14,6 +14,7 @@ public enum ThemeColors {
     case alertGray
     case backgroundGray
     case alertRed
+    case attentionYellow
     case normalText
     case black
     case dividerGray
@@ -42,6 +43,8 @@ public enum ThemeColors {
             return #colorLiteral(red: 0.9294117647, green: 0.9294117647, blue: 0.9294117647, alpha: 1)
         case .alertRed:
             return #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        case .attentionYellow:
+            return #colorLiteral(red: 0.9450980392, green: 0.768627451, blue: 0.05882352941, alpha: 1)
         case .normalText:
             return #colorLiteral(red: 0.1333333333, green: 0.1333333333, blue: 0.1333333333, alpha: 1)
         case .black:

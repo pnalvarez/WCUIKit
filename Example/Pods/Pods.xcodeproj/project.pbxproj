@@ -98,6 +98,7 @@
 		3FD7E06D267EAEB600D98DE2 /* WCBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */; };
 		3FD7E071267EB95F00D98DE2 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E070267EB95F00D98DE2 /* UIColor+.swift */; };
 		3FD7E073267EBDDB00D98DE2 /* WCBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */; };
+		3FD7E0752681803D00D98DE2 /* WCToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E0742681803D00D98DE2 /* WCToastView.swift */; };
 		3FF94ADA2669AA6C0032C769 /* WCSideInteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */; };
 		3FF94ADE266D58200032C769 /* WCTertiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */; };
 		3FF94AE026704D820032C769 /* WCAuxilarActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */; };
@@ -408,6 +409,7 @@
 		3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBaseButton.swift; sourceTree = "<group>"; };
 		3FD7E070267EB95F00D98DE2 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBlurView.swift; sourceTree = "<group>"; };
+		3FD7E0742681803D00D98DE2 /* WCToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCToastView.swift; sourceTree = "<group>"; };
 		3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSideInteractionButton.swift; sourceTree = "<group>"; };
 		3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTertiaryButton.swift; sourceTree = "<group>"; };
 		3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCAuxilarActionButton.swift; sourceTree = "<group>"; };
@@ -656,8 +658,8 @@
 		2DBDC68D153DD17BE04C0C2734121BF2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3FD79FD8264C580600026340 /* Views */,
 				3F503CE32627D5960066AB19 /* Cells */,
+				3FD79FD8264C580600026340 /* Views */,
 			);
 			name = Components;
 			path = WCUIKit/Classes/Components;
@@ -745,6 +747,8 @@
 				3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */,
 				E815F34587936BA90B80548B4E83331E /* WCBackButton.swift */,
 				3FF94AE32670561A0032C769 /* WCBaseActionButton.swift */,
+				3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */,
+				3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */,
 				3FC38C6F26479BAA0017599D /* WCBulletEditableItemView.swift */,
 				3F503D122627D6EF0066AB19 /* WCCathegoryListView.swift */,
 				E10FA79AC07330BAD75DBC3204F87C7E /* WCCloseButton.swift */,
@@ -775,11 +779,10 @@
 				3FC38C6726476CC40017599D /* WCSmallAuxiliarButton.swift */,
 				3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */,
 				3FC38C65264768AD0017599D /* WCTitleDescriptionEditableView.swift */,
+				3FD7E0742681803D00D98DE2 /* WCToastView.swift */,
 				3FD7E06A267EA07900D98DE2 /* WCUIView.swift */,
-				3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */,
 				1E83AB35C520913226FF5C89BE1B4DF8 /* WCUserDisplayView.swift */,
 				3FF94AE7267838A20032C769 /* Labels */,
-				3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1468,6 +1471,7 @@
 				3F503CFA2627D5BF0066AB19 /* TableViewFactory.swift in Sources */,
 				3FC38C7026479BAA0017599D /* WCBulletEditableItemView.swift in Sources */,
 				E4873B0A618FC877E4956B9794104215 /* WCUserDisplayView.swift in Sources */,
+				3FD7E0752681803D00D98DE2 /* WCToastView.swift in Sources */,
 				3FF94AE9267838E50032C769 /* WCUILabelRobotoBold18.swift in Sources */,
 				CB67D2587F7E5FC225332A8532BADBD4 /* ViewCodeProtocol.swift in Sources */,
 				3FC38C6226475E780017599D /* WCRelevantItemImageView.swift in Sources */,

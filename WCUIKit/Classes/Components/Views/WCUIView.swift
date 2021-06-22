@@ -64,6 +64,7 @@ public class WCUIView: UIView {
                  withDelay delay: TimeInterval = 0,
                  completion: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: duration,
+                       delay: delay,
                        animations: {
                         self.alpha = 0
                        }, completion: completion)
