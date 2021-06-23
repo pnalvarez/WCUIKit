@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WCUILabelRobotoBold18: UILabel {
+public class WCUILabelRobotoBold18: WCUILabel {
     
     private enum Constants {
         static let fontSize: CGFloat = 18
@@ -15,14 +15,15 @@ public class WCUILabelRobotoBold18: UILabel {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        font = ThemeFonts.RobotoBold(Constants.fontSize).rawValue
+    private func setup() {
+        setProperties(font: ThemeFonts.RobotoBold(Constants.fontSize).rawValue,
+                      textColor: ThemeColors.black.rawValue)
     }
 }

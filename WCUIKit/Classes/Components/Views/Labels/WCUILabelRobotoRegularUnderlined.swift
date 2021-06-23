@@ -7,12 +7,12 @@
 
 import UIKit
 
-public class WCUILabelRobotoRegularUnderlined: UILabel {
+public class WCUILabelRobotoRegularUnderlined: WCUILabel {
     
     private enum Constants {
         static let fontSize: CGFloat = 16
     }
-    
+
     public override var text: String? {
         didSet {
             guard let text = text else { return }
