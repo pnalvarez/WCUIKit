@@ -54,6 +54,18 @@ public class WCDialogView: WCUIView {
         return view
     }()
     
+    private lazy var confirmButton: WCAuxiliarActionButton = {
+        let view = WCAuxiliarActionButton(frame: .zero)
+        view.addTarget(self, action: #selector(doneCallback), for: .touchUpInside)
+        return view
+    }()
+    
+    private lazy var divider: WCContentView = {
+        let view = WCContentView()
+        view.style = .hex969494
+        return view
+    }()
+    
     private lazy var cancelButton: WCAuxiliarActionButton = {
         let view = WCAuxiliarActionButton(frame: .zero)
         view.addTarget(self, action: #selector(cancelCallback), for: .touchUpInside)
@@ -91,7 +103,7 @@ public class WCDialogView: WCUIView {
         layer.cornerRadius = Constants.radius
     }
     
-    public func setup() {
+    private func setup() {
         if let controller = topController {
             self.bounds = UIScreen.main.bounds
             showTranslucentView(contentView: controller.view)
@@ -171,7 +183,7 @@ public class WCDialogView: WCUIView {
         }
         applyViewCode()
     }
-    
+
     private func showTranslucentView(contentView: UIView) {
         UIView.animate(withDuration: 0.1, animations: {
             contentView.addSubview(self.translucentBackgroundView)

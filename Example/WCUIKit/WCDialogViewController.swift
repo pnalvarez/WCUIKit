@@ -15,10 +15,33 @@ final class WCDialogViewController: UIViewController {
         return view
     }()
     
-    private lazy var button: WCAuxiliarActionButton = {
+    private lazy var buttonSuccess: WCAuxiliarActionButton = {
         let view = WCAuxiliarActionButton(frame: .zero)
-        view.text = "Show"
-        view.addTarget(self, action: #selector(didTap), for: .touchUpInside)
+        view.text = "Show Success"
+        view.addTarget(self, action: #selector(didTapSuccess), for: .touchUpInside)
+        return view
+    }()
+    
+    private lazy var buttonInteraction: WCAuxiliarActionButton = {
+        let view = WCAuxiliarActionButton(frame: .zero)
+        view.text = "Show Interaction"
+        view.addTarget(self, action: #selector(didTapInteraction), for: .touchUpInside)
+        return view
+    }()
+    
+    private lazy var buttonError: WCAuxiliarActionButton = {
+        let view = WCAuxiliarActionButton(frame: .zero)
+        view.text = "Show Error"
+        view.addTarget(self, action: #selector(didTapError), for: .touchUpInside)
+        return view
+    }()
+    
+    private lazy var buttonStackView: UIStackView = {
+        let view = UIStackView(frame: .zero)
+        view.distribution = .fill
+        view.spacing = 24
+        view.alignment = .center
+        view.axis = .vertical
         return view
     }()
     
@@ -29,8 +52,28 @@ final class WCDialogViewController: UIViewController {
     }
     
     @objc
-    private func didTap() {
-        testView.show(dialogType: .successNotification,
+    private func didTapSuccess() {
+        WCDialogView().show(dialogType: .successNotification,
+                      in: self,
+                      title: "Título",
+                      description: "Descrição",
+                      doneText: "Sucesso",
+                      cancelText: "Cancelar")
+    }
+    
+    @objc
+    private func didTapInteraction() {
+        WCDialogView().show(dialogType: .interaction,
+                      in: self,
+                      title: "Título",
+                      description: "Descrição",
+                      doneText: "Sucesso",
+                      cancelText: "Cancelar")
+    }
+    
+    @objc
+    private func didTapError() {
+        WCDialogView().show(dialogType: .errorNotification,
                       in: self,
                       title: "Título",
                       description: "Descrição",
@@ -42,13 +85,25 @@ final class WCDialogViewController: UIViewController {
 extension WCDialogViewController: ViewCodeProtocol {
     
     func buildViewHierarchy() {
-        view.addSubview(button)
+        buttonStackView.addArrangedSubview(buttonSuccess)
+        buttonStackView.addArrangedSubview(buttonInteraction)
+        buttonStackView.addArrangedSubview(buttonError)
+        view.addSubview(buttonStackView)
     }
     
     func setupConstraints() {
-        button.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        buttonStackView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
             make.left.right.equalToSuperview().inset(24)
+        }
+        buttonSuccess.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+        }
+        buttonInteraction.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+        }
+        buttonError.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
         }
     }
 }
