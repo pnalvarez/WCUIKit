@@ -76,7 +76,7 @@ public class WCDialogView: WCUIView {
         let view = UIStackView(frame: .zero)
         view.alignment = .center
         view.distribution = .fill
-        view.axis = .vertical
+        view.axis = .horizontal
         view.spacing = Constants.spacingBetweenStacks
         return view
     }()
@@ -208,7 +208,7 @@ extension WCDialogView: ViewCodeProtocol {
     public func buildViewHierarchy() {
         labelStackView.addArrangedSubview(titleLbl)
         labelStackView.addArrangedSubview(descriptionLbl)
-        buttonStackView.addArrangedSubview(doneButton)
+        addSubview(doneButton)
         
         if dialogType == .interaction {
             buttonStackView.addArrangedSubview(cancelButton)
@@ -235,7 +235,9 @@ extension WCDialogView: ViewCodeProtocol {
             make.right.left.equalToSuperview()
         }
         doneButton.snp.makeConstraints { make in
-            make.width.equalTo(Constants.buttonWidth)
+            make.top.equalTo(labelStackView.snp.bottom).offset(24)
+            make.left.right.equalToSuperview().inset(24)
+            make.bottom.equalToSuperview().inset(12)
         }
         cancelButton.snp.makeConstraints { make in
             make.width.equalTo(Constants.buttonWidth)
