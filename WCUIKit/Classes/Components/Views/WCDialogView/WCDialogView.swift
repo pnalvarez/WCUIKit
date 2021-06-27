@@ -13,6 +13,35 @@ public class WCDialogView: WCUIView {
         case successNotification
         case errorNotification
         case interaction
+        
+        var buttonStackHidden: Bool {
+            switch self {
+            case .interaction:
+                return false
+            default:
+                return true
+            }
+        }
+        
+        var doneButtonIsHidden: Bool {
+            switch self {
+            case .interaction:
+                return true
+            default:
+                return false
+            }
+        }
+        
+        var titleColor: UIColor {
+            switch self {
+            case .successNotification:
+                return ThemeColors.connectedGreen.rawValue
+            case .interaction:
+                return ThemeColors.attentionYellow.rawValue
+            case .errorNotification:
+                return ThemeColors.alertRed.rawValue
+            }
+        }
     }
     
     private enum Constants {
@@ -20,9 +49,10 @@ public class WCDialogView: WCUIView {
         static let buttonSpacing: CGFloat = 16
         static let spacingBetweenStacks: CGFloat = 24
         static let radius: CGFloat = 14
-        static let buttonWidth: CGFloat = 150
+        static let buttonWidth: CGFloat = 75
         static let horizontalMargin: CGFloat = 48
         static let borderWidth: CGFloat = 0.5
+        static let dividerWidth: CGFloat = 1
     }
     
     private lazy var titleLbl: WCUILabelRobotoBold18 = {
@@ -68,6 +98,7 @@ public class WCDialogView: WCUIView {
     
     private lazy var cancelButton: WCAuxiliarActionButton = {
         let view = WCAuxiliarActionButton(frame: .zero)
+        view.colorStyle = .black
         view.addTarget(self, action: #selector(cancelCallback), for: .touchUpInside)
         return view
     }()
@@ -116,6 +147,7 @@ public class WCDialogView: WCUIView {
                      title: String,
                      description: String,
                      doneText: String,
+                     confirmText: String = "",
                      cancelText: String = "",
                      doneAction: (() -> Void)? = nil,
                      cancelAction: (() -> Void)? = nil) {
@@ -124,7 +156,11 @@ public class WCDialogView: WCUIView {
         self.doneAction = doneAction
         self.cancelAction = cancelAction
         setup()
-        setupUI(textTitle: title, textDescription: description, buttonSuccessText: doneText, buttonCancelText: cancelText)
+        setupUI(textTitle: title,
+                textDescription: description,
+                buttonSuccessText: doneText,
+                buttonConfirmText: confirmText,
+                buttonCancelText: cancelText)
         fadeIn(0.1)
     }
     
@@ -132,20 +168,16 @@ public class WCDialogView: WCUIView {
                          textTitle: String,
                          textDescription: String,
                          buttonSuccessText: String? = nil,
+                         buttonConfirmText: String? = nil,
                          buttonCancelText: String? = nil) {
         titleLbl.text = textTitle
         descriptionLbl.text = textDescription
         doneButton.text = buttonSuccessText
+        confirmButton.text = buttonConfirmText
         cancelButton.text = buttonCancelText
-        
-        switch dialogType {
-        case .errorNotification:
-            titleLbl.textColor = ThemeColors.alertRed.rawValue
-        case .interaction:
-            titleLbl.textColor = ThemeColors.black.rawValue
-        case .successNotification:
-            titleLbl.textColor = ThemeColors.connectedGreen.rawValue
-        }
+        buttonStackView.isHidden = dialogType.buttonStackHidden
+        doneButton.isHidden = dialogType.doneButtonIsHidden
+        titleLbl.textColor = dialogType.titleColor
     }
     
     public func hide(completion: @escaping () -> Void) {
@@ -209,11 +241,9 @@ extension WCDialogView: ViewCodeProtocol {
         labelStackView.addArrangedSubview(titleLbl)
         labelStackView.addArrangedSubview(descriptionLbl)
         addSubview(doneButton)
-        
-        if dialogType == .interaction {
-            buttonStackView.addArrangedSubview(cancelButton)
-        }
-    
+        buttonStackView.addArrangedSubview(cancelButton)
+        buttonStackView.addArrangedSubview(divider)
+        buttonStackView.addArrangedSubview(confirmButton)
         addSubview(labelStackView)
         addSubview(buttonStackView)
     }
@@ -225,7 +255,7 @@ extension WCDialogView: ViewCodeProtocol {
         }
         buttonStackView.snp.makeConstraints { make in
             make.top.equalTo(labelStackView.snp.bottom).offset(Constants.spacingBetweenStacks)
-            make.left.right.equalToSuperview()
+            make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().inset(12)
         }
         titleLbl.snp.makeConstraints { make in
@@ -239,8 +269,9 @@ extension WCDialogView: ViewCodeProtocol {
             make.left.right.equalToSuperview().inset(24)
             make.bottom.equalToSuperview().inset(12)
         }
-        cancelButton.snp.makeConstraints { make in
-            make.width.equalTo(Constants.buttonWidth)
+        divider.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.width.equalTo(Constants.dividerWidth)
         }
     }
 }

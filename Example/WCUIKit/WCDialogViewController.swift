@@ -68,6 +68,7 @@ final class WCDialogViewController: UIViewController {
                       title: "Título",
                       description: "Descrição",
                       doneText: "Sucesso",
+                      confirmText: "Confirmar",
                       cancelText: "Cancelar")
     }
     

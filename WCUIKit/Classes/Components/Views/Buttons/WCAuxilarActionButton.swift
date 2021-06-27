@@ -14,10 +14,38 @@ public class WCAuxiliarActionButton: WCBaseActionButton {
         static let fontSize: CGFloat = 16
     }
     
+    public enum ColorStyle {
+        case success
+        case black
+        
+        var titleColorEnabled: UIColor {
+            switch self {
+            case .success:
+                return ThemeColors.mainRedColor.rawValue
+            case .black:
+                return ThemeColors.black.rawValue
+            }
+        }
+        
+        var titleColorDisabled: UIColor {
+            switch self {
+            case .success:
+                return ThemeColors.emptyRedColor.rawValue
+            case .black:
+                return ThemeColors.hex969494.rawValue
+            }
+        }
+    }
+    
+    public var colorStyle: ColorStyle = .success {
+        didSet {
+            setupUI()
+        }
+    }
+    
     public var enableState: State = .enabled {
         didSet {
-            setTitleColor(enableState.backgroundColor, for: .normal)
-            isUserInteractionEnabled = enableState.isUserInteractionEnabled
+            setupUI()
         }
     }
     
@@ -35,6 +63,16 @@ public class WCAuxiliarActionButton: WCBaseActionButton {
         titleLabel?.font = ThemeFonts.RobotoBold(Constants.fontSize).rawValue
         titleLabel?.adjustsFontSizeToFitWidth = true
         applyViewCode()
+    }
+    
+    private func setupUI() {
+        switch enableState {
+        case .enabled:
+            setTitleColor(colorStyle.titleColorEnabled, for: .normal)
+        case .disabled:
+            setTitleColor(colorStyle.titleColorDisabled, for: .normal)
+        }
+        isUserInteractionEnabled = enableState.isUserInteractionEnabled
     }
 }
 
