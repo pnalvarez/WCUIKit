@@ -77,6 +77,7 @@ public class WCDialogView: WCUIView {
     
     private var doneAction: (() -> Void)?
     private var cancelAction: (() -> Void)?
+    private var topController: UIViewController?
     private var dialogType: DialogType = .successNotification
     
     private let defaultBorderColor = UIColor.black.cgColor
@@ -91,24 +92,23 @@ public class WCDialogView: WCUIView {
     }
     
     public func setup() {
-        if var topController = UIApplication.shared.delegate?.window??.rootViewController {
-            while let presentedViewController = topController.presentedViewController {
-                topController = presentedViewController
-            }
+        if let controller = topController {
             self.bounds = UIScreen.main.bounds
-            showTranslucentView(contentView: topController.view)
-            constraintWindowUI(in: topController.view)
+            showTranslucentView(contentView: controller.view)
+            constraintUI(in: controller.view)
         }
     }
     
     public func show(dialogType: DialogType = .interaction,
+                     in viewController: UIViewController,
                      title: String,
                      description: String,
                      doneText: String,
-                     cancelText: String,
+                     cancelText: String = "",
                      doneAction: (() -> Void)? = nil,
                      cancelAction: (() -> Void)? = nil) {
         self.dialogType = dialogType
+        self.topController = viewController
         self.doneAction = doneAction
         self.cancelAction = cancelAction
         setup()
@@ -163,7 +163,7 @@ public class WCDialogView: WCUIView {
         }
     }
     
-    private func constraintWindowUI(in contentView: UIView) {
+    private func constraintUI(in contentView: UIView) {
         contentView.addSubview(self)
         self.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
@@ -209,7 +209,7 @@ extension WCDialogView: ViewCodeProtocol {
     public func setupConstraints() {
         labelStackView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(11)
-            make.left.right.equalToSuperview()
+            make.left.right.equalToSuperview().inset(12)
         }
         buttonStackView.snp.makeConstraints { make in
             make.top.equalTo(labelStackView.snp.bottom).offset(Constants.spacingBetweenStacks)

@@ -31,6 +31,7 @@ final class WCDialogViewController: UIViewController {
     @objc
     private func didTap() {
         testView.show(dialogType: .successNotification,
+                      in: self,
                       title: "Título",
                       description: "Descrição",
                       doneText: "Sucesso",
