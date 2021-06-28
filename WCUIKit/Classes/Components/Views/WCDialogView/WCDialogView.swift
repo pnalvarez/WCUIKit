@@ -37,7 +37,7 @@ public class WCDialogView: WCUIView {
             case .successNotification:
                 return ThemeColors.connectedGreen.rawValue
             case .interaction:
-                return ThemeColors.attentionYellow.rawValue
+                return ThemeColors.black.rawValue
             case .errorNotification:
                 return ThemeColors.alertRed.rawValue
             }
@@ -98,7 +98,7 @@ public class WCDialogView: WCUIView {
     
     private lazy var cancelButton: WCAuxiliarActionButton = {
         let view = WCAuxiliarActionButton(frame: .zero)
-        view.colorStyle = .black
+        view.colorStyle = .gray
         view.addTarget(self, action: #selector(cancelCallback), for: .touchUpInside)
         return view
     }()

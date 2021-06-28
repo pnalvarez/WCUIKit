@@ -100,6 +100,8 @@
 		3FD7E073267EBDDB00D98DE2 /* WCBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */; };
 		3FD7E0752681803D00D98DE2 /* WCToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E0742681803D00D98DE2 /* WCToastView.swift */; };
 		3FD7E0792683952600D98DE2 /* WCUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E0782683952600D98DE2 /* WCUILabel.swift */; };
+		3FDC66C826896F0E00054675 /* WCUILabelRobotoMedium14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC66C726896F0E00054675 /* WCUILabelRobotoMedium14.swift */; };
+		3FDC66CA2689707700054675 /* WCUILabelRobotoBold16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC66C92689707700054675 /* WCUILabelRobotoBold16.swift */; };
 		3FF94ADA2669AA6C0032C769 /* WCSideInteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */; };
 		3FF94ADE266D58200032C769 /* WCTertiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */; };
 		3FF94AE026704D820032C769 /* WCAuxilarActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */; };
@@ -412,6 +414,8 @@
 		3FD7E072267EBDDB00D98DE2 /* WCBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBlurView.swift; sourceTree = "<group>"; };
 		3FD7E0742681803D00D98DE2 /* WCToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCToastView.swift; sourceTree = "<group>"; };
 		3FD7E0782683952600D98DE2 /* WCUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabel.swift; sourceTree = "<group>"; };
+		3FDC66C726896F0E00054675 /* WCUILabelRobotoMedium14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoMedium14.swift; sourceTree = "<group>"; };
+		3FDC66C92689707700054675 /* WCUILabelRobotoBold16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoBold16.swift; sourceTree = "<group>"; };
 		3FF94AD92669AA6C0032C769 /* WCSideInteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSideInteractionButton.swift; sourceTree = "<group>"; };
 		3FF94ADD266D58200032C769 /* WCTertiaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTertiaryButton.swift; sourceTree = "<group>"; };
 		3FF94ADF26704D820032C769 /* WCAuxilarActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCAuxilarActionButton.swift; sourceTree = "<group>"; };
@@ -1012,6 +1016,8 @@
 				3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */,
 				3FF94AE8267838E50032C769 /* WCUILabelRobotoBold18.swift */,
 				3FF94AEA26783B410032C769 /* WCUILabelRobotoRegular14.swift */,
+				3FDC66C726896F0E00054675 /* WCUILabelRobotoMedium14.swift */,
+				3FDC66C92689707700054675 /* WCUILabelRobotoBold16.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -1691,10 +1697,12 @@
 				3FC38C7026479BAA0017599D /* WCBulletEditableItemView.swift in Sources */,
 				E4873B0A618FC877E4956B9794104215 /* WCUserDisplayView.swift in Sources */,
 				3FD7E0752681803D00D98DE2 /* WCToastView.swift in Sources */,
+				3FDC66CA2689707700054675 /* WCUILabelRobotoBold16.swift in Sources */,
 				3FF94AE9267838E50032C769 /* WCUILabelRobotoBold18.swift in Sources */,
 				CB67D2587F7E5FC225332A8532BADBD4 /* ViewCodeProtocol.swift in Sources */,
 				3FC38C6226475E780017599D /* WCRelevantItemImageView.swift in Sources */,
 				3FF94AE6267837C70032C769 /* WCDialogView.swift in Sources */,
+				3FDC66C826896F0E00054675 /* WCUILabelRobotoMedium14.swift in Sources */,
 				3F8E5A652634BDD6009B38AA /* WCSecondaryButton.swift in Sources */,
 				133665E6DD42BE5B17BAC13273A1D9BF /* WCActionButton.swift in Sources */,
 				26E17C0ECCB0FA17F30115D42EF22E1C /* WCBackButton.swift in Sources */,

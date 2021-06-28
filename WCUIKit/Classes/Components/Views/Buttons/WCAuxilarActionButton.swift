@@ -16,14 +16,14 @@ public class WCAuxiliarActionButton: WCBaseActionButton {
     
     public enum ColorStyle {
         case success
-        case black
+        case gray
         
         var titleColorEnabled: UIColor {
             switch self {
             case .success:
                 return ThemeColors.mainRedColor.rawValue
-            case .black:
-                return ThemeColors.black.rawValue
+            case .gray:
+                return ThemeColors.hex969494.rawValue
             }
         }
         
@@ -31,7 +31,7 @@ public class WCAuxiliarActionButton: WCBaseActionButton {
             switch self {
             case .success:
                 return ThemeColors.emptyRedColor.rawValue
-            case .black:
+            case .gray:
                 return ThemeColors.hex969494.rawValue
             }
         }
