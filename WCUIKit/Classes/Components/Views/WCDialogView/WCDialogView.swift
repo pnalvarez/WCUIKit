@@ -55,15 +55,15 @@ public class WCDialogView: WCUIView {
         static let dividerWidth: CGFloat = 1
     }
     
-    private lazy var titleLbl: WCUILabelRobotoBold18 = {
-        let view = WCUILabelRobotoBold18(frame: .zero)
+    private lazy var titleLbl: WCUILabelRobotoBold18Black = {
+        let view = WCUILabelRobotoBold18Black(frame: .zero)
         view.textAlignment = .center
         view.numberOfLines = 0
         return view
     }()
     
-    private lazy var descriptionLbl: WCUILabelRobotoRegular14 = {
-        let view = WCUILabelRobotoRegular14(frame: .zero)
+    private lazy var descriptionLbl: WCUILabelRobotoRegular14Black = {
+        let view = WCUILabelRobotoRegular14Black(frame: .zero)
         view.textAlignment = .center
         view.numberOfLines = 0
         return view

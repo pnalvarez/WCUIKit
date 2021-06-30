@@ -103,8 +103,8 @@ public class WCProfileHeaderView: WCUIView {
         return view
     }()
     
-    private lazy var emailLbl: WCUILabelRobotoRegularUnderlined = {
-        let view = WCUILabelRobotoRegularUnderlined(frame: .zero)
+    private lazy var emailLbl: WCUILabelRobotoRegular16UnderlinedBlack = {
+        let view = WCUILabelRobotoRegular16UnderlinedBlack(frame: .zero)
         view.numberOfLines = 0
         view.textAlignment = .left
         return view

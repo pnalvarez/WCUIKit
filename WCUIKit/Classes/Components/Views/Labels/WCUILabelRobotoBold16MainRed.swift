@@ -1,13 +1,13 @@
 //
-//  WCUILabelRobotoBold16.swift
+//  WCUILabelRobotoBold16MainRed.swift
 //  WCUIKit
 //
-//  Created by Pedro Alvarez on 27/06/21.
+//  Created by Pedro Alvarez on 29/06/21.
 //
 
 import UIKit
 
-public class WCUILabelRobotoBold16: WCUILabel {
+public class WCUILabelRobotoBold16MainRed: WCUILabel {
     
     private enum Constants {
         static let fontSize: CGFloat = 16
@@ -24,6 +24,6 @@ public class WCUILabelRobotoBold16: WCUILabel {
     
     private func setup() {
         setProperties(font: ThemeFonts.RobotoBold(Constants.fontSize).rawValue,
-                      textColor: ThemeColors.black.rawValue)
+                      textColor: ThemeColors.mainRedColor.rawValue)
     }
 }

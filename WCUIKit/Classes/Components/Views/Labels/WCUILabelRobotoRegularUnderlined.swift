@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WCUILabelRobotoRegularUnderlined: WCUILabel {
+public class WCUILabelRobotoRegular16UnderlinedBlack: WCUILabel {
     
     private enum Constants {
         static let fontSize: CGFloat = 16

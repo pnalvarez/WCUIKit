@@ -30,6 +30,7 @@ enum AllComponentsLibrary: CaseIterable {
     case auxiliarActionButton
     case dialogView
     case toastView
+    case scrollView
     
     var text: String {
         switch self {
@@ -75,6 +76,8 @@ enum AllComponentsLibrary: CaseIterable {
             return "Dialog View"
         case .toastView:
             return "Toast View"
+        case .scrollView:
+            return "ScrollView"
         }
     }
     
@@ -122,6 +125,8 @@ enum AllComponentsLibrary: CaseIterable {
             return WCDialogViewController()
         case .toastView:
             return WCToastViewController()
+        case .scrollView:
+            return WCUIScrollViewController()
         }
     }
 }

@@ -31,8 +31,8 @@ public class WCToastView: WCUIView {
         static let radius: CGFloat = 8
     }
     
-    private lazy var titleLbl: WCUILabelRobotoMedium14 = {
-        let view = WCUILabelRobotoMedium14(frame: .zero)
+    private lazy var titleLbl: WCUILabelRobotoMedium14Black = {
+        let view = WCUILabelRobotoMedium14Black(frame: .zero)
         view.numberOfLines = 2
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
