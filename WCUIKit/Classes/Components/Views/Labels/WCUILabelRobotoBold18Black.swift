@@ -27,3 +27,4 @@ public class WCUILabelRobotoBold18Black: WCUILabel {
                       textColor: ThemeColors.black.rawValue)
     }
 }
+
