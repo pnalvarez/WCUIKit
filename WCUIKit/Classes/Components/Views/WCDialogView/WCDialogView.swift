@@ -142,9 +142,9 @@ public class WCDialogView: WCUIView {
         }
     }
     
-    public func show(dialogType: DialogType = .successNotification(doneText: ""),
+    public func show(dialogType: DialogType,
                      in viewController: UIViewController,
-                     title: String,
+                     title: String = "",
                      description: String = "",
                      doneAction: (() -> Void)? = nil,
                      cancelAction: (() -> Void)? = nil) {
