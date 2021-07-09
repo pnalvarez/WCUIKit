@@ -10,9 +10,9 @@ import UIKit
 public class WCDialogView: WCUIView {
     
     public enum DialogType {
-        case successNotification
-        case errorNotification
-        case interaction
+        case successNotification(doneText: String)
+        case errorNotification(doneText: String)
+        case interaction(confirmText: String, cancelText: String)
         
         var buttonStackHidden: Bool {
             switch self {
@@ -121,7 +121,7 @@ public class WCDialogView: WCUIView {
     private var doneAction: (() -> Void)?
     private var cancelAction: (() -> Void)?
     private var topController: UIViewController?
-    private var dialogType: DialogType = .successNotification
+    private var dialogType: DialogType = .successNotification(doneText: "")
     
     private let defaultBorderColor = UIColor.black.cgColor
     
@@ -142,13 +142,10 @@ public class WCDialogView: WCUIView {
         }
     }
     
-    public func show(dialogType: DialogType = .interaction,
+    public func show(dialogType: DialogType = .successNotification(doneText: ""),
                      in viewController: UIViewController,
                      title: String,
                      description: String = "",
-                     doneText: String,
-                     confirmText: String = "",
-                     cancelText: String = "",
                      doneAction: (() -> Void)? = nil,
                      cancelAction: (() -> Void)? = nil) {
         self.dialogType = dialogType
@@ -158,23 +155,26 @@ public class WCDialogView: WCUIView {
         setup()
         setupUI(textTitle: title,
                 textDescription: description,
-                buttonSuccessText: doneText,
-                buttonConfirmText: confirmText,
-                buttonCancelText: cancelText)
+                dialogType: dialogType)
         fadeIn(0.1)
     }
     
     private func setupUI(iconNameImage: String? = nil,
                          textTitle: String,
                          textDescription: String,
-                         buttonSuccessText: String? = nil,
-                         buttonConfirmText: String? = nil,
-                         buttonCancelText: String? = nil) {
+                         dialogType: DialogType) {
         titleLbl.text = textTitle
         descriptionLbl.text = textDescription
-        doneButton.text = buttonSuccessText
-        confirmButton.text = buttonConfirmText
-        cancelButton.text = buttonCancelText
+        
+        switch dialogType {
+        case .successNotification(let doneText):
+            doneButton.text = doneText
+        case .errorNotification(let doneText):
+            doneButton.text = doneText
+        case .interaction(let confirmText, let cancelText):
+            confirmButton.text = confirmText
+            cancelButton.text = cancelText
+        }
         buttonStackView.isHidden = dialogType.buttonStackHidden
         doneButton.isHidden = dialogType.doneButtonIsHidden
         titleLbl.textColor = dialogType.titleColor

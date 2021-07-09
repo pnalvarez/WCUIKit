@@ -53,33 +53,26 @@ final class WCDialogViewController: UIViewController {
     
     @objc
     private func didTapSuccess() {
-        WCDialogView().show(dialogType: .successNotification,
-                      in: self,
-                      title: "Título",
-                      description: "Descrição",
-                      doneText: "Sucesso",
-                      cancelText: "Cancelar")
+        WCDialogView().show(dialogType: .successNotification(doneText: "Ok"),
+                            in: self,
+                            title: "Título",
+                            description: "Descrição")
     }
     
     @objc
     private func didTapInteraction() {
-        WCDialogView().show(dialogType: .interaction,
+        WCDialogView().show(dialogType: .interaction(confirmText: "Ok", cancelText: "Cancelar"),
                       in: self,
                       title: "Título",
-                      description: "Descrição",
-                      doneText: "Sucesso",
-                      confirmText: "Confirmar",
-                      cancelText: "Cancelar")
+                      description: "Descrição")
     }
     
     @objc
     private func didTapError() {
-        WCDialogView().show(dialogType: .errorNotification,
+        WCDialogView().show(dialogType: .errorNotification(doneText: "Ok"),
                       in: self,
                       title: "Título",
-                      description: "Descrição",
-                      doneText: "Sucesso",
-                      cancelText: "Cancelar")
+                      description: "Descrição")
     }
 }
 
