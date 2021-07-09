@@ -145,7 +145,7 @@ public class WCDialogView: WCUIView {
     public func show(dialogType: DialogType = .interaction,
                      in viewController: UIViewController,
                      title: String,
-                     description: String,
+                     description: String = "",
                      doneText: String,
                      confirmText: String = "",
                      cancelText: String = "",
