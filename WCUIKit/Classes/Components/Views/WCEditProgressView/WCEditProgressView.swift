@@ -43,7 +43,7 @@ public class WCEditProgressView: WCBaseModalView {
         return view
     }()
     
-    private(set) var progress: Float = 0.0 {
+    public private(set) var progress: Float = 0.0 {
         didSet {
             progressView.percentage = progress/100
         }
