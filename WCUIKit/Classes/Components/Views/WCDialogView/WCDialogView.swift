@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WCDialogView: WCUIView{
+public class WCDialogView: WCBaseModalView {
     
     public enum DialogType {
         case successNotification(doneText: String)
@@ -111,10 +111,7 @@ public class WCDialogView: WCUIView{
         view.spacing = Constants.spacingBetweenStacks
         return view
     }()
-    
-    private var doneAction: (() -> Void)?
-    private var cancelAction: (() -> Void)?
-    private var topController: UIViewController?
+
     private var dialogType: DialogType = .successNotification(doneText: "")
     
     private let defaultBorderColor = UIColor.black.cgColor
@@ -128,14 +125,6 @@ public class WCDialogView: WCUIView{
         layer.cornerRadius = Constants.radius
     }
     
-    private func setup() {
-        if let controller = topController {
-            self.bounds = UIScreen.main.bounds
-            showTranslucentView(in: controller.view)
-            constraintUI(in: controller.view)
-        }
-    }
-    
     public func show(dialogType: DialogType,
                      in viewController: UIViewController,
                      title: String = "",
@@ -146,7 +135,7 @@ public class WCDialogView: WCUIView{
         self.topController = viewController
         self.doneAction = doneAction
         self.cancelAction = cancelAction
-        setup()
+        setup { applyViewCode() }
         setupUI(textTitle: title,
                 textDescription: description,
                 dialogType: dialogType)
@@ -172,42 +161,6 @@ public class WCDialogView: WCUIView{
         buttonStackView.isHidden = dialogType.buttonStackHidden
         doneButton.isHidden = dialogType.doneButtonIsHidden
         titleLbl.textColor = dialogType.titleColor
-    }
-    
-    public func hide(completion: @escaping () -> Void) {
-        hideTranslucentView()
-        fadeOut(0.1, completion: { _ in
-            completion()
-        })
-    }
-    
-    @objc
-    private func doneCallback() {
-        hide { [unowned self] in
-            self.removeFromSuperview()
-            if let doneAction = doneAction {
-                doneAction()
-            }
-        }
-    }
-    
-    @objc
-    private func cancelCallback() {
-        hide { [unowned self] in
-            self.removeFromSuperview()
-            if let cancelAction = cancelAction {
-                cancelAction()
-            }
-        }
-    }
-    
-    private func constraintUI(in contentView: UIView) {
-        contentView.addSubview(self)
-        self.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.left.right.equalToSuperview().inset(Constants.horizontalMargin)
-        }
-        applyViewCode()
     }
 }
 

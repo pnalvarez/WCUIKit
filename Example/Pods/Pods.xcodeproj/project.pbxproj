@@ -50,7 +50,7 @@
 		3D074AA7E6C8CB30B879378BAF6FE9C2 /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = FB48AF870DC86016346C88BC7B8D2A42 /* SDImageGraphics.m */; };
 		3E05153D7ED2768CCE755D51CD3C8184 /* SDWebImageError.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D9D25AC723F52B14749667E0EC7D6E /* SDWebImageError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F123E4C269B8D3A00509AB2 /* WCUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F123E4A269B8CEC00509AB2 /* WCUIConstants.swift */; };
-		3F123E4E269BDD3000509AB2 /* WCBaseAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F123E4D269BDD3000509AB2 /* WCBaseAlertView.swift */; };
+		3F123E4E269BDD3000509AB2 /* WCBaseModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F123E4D269BDD3000509AB2 /* WCBaseModalView.swift */; };
 		3F35C88B2657476A00EF741E /* WCProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35C88A2657476A00EF741E /* WCProfileHeaderView.swift */; };
 		3F35C88D26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */; };
 		3F503CE52627D5960066AB19 /* CathegoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */; };
@@ -367,7 +367,7 @@
 		3C6C69246F7D71CE1BF5F456EE6AF8D0 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		3F09054BE5262F22536C317D8C26099B /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
 		3F123E4A269B8CEC00509AB2 /* WCUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIConstants.swift; sourceTree = "<group>"; };
-		3F123E4D269BDD3000509AB2 /* WCBaseAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBaseAlertView.swift; sourceTree = "<group>"; };
+		3F123E4D269BDD3000509AB2 /* WCBaseModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBaseModalView.swift; sourceTree = "<group>"; };
 		3F35C88A2657476A00EF741E /* WCProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProfileHeaderView.swift; sourceTree = "<group>"; };
 		3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoRegularUnderlined.swift; sourceTree = "<group>"; };
 		3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CathegoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1006,7 +1006,7 @@
 				3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */,
 				3FD7E06A267EA07900D98DE2 /* WCUIView.swift */,
 				3F563918268C0053008BEC25 /* WCUIScrollView.swift */,
-				3F123E4D269BDD3000509AB2 /* WCBaseAlertView.swift */,
+				3F123E4D269BDD3000509AB2 /* WCBaseModalView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1689,7 +1689,7 @@
 				3F503CFC2627D5BF0066AB19 /* TableViewSectionProtocol.swift in Sources */,
 				FF4DC86AB43CCBFDBAE258236EAEA92F /* OpionSelectorView.swift in Sources */,
 				3F563919268C0053008BEC25 /* WCUIScrollView.swift in Sources */,
-				3F123E4E269BDD3000509AB2 /* WCBaseAlertView.swift in Sources */,
+				3F123E4E269BDD3000509AB2 /* WCBaseModalView.swift in Sources */,
 				3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */,
 				3FC38C6826476CC40017599D /* WCSmallAuxiliarButton.swift in Sources */,
 				72F7DC3E4159F1A5EEBEB2AA9007D08C /* OptionFilterButton.swift in Sources */,

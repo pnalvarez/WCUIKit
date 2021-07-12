@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WCEditProgressView: WCUIView {
+public class WCEditProgressView: WCBaseModalView {
     
     private enum Strings {
         static let concludedText = "Concluído"
@@ -49,10 +49,6 @@ public class WCEditProgressView: WCUIView {
         }
     }
     
-    private var doneAction: (() -> Void)?
-    private var cancelAction: (() -> Void)?
-    private var topController: UIViewController?
-    
     public override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -76,52 +72,8 @@ public class WCEditProgressView: WCUIView {
         self.doneAction = doneAction
         self.cancelAction = cancelAction
         mainLbl.text = text
-        setup()
+        setup { applyViewCode() }
         fadeIn(0.1)
-    }
-    
-    private func setup() {
-        if let controller = topController {
-            self.bounds = UIScreen.main.bounds
-            showTranslucentView(in: controller.view)
-            constraintUI(in: controller.view)
-        }
-    }
-    
-    private func constraintUI(in contentView: UIView) {
-        contentView.addSubview(self)
-        self.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.left.right.equalToSuperview().inset(Constants.horizontalMargin)
-        }
-        applyViewCode()
-    }
-    
-    public func hide(completion: @escaping () -> Void) {
-        hideTranslucentView()
-        fadeOut(0.1, completion: { _ in
-            completion()
-        })
-    }
-    
-    @objc
-    private func doneCallback() {
-        hide { [unowned self] in
-            self.removeFromSuperview()
-            if let doneAction = doneAction {
-                doneAction()
-            }
-        }
-    }
-    
-    @objc
-    private func cancelCallback() {
-        hide { [unowned self] in
-            self.removeFromSuperview()
-            if let cancelAction = cancelAction {
-                cancelAction()
-            }
-        }
     }
 }
 
