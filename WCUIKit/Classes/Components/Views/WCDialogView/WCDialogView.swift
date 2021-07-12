@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WCDialogView: WCUIView {
+public class WCDialogView: WCUIView{
     
     public enum DialogType {
         case successNotification(doneText: String)
@@ -112,12 +112,6 @@ public class WCDialogView: WCUIView {
         return view
     }()
     
-    private lazy var translucentBackgroundView: WCUIView = {
-        let view = WCUIView(frame: .zero)
-        view.backgroundColor = .gray
-        return view
-    }()
-    
     private var doneAction: (() -> Void)?
     private var cancelAction: (() -> Void)?
     private var topController: UIViewController?
@@ -137,7 +131,7 @@ public class WCDialogView: WCUIView {
     private func setup() {
         if let controller = topController {
             self.bounds = UIScreen.main.bounds
-            showTranslucentView(contentView: controller.view)
+            showTranslucentView(in: controller.view)
             constraintUI(in: controller.view)
         }
     }
@@ -214,24 +208,6 @@ public class WCDialogView: WCUIView {
             make.left.right.equalToSuperview().inset(Constants.horizontalMargin)
         }
         applyViewCode()
-    }
-
-    private func showTranslucentView(contentView: UIView) {
-        UIView.animate(withDuration: 0.1, animations: {
-            contentView.addSubview(self.translucentBackgroundView)
-            self.translucentBackgroundView.snp.makeConstraints { make in
-                make.edges.equalToSuperview()
-            }
-            self.translucentBackgroundView.alpha = 0.9
-        })
-    }
-    
-    private func hideTranslucentView() {
-        UIView.animate(withDuration: 0.1, animations: {
-            self.translucentBackgroundView.alpha = 0
-        }, completion: { _ in
-            self.translucentBackgroundView.removeFromSuperview()
-        })
     }
 }
 

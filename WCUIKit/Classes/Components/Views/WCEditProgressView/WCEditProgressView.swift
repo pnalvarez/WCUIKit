@@ -8,32 +8,25 @@
 
 import UIKit
 
-public protocol WCEditProgressViewDelegate: AnyObject {
-    func didConfirm(progress: Float)
-    func didClose()
-}
-
 public class WCEditProgressView: WCUIView {
     
-    private lazy var notchView: UIView = {
-        let view = UIView(frame: .zero)
-        view.layer.cornerRadius = 6
-        view.backgroundColor = ThemeColors.hexe3e0e0.rawValue
+    private enum Strings {
+        static let concludedText = "Concluído"
+    }
+    
+    private enum Constants {
+        static let radius: CGFloat = 8
+        static let horizontalMargin: CGFloat = 48
+    }
+    
+    private lazy var closeButton: WCCloseButton = {
+        let view = WCCloseButton(frame: .zero, context: .component(callback: cancelCallback))
         return view
     }()
     
-    private lazy var closeButton: UIButton = {
-        let view = WCCloseButton(frame: .zero)
-        view.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
-        return view
-    }()
-    
-    private lazy var mainLbl: UILabel = {
-        let view = UILabel(frame: .zero)
-        view.text = "Como está o progresso do seu projeto?"
+    private lazy var mainLbl: WCUILabelRobotoBold18Black = {
+        let view = WCUILabelRobotoBold18Black(frame: .zero)
         view.textAlignment = .center
-        view.font = ThemeFonts.RobotoBold(18).rawValue
-        view.textColor = .black
         view.numberOfLines = 0
         return view
     }()
@@ -43,70 +36,110 @@ public class WCEditProgressView: WCUIView {
         return view
     }()
     
-    private lazy var finishButton: UIButton = {
-        let view = UIButton(frame: .zero)
-        view.addTarget(self, action: #selector(didTapFinish), for: .touchUpInside)
-        view.layer.cornerRadius = 4
-        view.backgroundColor = ThemeColors.mainRedColor.rawValue
-        view.setTitle("Concluído", for: .normal)
-        view.setTitleColor(.white, for: .normal)
-        view.titleLabel?.font = ThemeFonts.RobotoBold(16).rawValue
+    private lazy var finishButton: WCPrimaryActionButton = {
+        let view = WCPrimaryActionButton(frame: .zero)
+        view.addTarget(self, action: #selector(doneCallback), for: .touchUpInside)
+        view.text = Strings.concludedText
         return view
     }()
     
-    private weak var delegate: WCEditProgressViewDelegate?
-    
-    public var progress: Float {
+    public var progress: Float = 0.0 {
         didSet {
             progressView.percentage = progress/100
         }
     }
     
-    public init(frame: CGRect,
-         delegate: WCEditProgressViewDelegate? = nil,
-         progress: Float = 0.0) {
-        self.delegate = delegate
-        self.progress = progress
+    private var doneAction: (() -> Void)?
+    private var cancelAction: (() -> Void)?
+    private var topController: UIViewController?
+    
+    public override init(frame: CGRect) {
         super.init(frame: frame)
-        applyViewCode()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension WCEditProgressView {
     
-    @objc
-    private func didTapClose() {
-        delegate?.didClose()
+    override func customConfigs() {
+        backgroundColor = ThemeColors.hexfdfefe.rawValue
+        layer.cornerRadius = Constants.radius
+    }
+    
+    public func show(in viewController: UIViewController,
+              text: String,
+              progress: Float,
+              doneAction: (() -> Void)? = nil,
+              cancelAction: (() -> Void)? = nil) {
+        self.topController = viewController
+        self.progress = progress
+        self.doneAction = doneAction
+        self.cancelAction = cancelAction
+        mainLbl.text = text
+        setup()
+        fadeIn(0.1)
+    }
+    
+    private func setup() {
+        if let controller = topController {
+            self.bounds = UIScreen.main.bounds
+            showTranslucentView(in: controller.view)
+            constraintUI(in: controller.view)
+        }
+    }
+    
+    private func constraintUI(in contentView: UIView) {
+        contentView.addSubview(self)
+        self.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.left.right.equalToSuperview().inset(Constants.horizontalMargin)
+        }
+        applyViewCode()
+    }
+    
+    public func hide(completion: @escaping () -> Void) {
+        hideTranslucentView()
+        fadeOut(0.1, completion: { _ in
+            completion()
+        })
     }
     
     @objc
-    private func didTapFinish() {
-        delegate?.didConfirm(progress: progressView.percentage)
+    private func doneCallback() {
+        hide { [unowned self] in
+            self.removeFromSuperview()
+            if let doneAction = doneAction {
+                doneAction()
+            }
+        }
+    }
+    
+    @objc
+    private func cancelCallback() {
+        hide { [unowned self] in
+            self.removeFromSuperview()
+            if let cancelAction = cancelAction {
+                cancelAction()
+            }
+        }
     }
 }
 
 extension WCEditProgressView: ViewCodeProtocol {
     
     public func buildViewHierarchy() {
-        addSubview(notchView)
+        addSubview(closeButton)
         addSubview(mainLbl)
         addSubview(progressView)
         addSubview(finishButton)
     }
     
     public func setupConstraints() {
-        notchView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(17)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(100)
-            make.height.equalTo(6)
+        closeButton.snp.makeConstraints { make in
+            make.top.right.equalToSuperview().inset(12)
         }
         mainLbl.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(19)
+            make.top.equalTo(closeButton.snp.bottom).offset(19)
             make.centerX.equalToSuperview()
             make.width.equalTo(300)
         }
@@ -116,10 +149,11 @@ extension WCEditProgressView: ViewCodeProtocol {
             make.height.equalTo(96)
         }
         finishButton.snp.makeConstraints { make in
-            make.top.equalTo(progressView.snp.bottom).offset(82)
+            make.top.equalTo(progressView.snp.bottom).offset(120)
             make.centerX.equalToSuperview()
             make.height.equalTo(30)
             make.width.equalTo(94)
+            make.bottom.equalToSuperview().inset(20)
         }
     }
     

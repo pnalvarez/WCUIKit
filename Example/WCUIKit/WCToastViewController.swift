@@ -17,6 +17,6 @@ final class WCToastViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        WCToastView().show(withTitle: "Toast de Sucesso", status: .success, in: view)
+        WCToastView().show(withTitle: "Toast de Sucesso", status: .error, in: view)
     }
 }

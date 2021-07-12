@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F3825EF263F8187006B6DCE /* WCLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3825EE263F8187006B6DCE /* WCLoadingViewController.swift */; };
 		3F56391B268C029B008BEC25 /* WCUIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56391A268C029B008BEC25 /* WCUIScrollViewController.swift */; };
+		3F5B00F4269A9FF8004F8D7B /* WCEditProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B00F3269A9FF8004F8D7B /* WCEditProgressViewController.swift */; };
 		3F7A0E9C263B89060067B354 /* WCInternetErrorConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A0E9B263B89060067B354 /* WCInternetErrorConnectionController.swift */; };
 		3F8E59A126339CF5009B38AA /* WCSearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E59A026339CF5009B38AA /* WCSearchDisplayViewController.swift */; };
 		3F8E59CF2633A52D009B38AA /* WCUserDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E59CE2633A52D009B38AA /* WCUserDisplayViewController.swift */; };
@@ -73,6 +74,7 @@
 		35B59E4A399A049A12986DF9 /* Pods-WCUIKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCUIKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-WCUIKit_Tests/Pods-WCUIKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3F3825EE263F8187006B6DCE /* WCLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCLoadingViewController.swift; sourceTree = "<group>"; };
 		3F56391A268C029B008BEC25 /* WCUIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIScrollViewController.swift; sourceTree = "<group>"; };
+		3F5B00F3269A9FF8004F8D7B /* WCEditProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCEditProgressViewController.swift; sourceTree = "<group>"; };
 		3F7A0E9B263B89060067B354 /* WCInternetErrorConnectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCInternetErrorConnectionController.swift; sourceTree = "<group>"; };
 		3F8E59A026339CF5009B38AA /* WCSearchDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSearchDisplayViewController.swift; sourceTree = "<group>"; };
 		3F8E59CE2633A52D009B38AA /* WCUserDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUserDisplayViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				3FD7E06E267EAFFA00D98DE2 /* WCDialogViewController.swift */,
 				3FD7E076268185C400D98DE2 /* WCToastViewController.swift */,
 				3F56391A268C029B008BEC25 /* WCUIScrollViewController.swift */,
+				3F5B00F3269A9FF8004F8D7B /* WCEditProgressViewController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				3FF94AE2267050380032C769 /* WCAuxiliarActionButtonController.swift in Sources */,
 				3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */,
 				3F8E59CF2633A52D009B38AA /* WCUserDisplayViewController.swift in Sources */,
+				3F5B00F4269A9FF8004F8D7B /* WCEditProgressViewController.swift in Sources */,
 				3F7A0E9C263B89060067B354 /* WCInternetErrorConnectionController.swift in Sources */,
 				3FD79FDE264CB3FF00026340 /* WCOptionsToolbarController.swift in Sources */,
 				3FBDC5B926333FDA007FA4F1 /* WCProjectDataTextViewController.swift in Sources */,

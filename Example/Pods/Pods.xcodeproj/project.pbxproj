@@ -49,9 +49,10 @@
 		3C49237ABF1CC83635F1D0BA74EE3DE8 /* SDDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A267566E47E0C8335D13FAD5AD1E38F /* SDDiskCache.m */; };
 		3D074AA7E6C8CB30B879378BAF6FE9C2 /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = FB48AF870DC86016346C88BC7B8D2A42 /* SDImageGraphics.m */; };
 		3E05153D7ED2768CCE755D51CD3C8184 /* SDWebImageError.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D9D25AC723F52B14749667E0EC7D6E /* SDWebImageError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F123E4C269B8D3A00509AB2 /* WCUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F123E4A269B8CEC00509AB2 /* WCUIConstants.swift */; };
+		3F123E4E269BDD3000509AB2 /* WCBaseAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F123E4D269BDD3000509AB2 /* WCBaseAlertView.swift */; };
 		3F35C88B2657476A00EF741E /* WCProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35C88A2657476A00EF741E /* WCProfileHeaderView.swift */; };
 		3F35C88D26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */; };
-		3F3EF31F262A6D0F00887EA0 /* BaseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */; };
 		3F503CE52627D5960066AB19 /* CathegoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */; };
 		3F503CEE2627D5AD0066AB19 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CEB2627D5AD0066AB19 /* UITableViewCell+.swift */; };
 		3F503CEF2627D5AD0066AB19 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CEC2627D5AD0066AB19 /* UITableView+.swift */; };
@@ -365,9 +366,10 @@
 		3C46D31B3593FA6EDEB591ABD86C11D2 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
 		3C6C69246F7D71CE1BF5F456EE6AF8D0 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		3F09054BE5262F22536C317D8C26099B /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		3F123E4A269B8CEC00509AB2 /* WCUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIConstants.swift; sourceTree = "<group>"; };
+		3F123E4D269BDD3000509AB2 /* WCBaseAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBaseAlertView.swift; sourceTree = "<group>"; };
 		3F35C88A2657476A00EF741E /* WCProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProfileHeaderView.swift; sourceTree = "<group>"; };
 		3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoRegularUnderlined.swift; sourceTree = "<group>"; };
-		3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseSection.swift; path = ../WCUIKit/Classes/Sections/BaseSection.swift; sourceTree = "<group>"; };
 		3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CathegoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F503CEB2627D5AD0066AB19 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		3F503CEC2627D5AD0066AB19 /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
@@ -702,6 +704,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		3F123E49269B8CD800509AB2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3F123E4A269B8CEC00509AB2 /* WCUIConstants.swift */,
+			);
+			name = Constants;
+			path = WCUIKit/Classes/Constants;
+			sourceTree = "<group>";
+		};
 		3F503CE32627D5960066AB19 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,14 +720,6 @@
 				3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		3F503D032627D5D60066AB19 /* Sections */ = {
-			isa = PBXGroup;
-			children = (
-				3F3EF31E262A6D0F00887EA0 /* BaseSection.swift */,
-			);
-			path = Sections;
 			sourceTree = "<group>";
 		};
 		3F9846FD2623BF4B000BE5BC /* Fonts */ = {
@@ -1003,6 +1006,7 @@
 				3FD7E06C267EAEB600D98DE2 /* WCBaseButton.swift */,
 				3FD7E06A267EA07900D98DE2 /* WCUIView.swift */,
 				3F563918268C0053008BEC25 /* WCUIScrollView.swift */,
+				3F123E4D269BDD3000509AB2 /* WCBaseAlertView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1120,7 +1124,7 @@
 		67164B15CDD4CC322B33F8F571B8FCA6 /* WCUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				3F503D032627D5D60066AB19 /* Sections */,
+				3F123E49269B8CD800509AB2 /* Constants */,
 				2DBDC68D153DD17BE04C0C2734121BF2 /* Components */,
 				6C3F15B6DF820210E72316C6BE15F018 /* Extensions */,
 				F468DA4EFCAAF2F934C324E5AC0A04F0 /* Pod */,
@@ -1589,6 +1593,9 @@
 					19622742EBA51E823D6DAE3F8CDBFAD4 = {
 						LastSwiftMigration = 1250;
 					};
+					DD13E1ADDCD8C46272A4642293D44B3E = {
+						LastSwiftMigration = 1250;
+					};
 				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
@@ -1682,6 +1689,7 @@
 				3F503CFC2627D5BF0066AB19 /* TableViewSectionProtocol.swift in Sources */,
 				FF4DC86AB43CCBFDBAE258236EAEA92F /* OpionSelectorView.swift in Sources */,
 				3F563919268C0053008BEC25 /* WCUIScrollView.swift in Sources */,
+				3F123E4E269BDD3000509AB2 /* WCBaseAlertView.swift in Sources */,
 				3F503D132627D6EF0066AB19 /* WCCathegoryListView.swift in Sources */,
 				3FC38C6826476CC40017599D /* WCSmallAuxiliarButton.swift in Sources */,
 				72F7DC3E4159F1A5EEBEB2AA9007D08C /* OptionFilterButton.swift in Sources */,
@@ -1689,6 +1697,7 @@
 				3F35C88B2657476A00EF741E /* WCProfileHeaderView.swift in Sources */,
 				609A6463EB52867060A14D110E2B034C /* OptionView.swift in Sources */,
 				96E688ABE3728EFDD095054F4E7296DF /* WCProjectDataTextField.swift in Sources */,
+				3F123E4C269B8D3A00509AB2 /* WCUIConstants.swift in Sources */,
 				09BD05EB08C3DBE81E1DBDD02A700FCD /* WCProjectDataTextView.swift in Sources */,
 				3F503D0C2627D6330066AB19 /* ReusableView.swift in Sources */,
 				44E56CD43BBA4F887D63307CE8D0BBFA /* WCSearchDisplayView.swift in Sources */,
@@ -1697,7 +1706,6 @@
 				76EA50A89D0AFBAD866374580A2E608E /* ThemeFonts.swift in Sources */,
 				3FF94ADE266D58200032C769 /* WCTertiaryButton.swift in Sources */,
 				8D095C58F7698BDD9910DEC5E6086353 /* UIImage+.swift in Sources */,
-				3F3EF31F262A6D0F00887EA0 /* BaseSection.swift in Sources */,
 				3F503CEF2627D5AD0066AB19 /* UITableView+.swift in Sources */,
 				3FF94AEB26783B410032C769 /* WCUILabelRobotoRegular14Black.swift in Sources */,
 				3F7CC80026437B4C00513E3C /* WCContentView.swift in Sources */,
@@ -2013,6 +2021,7 @@
 			baseConfigurationReference = F5FD1D5A8ED755FB517A87CCE8162187 /* Pods-WCUIKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2035,6 +2044,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2301,6 +2312,7 @@
 			baseConfigurationReference = CFE4B8BF02865B8F7D302FA576C9F607 /* Pods-WCUIKit_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2323,6 +2335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

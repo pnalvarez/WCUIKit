@@ -31,6 +31,7 @@ enum AllComponentsLibrary: CaseIterable {
     case dialogView
     case toastView
     case scrollView
+    case editProgressView
     
     var text: String {
         switch self {
@@ -78,6 +79,8 @@ enum AllComponentsLibrary: CaseIterable {
             return "Toast View"
         case .scrollView:
             return "ScrollView"
+        case .editProgressView:
+            return "WCEditProgressView"
         }
     }
     
@@ -127,6 +130,8 @@ enum AllComponentsLibrary: CaseIterable {
             return WCToastViewController()
         case .scrollView:
             return WCUIScrollViewController()
+        case .editProgressView:
+            return WCEditProgressViewController()
         }
     }
 }

@@ -23,6 +23,12 @@ public class WCUIView: UIView {
         return view
     }()
     
+    private lazy var translucentBackgroundView: WCContentView = {
+        let view = WCContentView(frame: .zero)
+        view.style = .hex969494
+        return view
+    }()
+    
     var defaultBackgroundImage: UIImage?
     var shadowColor = UIColor.green.cgColor
     var defaultBackgroundColor = UIColor.white
@@ -71,9 +77,9 @@ public class WCUIView: UIView {
     }
     
     private func commonInit() {
-//        configureBackground()
-//        configureShadow()
-//        configureBorder()
+        //        configureBackground()
+        //        configureShadow()
+        //        configureBorder()
     }
     
     private func configureBackground() {
@@ -99,6 +105,24 @@ public class WCUIView: UIView {
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    func showTranslucentView(in contentView: UIView) {
+        UIView.animate(withDuration: 0.1, animations: {
+            contentView.addSubview(self.translucentBackgroundView)
+            self.translucentBackgroundView.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+            self.translucentBackgroundView.alpha = 0.9
+        })
+    }
+    
+    func hideTranslucentView() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.translucentBackgroundView.alpha = 0
+        }, completion: { _ in
+            self.translucentBackgroundView.removeFromSuperview()
+        })
     }
     
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {

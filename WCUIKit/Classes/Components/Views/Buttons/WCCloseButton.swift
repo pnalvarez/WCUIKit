@@ -39,8 +39,10 @@ public class WCCloseButton: WCBaseButton {
     public var context: Context = .modal
     
     public init(frame: CGRect,
-                layout: Layout = .medium) {
+                layout: Layout = .medium,
+                context: Context = .modal) {
         self.layout = layout
+        self.context = context
         super.init(frame: frame)
     }
     
