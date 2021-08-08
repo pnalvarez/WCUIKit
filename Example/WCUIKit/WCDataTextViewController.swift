@@ -9,10 +9,10 @@
 import UIKit
 import WCUIKit
 
-final class WCProjectDataTextViewController: UIViewController {
+final class WCDataTextViewController: UIViewController {
     
-    private lazy var textView: WCProjectDataTextView = {
-        let view = WCProjectDataTextView(frame: .zero, textContainer: nil, layout: .medium)
+    private lazy var textView: WCDataTextView = {
+        let view = WCDataTextView(frame: .zero, textContainer: nil, layout: .medium)
         view.textViewState = .normal
         return view
     }()
@@ -24,7 +24,7 @@ final class WCProjectDataTextViewController: UIViewController {
     }
 }
 
-extension WCProjectDataTextViewController: ViewCodeProtocol {
+extension WCDataTextViewController: ViewCodeProtocol {
     
     func buildViewHierarchy() {
         view.addSubview(textView)

@@ -8,6 +8,7 @@
 import UIKit
 
 public enum ThemeColors {
+    case clear
     case mainRedColor
     case emptyRedColor
     case whiteThemeColor
@@ -31,6 +32,8 @@ public enum ThemeColors {
     
     public var rawValue: UIColor {
         switch self {
+        case .clear:
+            return .clear
         case .mainRedColor:
             return #colorLiteral(red: 0.8980392157, green: 0.04705882353, blue: 0.2352941176, alpha: 1)
         case .emptyRedColor:

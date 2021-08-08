@@ -20,7 +20,8 @@ final class WCEditProgressViewController: UIViewController {
         view.backgroundColor = .white
         testView.show(in: self,
                       text: "Como está o seu projeto?",
-                      progress: 0.0, doneAction: {
+                      progress: 1.0,
+                      doneAction: {
                         print("Done")
                       }, cancelAction: {
                         print("Cancel")

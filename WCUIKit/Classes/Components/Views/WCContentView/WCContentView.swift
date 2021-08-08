@@ -10,12 +10,15 @@ import UIKit
 public class WCContentView: UIView {
     
     public enum ColorStyle {
+        case clear
         case white
         case hex969494
         case red
         
         var color: ThemeColors {
             switch self {
+            case .clear:
+                return .clear
             case .white:
                 return .whiteThemeColor
             case .hex969494:

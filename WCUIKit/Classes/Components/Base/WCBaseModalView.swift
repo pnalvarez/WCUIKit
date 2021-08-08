@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WCBaseModalView: WCUIView {
+public class WCBaseModalView: WCUIView, UITextViewDelegate {
     
     private enum Constants {
         static let radius: CGFloat = 8

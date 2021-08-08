@@ -20,7 +20,7 @@
 		3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */; };
 		3FBDC4BC2630DD33007FA4F1 /* WCProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */; };
 		3FBDC58626333D20007FA4F1 /* WCProjectDataTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */; };
-		3FBDC5B926333FDA007FA4F1 /* WCProjectDataTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */; };
+		3FBDC5B926333FDA007FA4F1 /* WCDataTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC5B826333FDA007FA4F1 /* WCDataTextViewController.swift */; };
 		3FC38C64264760DB0017599D /* WCRelevantItemImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C63264760DB0017599D /* WCRelevantItemImageViewController.swift */; };
 		3FC38C6A26476E480017599D /* WCSmallAuxiliarButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6926476E480017599D /* WCSmallAuxiliarButtonController.swift */; };
 		3FC38C6E2647982A0017599D /* WCTitleDescriptionEditableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC38C6D2647982A0017599D /* WCTitleDescriptionEditableViewController.swift */; };
@@ -45,6 +45,7 @@
 		3FC3CB2926362AAB007DFF99 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB1626362AAB007DFF99 /* Roboto-Bold.ttf */; };
 		3FC3CB2A26362AAB007DFF99 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB1726362AAB007DFF99 /* Roboto-Thin.ttf */; };
 		3FC3CB2B26362AAB007DFF99 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB1826362AAB007DFF99 /* Roboto-Black.ttf */; };
+		3FCDD4E226BF804700E16DBA /* WCDataTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4E126BF804700E16DBA /* WCDataTextFieldViewController.swift */; };
 		3FD79FDE264CB3FF00026340 /* WCOptionsToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDD264CB3FF00026340 /* WCOptionsToolbarController.swift */; };
 		3FD7E06F267EAFFA00D98DE2 /* WCDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E06E267EAFFA00D98DE2 /* WCDialogViewController.swift */; };
 		3FD7E077268185C400D98DE2 /* WCToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E076268185C400D98DE2 /* WCToastViewController.swift */; };
@@ -85,7 +86,7 @@
 		3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCCathegoryListViewController.swift; sourceTree = "<group>"; };
 		3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProgressViewController.swift; sourceTree = "<group>"; };
 		3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProjectDataTextFieldController.swift; sourceTree = "<group>"; };
-		3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProjectDataTextViewController.swift; sourceTree = "<group>"; };
+		3FBDC5B826333FDA007FA4F1 /* WCDataTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDataTextViewController.swift; sourceTree = "<group>"; };
 		3FC38C63264760DB0017599D /* WCRelevantItemImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRelevantItemImageViewController.swift; sourceTree = "<group>"; };
 		3FC38C6926476E480017599D /* WCSmallAuxiliarButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSmallAuxiliarButtonController.swift; sourceTree = "<group>"; };
 		3FC38C6D2647982A0017599D /* WCTitleDescriptionEditableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTitleDescriptionEditableViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		3FC3CB1626362AAB007DFF99 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3FC3CB1726362AAB007DFF99 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		3FC3CB1826362AAB007DFF99 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		3FCDD4E126BF804700E16DBA /* WCDataTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDataTextFieldViewController.swift; sourceTree = "<group>"; };
 		3FD79FDD264CB3FF00026340 /* WCOptionsToolbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarController.swift; sourceTree = "<group>"; };
 		3FD7E06E267EAFFA00D98DE2 /* WCDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDialogViewController.swift; sourceTree = "<group>"; };
 		3FD7E076268185C400D98DE2 /* WCToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCToastViewController.swift; sourceTree = "<group>"; };
@@ -170,7 +172,7 @@
 				3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */,
 				3FBDC4BB2630DD33007FA4F1 /* WCProgressViewController.swift */,
 				3FBDC58526333D20007FA4F1 /* WCProjectDataTextFieldController.swift */,
-				3FBDC5B826333FDA007FA4F1 /* WCProjectDataTextViewController.swift */,
+				3FBDC5B826333FDA007FA4F1 /* WCDataTextViewController.swift */,
 				3F8E59A026339CF5009B38AA /* WCSearchDisplayViewController.swift */,
 				3F8E59CE2633A52D009B38AA /* WCUserDisplayViewController.swift */,
 				3F8E59F72633A855009B38AA /* WCBackButtonViewController.swift */,
@@ -189,6 +191,7 @@
 				3FD7E076268185C400D98DE2 /* WCToastViewController.swift */,
 				3F56391A268C029B008BEC25 /* WCUIScrollViewController.swift */,
 				3F5B00F3269A9FF8004F8D7B /* WCEditProgressViewController.swift */,
+				3FCDD4E126BF804700E16DBA /* WCDataTextFieldViewController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -539,9 +542,10 @@
 				3F5B00F4269A9FF8004F8D7B /* WCEditProgressViewController.swift in Sources */,
 				3F7A0E9C263B89060067B354 /* WCInternetErrorConnectionController.swift in Sources */,
 				3FD79FDE264CB3FF00026340 /* WCOptionsToolbarController.swift in Sources */,
-				3FBDC5B926333FDA007FA4F1 /* WCProjectDataTextViewController.swift in Sources */,
+				3FBDC5B926333FDA007FA4F1 /* WCDataTextViewController.swift in Sources */,
 				3FC38C64264760DB0017599D /* WCRelevantItemImageViewController.swift in Sources */,
 				3F8E59F82633A855009B38AA /* WCBackButtonViewController.swift in Sources */,
+				3FCDD4E226BF804700E16DBA /* WCDataTextFieldViewController.swift in Sources */,
 				3F56391B268C029B008BEC25 /* WCUIScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

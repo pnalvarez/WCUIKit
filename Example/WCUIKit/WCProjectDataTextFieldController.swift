@@ -11,8 +11,8 @@ import WCUIKit
 
 final class WCProjectDataTextFieldController: UIViewController {
     
-    private lazy var textField: WCProjectDataTextField = {
-        let view = WCProjectDataTextField(frame: .zero)
+    private lazy var textField: WCDataTextField = {
+        let view = WCDataTextField(frame: .zero)
         view.textFieldState = .normal
         return view
     }()

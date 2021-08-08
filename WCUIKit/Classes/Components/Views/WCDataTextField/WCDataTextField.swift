@@ -13,7 +13,7 @@ public enum WCProjectDataTextFieldState {
     case error
 }
 
-public class WCProjectDataTextField: UITextField {
+public class WCDataTextField: UITextField {
     
     public var textFieldState: WCProjectDataTextFieldState = .normal {
         didSet {
@@ -41,7 +41,7 @@ public class WCProjectDataTextField: UITextField {
     }
 }
 
-extension WCProjectDataTextField: ViewCodeProtocol {
+extension WCDataTextField: ViewCodeProtocol {
     
     public func buildViewHierarchy() {
         

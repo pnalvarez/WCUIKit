@@ -13,7 +13,7 @@ public enum WCProjectDataTextViewState {
     case error
 }
 
-public class WCProjectDataTextView: UITextView {
+public class WCDataTextView: UITextView {
     
     public enum Layout {
         case medium
@@ -71,7 +71,7 @@ public class WCProjectDataTextView: UITextView {
     }
 }
 
-extension WCProjectDataTextView: ViewCodeProtocol {
+extension WCDataTextView: ViewCodeProtocol {
     
     public func buildViewHierarchy() {
         
