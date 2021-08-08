@@ -99,6 +99,11 @@
 		3FCDD4E026BF789100E16DBA /* WCUILabelRobotoRegular16Black.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4DF26BF789100E16DBA /* WCUILabelRobotoRegular16Black.swift */; };
 		3FCDD4E426BF9D8400E16DBA /* WCUILabelRobotoRegular16Gray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4E326BF9D8400E16DBA /* WCUILabelRobotoRegular16Gray.swift */; };
 		3FCDD4E626BFA58C00E16DBA /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4E526BFA58C00E16DBA /* UIStackView+.swift */; };
+		3FCDD4ED26C0A0F500E16DBA /* UIResponder+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4E726C0A0F400E16DBA /* UIResponder+.swift */; };
+		3FCDD4EE26C0A0F500E16DBA /* UITabBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4E826C0A0F500E16DBA /* UITabBar+.swift */; };
+		3FCDD4F026C0A0F500E16DBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4EA26C0A0F500E16DBA /* UIView+.swift */; };
+		3FCDD4F126C0A0F500E16DBA /* UISegmentedControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4EB26C0A0F500E16DBA /* UISegmentedControl+.swift */; };
+		3FCDD4F226C0A0F500E16DBA /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4EC26C0A0F500E16DBA /* UIAlertController+.swift */; };
 		3FD79FDA264C583900026340 /* WCOptionsToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */; };
 		3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */; };
 		3FD7E06B267EA07900D98DE2 /* WCUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E06A267EA07900D98DE2 /* WCUIView.swift */; };
@@ -420,6 +425,11 @@
 		3FCDD4DF26BF789100E16DBA /* WCUILabelRobotoRegular16Black.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoRegular16Black.swift; sourceTree = "<group>"; };
 		3FCDD4E326BF9D8400E16DBA /* WCUILabelRobotoRegular16Gray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoRegular16Gray.swift; sourceTree = "<group>"; };
 		3FCDD4E526BFA58C00E16DBA /* UIStackView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		3FCDD4E726C0A0F400E16DBA /* UIResponder+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+.swift"; sourceTree = "<group>"; };
+		3FCDD4E826C0A0F500E16DBA /* UITabBar+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+.swift"; sourceTree = "<group>"; };
+		3FCDD4EA26C0A0F500E16DBA /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		3FCDD4EB26C0A0F500E16DBA /* UISegmentedControl+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+.swift"; sourceTree = "<group>"; };
+		3FCDD4EC26C0A0F500E16DBA /* UIAlertController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbar.swift; sourceTree = "<group>"; };
 		3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FD7E06A267EA07900D98DE2 /* WCUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIView.swift; sourceTree = "<group>"; };
@@ -1151,6 +1161,11 @@
 		6C3F15B6DF820210E72316C6BE15F018 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3FCDD4EC26C0A0F500E16DBA /* UIAlertController+.swift */,
+				3FCDD4E726C0A0F400E16DBA /* UIResponder+.swift */,
+				3FCDD4EB26C0A0F500E16DBA /* UISegmentedControl+.swift */,
+				3FCDD4E826C0A0F500E16DBA /* UITabBar+.swift */,
+				3FCDD4EA26C0A0F500E16DBA /* UIView+.swift */,
 				3FCDD4E526BFA58C00E16DBA /* UIStackView+.swift */,
 				3FD7E070267EB95F00D98DE2 /* UIColor+.swift */,
 				3F503CED2627D5AD0066AB19 /* UICollectionView+.swift */,
@@ -1709,6 +1724,7 @@
 				72F7DC3E4159F1A5EEBEB2AA9007D08C /* OptionFilterButton.swift in Sources */,
 				3F563917268BFCC3008BEC25 /* WCUILabelRobotoBold16MainRed.swift in Sources */,
 				3F35C88B2657476A00EF741E /* WCProfileHeaderView.swift in Sources */,
+				3FCDD4EE26C0A0F500E16DBA /* UITabBar+.swift in Sources */,
 				609A6463EB52867060A14D110E2B034C /* OptionView.swift in Sources */,
 				96E688ABE3728EFDD095054F4E7296DF /* WCDataTextField.swift in Sources */,
 				3F123E4C269B8D3A00509AB2 /* WCUIConstants.swift in Sources */,
@@ -1716,9 +1732,11 @@
 				3F503D0C2627D6330066AB19 /* ReusableView.swift in Sources */,
 				44E56CD43BBA4F887D63307CE8D0BBFA /* WCSearchDisplayView.swift in Sources */,
 				C2B971F1B43AF55B8161271901390059 /* SelectionFilterView.swift in Sources */,
+				3FCDD4F026C0A0F500E16DBA /* UIView+.swift in Sources */,
 				809BFB40797E31075C4B6B2139260AC7 /* ThemeColors.swift in Sources */,
 				76EA50A89D0AFBAD866374580A2E608E /* ThemeFonts.swift in Sources */,
 				3FF94ADE266D58200032C769 /* WCTertiaryButton.swift in Sources */,
+				3FCDD4F126C0A0F500E16DBA /* UISegmentedControl+.swift in Sources */,
 				3FCDD4E426BF9D8400E16DBA /* WCUILabelRobotoRegular16Gray.swift in Sources */,
 				3FCDD4E626BFA58C00E16DBA /* UIStackView+.swift in Sources */,
 				8D095C58F7698BDD9910DEC5E6086353 /* UIImage+.swift in Sources */,
@@ -1747,6 +1765,7 @@
 				3FD7E06B267EA07900D98DE2 /* WCUIView.swift in Sources */,
 				45A7DE6F41C397CA4581DA57FE5D3545 /* WCInputTextField.swift in Sources */,
 				3F503CFB2627D5BF0066AB19 /* Resettable.swift in Sources */,
+				3FCDD4ED26C0A0F500E16DBA /* UIResponder+.swift in Sources */,
 				3FF94AED26783C230032C769 /* WCDialogButton.swift in Sources */,
 				3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */,
 				3F35C88D26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift in Sources */,
@@ -1761,6 +1780,7 @@
 				3FD7E073267EBDDB00D98DE2 /* WCBlurView.swift in Sources */,
 				1B5AC760724E58F241D768BE8309A929 /* WCProgressView.swift in Sources */,
 				3FD7E0792683952600D98DE2 /* WCUILabel.swift in Sources */,
+				3FCDD4F226C0A0F500E16DBA /* UIAlertController+.swift in Sources */,
 				3F7A0E9A263B86820067B354 /* WCFunctionalButton16.swift in Sources */,
 				69435CDD94A0387E3E4569FFB1EF360A /* WCSearchButton.swift in Sources */,
 				3F503CEE2627D5AD0066AB19 /* UITableViewCell+.swift in Sources */,
