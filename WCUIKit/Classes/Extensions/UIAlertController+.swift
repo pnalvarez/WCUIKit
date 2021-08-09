@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import WCUIKit
 
 public extension UIAlertController {
     
@@ -21,7 +20,7 @@ public extension UIAlertController {
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: completion)
         alertAction.setValue(ThemeColors.mainRedColor.rawValue, forKey: "titleTextColor")
         alertController.addAction(alertAction)
-
+        
         controller.present(alertController,
                            animated: true)
     }
@@ -75,15 +74,15 @@ public extension UIAlertController {
         controller.present(alertController, animated: animated)
     }
     
-    open override func viewDidLayoutSubviews() {
+    override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
         for i in self.actions {
             let attributedText = NSAttributedString(string: "OK",
                                                     attributes: [NSAttributedString.Key.font: ThemeFonts.RobotoBold(18).rawValue, NSAttributedString.Key.foregroundColor: ThemeColors.mainRedColor.rawValue])
             guard let label = (i.value(forKey: "__representer") as AnyObject).value(forKey: "label") as? UILabel else { return }
             label.attributedText = attributedText
         }
-
+        
     }
 }

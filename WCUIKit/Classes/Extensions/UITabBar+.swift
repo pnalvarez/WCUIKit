@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import WCUIKit
 
 public extension UITabBar {
     
