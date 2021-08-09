@@ -104,6 +104,7 @@
 		3FCDD4F026C0A0F500E16DBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4EA26C0A0F500E16DBA /* UIView+.swift */; };
 		3FCDD4F126C0A0F500E16DBA /* UISegmentedControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4EB26C0A0F500E16DBA /* UISegmentedControl+.swift */; };
 		3FCDD4F226C0A0F500E16DBA /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4EC26C0A0F500E16DBA /* UIAlertController+.swift */; };
+		3FCDD4F826C0B8A800E16DBA /* WCDimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4F726C0B8A800E16DBA /* WCDimens.swift */; };
 		3FD79FDA264C583900026340 /* WCOptionsToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */; };
 		3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */; };
 		3FD7E06B267EA07900D98DE2 /* WCUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E06A267EA07900D98DE2 /* WCUIView.swift */; };
@@ -430,6 +431,7 @@
 		3FCDD4EA26C0A0F500E16DBA /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		3FCDD4EB26C0A0F500E16DBA /* UISegmentedControl+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+.swift"; sourceTree = "<group>"; };
 		3FCDD4EC26C0A0F500E16DBA /* UIAlertController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
+		3FCDD4F726C0B8A800E16DBA /* WCDimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDimens.swift; sourceTree = "<group>"; };
 		3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbar.swift; sourceTree = "<group>"; };
 		3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FD7E06A267EA07900D98DE2 /* WCUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIView.swift; sourceTree = "<group>"; };
@@ -726,6 +728,7 @@
 			isa = PBXGroup;
 			children = (
 				3F123E4A269B8CEC00509AB2 /* WCUIConstants.swift */,
+				3FCDD4F726C0B8A800E16DBA /* WCDimens.swift */,
 			);
 			name = Constants;
 			path = WCUIKit/Classes/Constants;
@@ -1782,6 +1785,7 @@
 				3FD7E0792683952600D98DE2 /* WCUILabel.swift in Sources */,
 				3FCDD4F226C0A0F500E16DBA /* UIAlertController+.swift in Sources */,
 				3F7A0E9A263B86820067B354 /* WCFunctionalButton16.swift in Sources */,
+				3FCDD4F826C0B8A800E16DBA /* WCDimens.swift in Sources */,
 				69435CDD94A0387E3E4569FFB1EF360A /* WCSearchButton.swift in Sources */,
 				3F503CEE2627D5AD0066AB19 /* UITableViewCell+.swift in Sources */,
 				3FC38C66264768AD0017599D /* WCTitleDescriptionEditableView.swift in Sources */,
