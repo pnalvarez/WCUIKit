@@ -53,6 +53,7 @@
 		3F123E4E269BDD3000509AB2 /* WCBaseModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F123E4D269BDD3000509AB2 /* WCBaseModalView.swift */; };
 		3F35C88B2657476A00EF741E /* WCProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35C88A2657476A00EF741E /* WCProfileHeaderView.swift */; };
 		3F35C88D26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */; };
+		3F45D89526C35EE2003A5636 /* WCUILabelRobotoMedium14Gray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45D89426C35EE2003A5636 /* WCUILabelRobotoMedium14Gray.swift */; };
 		3F503CE52627D5960066AB19 /* CathegoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */; };
 		3F503CEE2627D5AD0066AB19 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CEB2627D5AD0066AB19 /* UITableViewCell+.swift */; };
 		3F503CEF2627D5AD0066AB19 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F503CEC2627D5AD0066AB19 /* UITableView+.swift */; };
@@ -105,6 +106,7 @@
 		3FCDD4F126C0A0F500E16DBA /* UISegmentedControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4EB26C0A0F500E16DBA /* UISegmentedControl+.swift */; };
 		3FCDD4F226C0A0F500E16DBA /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4EC26C0A0F500E16DBA /* UIAlertController+.swift */; };
 		3FCDD4F826C0B8A800E16DBA /* WCDimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4F726C0B8A800E16DBA /* WCDimens.swift */; };
+		3FCDD4FA26C0CB7500E16DBA /* WCUILabelRobotoRegular12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4F926C0CB7500E16DBA /* WCUILabelRobotoRegular12.swift */; };
 		3FD79FDA264C583900026340 /* WCOptionsToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */; };
 		3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */; };
 		3FD7E06B267EA07900D98DE2 /* WCUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E06A267EA07900D98DE2 /* WCUIView.swift */; };
@@ -380,6 +382,7 @@
 		3F123E4D269BDD3000509AB2 /* WCBaseModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBaseModalView.swift; sourceTree = "<group>"; };
 		3F35C88A2657476A00EF741E /* WCProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCProfileHeaderView.swift; sourceTree = "<group>"; };
 		3F35C88C26574BA000EF741E /* WCUILabelRobotoRegularUnderlined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoRegularUnderlined.swift; sourceTree = "<group>"; };
+		3F45D89426C35EE2003A5636 /* WCUILabelRobotoMedium14Gray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoMedium14Gray.swift; sourceTree = "<group>"; };
 		3F503CE42627D5960066AB19 /* CathegoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CathegoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F503CEB2627D5AD0066AB19 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		3F503CEC2627D5AD0066AB19 /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
@@ -432,6 +435,7 @@
 		3FCDD4EB26C0A0F500E16DBA /* UISegmentedControl+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+.swift"; sourceTree = "<group>"; };
 		3FCDD4EC26C0A0F500E16DBA /* UIAlertController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		3FCDD4F726C0B8A800E16DBA /* WCDimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDimens.swift; sourceTree = "<group>"; };
+		3FCDD4F926C0CB7500E16DBA /* WCUILabelRobotoRegular12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoRegular12.swift; sourceTree = "<group>"; };
 		3FD79FD9264C583900026340 /* WCOptionsToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbar.swift; sourceTree = "<group>"; };
 		3FD79FDB264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FD7E06A267EA07900D98DE2 /* WCUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIView.swift; sourceTree = "<group>"; };
@@ -1052,6 +1056,8 @@
 				3F563916268BFCC3008BEC25 /* WCUILabelRobotoBold16MainRed.swift */,
 				3FCDD4DF26BF789100E16DBA /* WCUILabelRobotoRegular16Black.swift */,
 				3FCDD4E326BF9D8400E16DBA /* WCUILabelRobotoRegular16Gray.swift */,
+				3FCDD4F926C0CB7500E16DBA /* WCUILabelRobotoRegular12.swift */,
+				3F45D89426C35EE2003A5636 /* WCUILabelRobotoMedium14Gray.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -1729,6 +1735,7 @@
 				3F35C88B2657476A00EF741E /* WCProfileHeaderView.swift in Sources */,
 				3FCDD4EE26C0A0F500E16DBA /* UITabBar+.swift in Sources */,
 				609A6463EB52867060A14D110E2B034C /* OptionView.swift in Sources */,
+				3F45D89526C35EE2003A5636 /* WCUILabelRobotoMedium14Gray.swift in Sources */,
 				96E688ABE3728EFDD095054F4E7296DF /* WCDataTextField.swift in Sources */,
 				3F123E4C269B8D3A00509AB2 /* WCUIConstants.swift in Sources */,
 				09BD05EB08C3DBE81E1DBDD02A700FCD /* WCDataTextView.swift in Sources */,
@@ -1768,6 +1775,7 @@
 				3FD7E06B267EA07900D98DE2 /* WCUIView.swift in Sources */,
 				45A7DE6F41C397CA4581DA57FE5D3545 /* WCInputTextField.swift in Sources */,
 				3F503CFB2627D5BF0066AB19 /* Resettable.swift in Sources */,
+				3FCDD4FA26C0CB7500E16DBA /* WCUILabelRobotoRegular12.swift in Sources */,
 				3FCDD4ED26C0A0F500E16DBA /* UIResponder+.swift in Sources */,
 				3FF94AED26783C230032C769 /* WCDialogButton.swift in Sources */,
 				3FD79FDC264C5B1300026340 /* WCOptionsToolbarCollectionViewCell.swift in Sources */,

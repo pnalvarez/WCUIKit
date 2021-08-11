@@ -35,14 +35,13 @@ public class WCToastView: WCUIView {
         let view = WCUILabelRobotoMedium14Black(frame: .zero)
         view.numberOfLines = 2
         view.textAlignment = .center
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private var contentView: UIView?
     
     private var status: Status = .success {
-        willSet {
+        didSet {
             updateUIStatus()
         }
     }

@@ -17,7 +17,7 @@ public class WCDialogButton: WCBaseButton {
     public override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = ThemeColors.mainRedColor.rawValue
-        setTitleColor(ThemeColors.black.rawValue, for: .normal)
+        setTitleColor(ThemeColors.whiteThemeColor.rawValue, for: .normal)
         titleLabel?.font = ThemeFonts.RobotoBold(18).rawValue
         layer.cornerRadius = Constants.radius
         applyViewCode()
