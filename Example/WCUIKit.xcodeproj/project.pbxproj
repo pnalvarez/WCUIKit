@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F3825EF263F8187006B6DCE /* WCLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3825EE263F8187006B6DCE /* WCLoadingViewController.swift */; };
+		3F45D8A826C9CF96003A5636 /* WCFeedListErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45D8A726C9CF96003A5636 /* WCFeedListErrorViewController.swift */; };
 		3F56391B268C029B008BEC25 /* WCUIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56391A268C029B008BEC25 /* WCUIScrollViewController.swift */; };
 		3F5B00F4269A9FF8004F8D7B /* WCEditProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B00F3269A9FF8004F8D7B /* WCEditProgressViewController.swift */; };
 		3F7A0E9C263B89060067B354 /* WCInternetErrorConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A0E9B263B89060067B354 /* WCInternetErrorConnectionController.swift */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		35B59E4A399A049A12986DF9 /* Pods-WCUIKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCUIKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-WCUIKit_Tests/Pods-WCUIKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3F3825EE263F8187006B6DCE /* WCLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCLoadingViewController.swift; sourceTree = "<group>"; };
+		3F45D8A726C9CF96003A5636 /* WCFeedListErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCFeedListErrorViewController.swift; sourceTree = "<group>"; };
 		3F56391A268C029B008BEC25 /* WCUIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUIScrollViewController.swift; sourceTree = "<group>"; };
 		3F5B00F3269A9FF8004F8D7B /* WCEditProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCEditProgressViewController.swift; sourceTree = "<group>"; };
 		3F7A0E9B263B89060067B354 /* WCInternetErrorConnectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCInternetErrorConnectionController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				3F56391A268C029B008BEC25 /* WCUIScrollViewController.swift */,
 				3F5B00F3269A9FF8004F8D7B /* WCEditProgressViewController.swift */,
 				3FCDD4E126BF804700E16DBA /* WCDataTextFieldViewController.swift */,
+				3F45D8A726C9CF96003A5636 /* WCFeedListErrorViewController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				3FC38C72264861C30017599D /* WCBulletEditableItemViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				3F3825EF263F8187006B6DCE /* WCLoadingViewController.swift in Sources */,
+				3F45D8A826C9CF96003A5636 /* WCFeedListErrorViewController.swift in Sources */,
 				3FF94ADC2669B1250032C769 /* WCProfileHeaderViewController.swift in Sources */,
 				3FD7E06F267EAFFA00D98DE2 /* WCDialogViewController.swift in Sources */,
 				3FC3CADD26351BF6007DFF99 /* WCSegmentedControlController.swift in Sources */,

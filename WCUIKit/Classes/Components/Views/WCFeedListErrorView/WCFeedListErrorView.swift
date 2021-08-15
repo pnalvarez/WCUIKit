@@ -1,23 +1,17 @@
 //
-//  WCInternetErrorConnectionView.swift
+//  WCFeedListErrorView.swift
 //  WCUIKit
 //
-//  Created by Pedro Alvarez on 29/04/21.
+//  Created by Pedro Alvarez on 15/08/21.
 //
 
 import UIKit
 
-public protocol WCInternetErrorConnectionViewDelegate: AnyObject {
-    func didTapTryAgain()
-}
-
-public class WCInternetErrorConnectionView: WCUIView {
+public class WCFeedListErrorView: WCUIView {
     
     private enum Strings {
-        static let connectionLost = "Você perdeu a conexão com a internet."
         static let alert = "alert"
         static let exclamation = "!"
-        static let tryAgain = "Tentar novamente"
     }
     
     private lazy var alertContainerImageView: UIImageView = {
@@ -40,33 +34,21 @@ public class WCInternetErrorConnectionView: WCUIView {
         let view = UILabel(frame: .zero)
         view.font = ThemeFonts.RobotoRegular(15).rawValue
         view.textColor = ThemeColors.hex707070.rawValue
-        view.text = Strings.connectionLost
         view.textAlignment = .center
         return view
     }()
-
-    private lazy var tryAgainButton: WCFunctionalButton16 = {
-        let view = WCFunctionalButton16(frame: .zero)
-        view.addTarget(self, action: #selector(didTapTryAgain), for: .touchUpInside)
-        view.text = Strings.tryAgain.uppercased()
+    
+    private lazy var actionButton: WCPrimaryActionButton = {
+        let view = WCPrimaryActionButton(frame: .zero)
+        view.addTarget(self, action: #selector(didTapAction), for: .touchUpInside)
         return view
     }()
     
-    public override var isHidden: Bool {
-        didSet {
-            if !isHidden {
-                if let superview = self.superview {
-                    superview.bringSubviewToFront(self)
-                }
-            }
-        }
-    }
-    
-    public weak var delegate: WCInternetErrorConnectionViewDelegate?
+    private var topController: UIViewController?
+    private var mainAction: (() -> Void)?
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
         applyViewCode()
     }
     
@@ -74,25 +56,42 @@ public class WCInternetErrorConnectionView: WCUIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        alertContainerImageView.layer.cornerRadius = alertContainerImageView.frame.height / 2
-        exclamationImageView.layer.cornerRadius = exclamationImageView.frame.width / 2
+    public func show(in topController: UIViewController,
+              message: String,
+              action: String,
+              mainAction: (() -> Void)? = nil) {
+        self.topController = topController
+        messageLbl.text = message
+        actionButton.text = action
+        self.mainAction = mainAction
+        constraintUI()
+    }
+    
+    private func constraintUI() {
+        if let contentView = topController?.view {
+            contentView.addSubview(self)
+            snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+        }
     }
     
     @objc
-    private func didTapTryAgain() {
-        delegate?.didTapTryAgain()
+    private func didTapAction() {
+        removeFromSuperview()
+        if let action = mainAction {
+            action()
+        }
     }
 }
 
-extension WCInternetErrorConnectionView: ViewCodeProtocol {
+extension WCFeedListErrorView: ViewCodeProtocol {
     
     public func buildViewHierarchy() {
         alertContainerImageView.addSubview(exclamationImageView)
         addSubview(alertContainerImageView)
         addSubview(messageLbl)
-        addSubview(tryAgainButton)
+        addSubview(actionButton)
     }
     
     public func setupConstraints() {
@@ -108,14 +107,16 @@ extension WCInternetErrorConnectionView: ViewCodeProtocol {
         }
         messageLbl.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(tryAgainButton.snp.top).offset(-40)
+            make.bottom.equalTo(actionButton.snp.top).offset(-40)
             make.width.equalTo(260)
         }
-        tryAgainButton.snp.makeConstraints { make in
+        actionButton.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.height.equalTo(21)
             make.width.equalTo(180)
         }
     }
+    
+    public func configureViews() {
+        backgroundColor = .white
+    }
 }
-
