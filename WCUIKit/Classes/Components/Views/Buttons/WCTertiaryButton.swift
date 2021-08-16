@@ -13,6 +13,7 @@ public class WCTertiaryButton: WCBaseButton {
         static let fontSize: CGFloat = 16
         static let borderWidth: CGFloat = 1
         static let height: CGFloat = 30
+        static let radius: CGFloat = 4
     }
     
     public override init(frame: CGRect) {
@@ -29,6 +30,7 @@ public class WCTertiaryButton: WCBaseButton {
         titleLabel?.font = ThemeFonts.RobotoBold(Constants.fontSize).rawValue
         layer.borderWidth = Constants.borderWidth
         layer.borderColor = ThemeColors.hex969494.rawValue.cgColor
+        layer.cornerRadius = Constants.radius
     }
 }
 
