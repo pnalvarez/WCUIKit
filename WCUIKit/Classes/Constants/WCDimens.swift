@@ -28,6 +28,7 @@ public enum WCDimens {
     public enum Sizing {
         public static let smallest: CGFloat = 4.0
         public static let small: CGFloat = 16.0
+        public static let normal: CGFloat = 32.0
         public static let big: CGFloat = 96.0
     }
 }

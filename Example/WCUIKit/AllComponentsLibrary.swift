@@ -34,6 +34,7 @@ enum AllComponentsLibrary: CaseIterable {
     case editProgressView
     case dataTextFieldView
     case feedListError
+    case inputTextField
     
     var text: String {
         switch self {
@@ -87,6 +88,8 @@ enum AllComponentsLibrary: CaseIterable {
             return "WCDataTextFieldView"
         case .feedListError:
             return "WCFeedListErrorView"
+        case .inputTextField:
+            return "WCInputTextField - Normal"
         }
     }
     
@@ -142,6 +145,8 @@ enum AllComponentsLibrary: CaseIterable {
             return WCDataTextFieldViewController()
         case .feedListError:
             return WCFeedListErrorViewController()
+        case .inputTextField:
+            return WCInputTextFieldController()
         }
     }
 }

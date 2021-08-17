@@ -16,6 +16,7 @@
 		3F8E59CF2633A52D009B38AA /* WCUserDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E59CE2633A52D009B38AA /* WCUserDisplayViewController.swift */; };
 		3F8E59F82633A855009B38AA /* WCBackButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E59F72633A855009B38AA /* WCBackButtonViewController.swift */; };
 		3F8E5A6C2634BF16009B38AA /* WCSecondaryButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8E5A6B2634BF16009B38AA /* WCSecondaryButtonController.swift */; };
+		3F91D93226CB46CA00C19DA4 /* WCInputTextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91D93126CB46CA00C19DA4 /* WCInputTextFieldController.swift */; };
 		3FBDC4AF2630DBC2007FA4F1 /* AllComponentsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4AE2630DBC2007FA4F1 /* AllComponentsLibrary.swift */; };
 		3FBDC4B42630DCE4007FA4F1 /* WCActionButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */; };
 		3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */; };
@@ -83,6 +84,7 @@
 		3F8E59CE2633A52D009B38AA /* WCUserDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUserDisplayViewController.swift; sourceTree = "<group>"; };
 		3F8E59F72633A855009B38AA /* WCBackButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCBackButtonViewController.swift; sourceTree = "<group>"; };
 		3F8E5A6B2634BF16009B38AA /* WCSecondaryButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSecondaryButtonController.swift; sourceTree = "<group>"; };
+		3F91D93126CB46CA00C19DA4 /* WCInputTextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCInputTextFieldController.swift; sourceTree = "<group>"; };
 		3FBDC4AE2630DBC2007FA4F1 /* AllComponentsLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllComponentsLibrary.swift; sourceTree = "<group>"; };
 		3FBDC4B32630DCE4007FA4F1 /* WCActionButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCActionButtonController.swift; sourceTree = "<group>"; };
 		3FBDC4B72630DD0C007FA4F1 /* WCCathegoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCCathegoryListViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				3F5B00F3269A9FF8004F8D7B /* WCEditProgressViewController.swift */,
 				3FCDD4E126BF804700E16DBA /* WCDataTextFieldViewController.swift */,
 				3F45D8A726C9CF96003A5636 /* WCFeedListErrorViewController.swift */,
+				3F91D93126CB46CA00C19DA4 /* WCInputTextFieldController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				3FBDC4B42630DCE4007FA4F1 /* WCActionButtonController.swift in Sources */,
 				3FC38C6E2647982A0017599D /* WCTitleDescriptionEditableViewController.swift in Sources */,
 				3FD7E077268185C400D98DE2 /* WCToastViewController.swift in Sources */,
+				3F91D93226CB46CA00C19DA4 /* WCInputTextFieldController.swift in Sources */,
 				3FC38C6A26476E480017599D /* WCSmallAuxiliarButtonController.swift in Sources */,
 				3FBDC4B82630DD0C007FA4F1 /* WCCathegoryListViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

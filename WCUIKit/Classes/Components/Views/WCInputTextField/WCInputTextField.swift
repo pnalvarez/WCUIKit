@@ -40,6 +40,7 @@ public class WCInputTextField: UITextField {
         textColor = ThemeColors.normalText.rawValue
         autocorrectionType = .no
         tintColor = ThemeColors.mainRedColor.rawValue
+        applyViewCode()
     }
     
     required init?(coder: NSCoder) {
@@ -56,5 +57,18 @@ public class WCInputTextField: UITextField {
     
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: Constants.padding)
+    }
+}
+
+extension WCInputTextField: ViewCodeProtocol {
+    
+    public func buildViewHierarchy() {
+        
+    }
+    
+    public func setupConstraints() {
+        snp.makeConstraints { make in
+            make.height.equalTo(WCDimens.Sizing.normal)
+        }
     }
 }
