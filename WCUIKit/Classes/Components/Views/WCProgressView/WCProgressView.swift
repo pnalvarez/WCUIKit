@@ -36,6 +36,7 @@ public class WCProgressView: WCUIView {
     public var percentage: Float = 0.0 {
         didSet {
             percentageLbl.text = "\(Int(percentage * 100)) %"
+            slider.value = percentage
             delegate?.didChangeValue(self, percentage: percentage)
         }
     }

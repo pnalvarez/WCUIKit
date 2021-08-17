@@ -11,6 +11,24 @@ import UIKit
 public enum DefaultInputTextFieldState {
     case normal
     case error
+    
+    var borderWidth: CGFloat {
+        switch self {
+        case .normal:
+            return 0
+        case .error:
+            return 1.0
+        }
+    }
+    
+    var borderColor: CGColor {
+        switch self {
+        case .normal:
+            return UIColor.clear.cgColor
+        case .error:
+            return ThemeColors.alertRed.rawValue.cgColor
+        }
+    }
 }
 
 public class WCInputTextField: UITextField {
@@ -21,14 +39,8 @@ public class WCInputTextField: UITextField {
     
     public var textFieldState: DefaultInputTextFieldState = .normal {
         didSet {
-            switch textFieldState {
-            case .normal:
-                layer.borderWidth = 0
-                layer.borderColor = UIColor.clear.cgColor
-            case .error:
-                layer.borderWidth = 1
-                layer.borderColor = ThemeColors.alertRed.rawValue.cgColor
-            }
+            layer.borderWidth = textFieldState.borderWidth
+            layer.borderColor = textFieldState.borderColor
         }
     }
     
