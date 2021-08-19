@@ -24,11 +24,9 @@ public class WCProgressView: WCUIView {
         return view
     }()
     
-    private lazy var percentageLbl: UILabel = {
-        let view = UILabel(frame: .zero)
+    private lazy var percentageLbl: WCUILabelRobotoRegular16 = {
+        let view = WCUILabelRobotoRegular16(frame: .zero)
         view.textAlignment = .center
-        view.textColor = .black
-        view.font = ThemeFonts.RobotoRegular(16).rawValue
         view.text = "\(Int(percentage * 100)) %"
         return view
     }()
@@ -43,9 +41,13 @@ public class WCProgressView: WCUIView {
     
     public weak var delegate: WCProgressViewDelegate?
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
         applyViewCode()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     @objc
