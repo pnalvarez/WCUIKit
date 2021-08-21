@@ -45,16 +45,8 @@ public class WCEditProgressView: WCBaseModalView {
     
     public private(set) var progress: Float = 0.0 {
         didSet {
-            progressView.percentage = progress/100
+            progressView.percentage = progress
         }
-    }
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func customConfigs() {

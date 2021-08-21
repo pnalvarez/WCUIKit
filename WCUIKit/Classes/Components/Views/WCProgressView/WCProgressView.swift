@@ -14,10 +14,20 @@ public protocol WCProgressViewDelegate: AnyObject {
 
 public class WCProgressView: WCUIView {
     
+    private enum Constants {
+        static let imageThumbSize = CGSize(width: 80, height: 94)
+        static let hundredPercent: Float = 100
+    }
+    
+    private enum Strings {
+        static let imageLogo = "logo-apenas"
+        static let percentageFormat = "%@ %"
+    }
+    
     private lazy var slider: UISlider = {
         let view = UISlider(frame: .zero)
-        view.setThumbImage(UIImage.imageWithImage(image: UIImage(named: "logo-apenas") ?? UIImage(), scaledToSize: CGSize(width: 80, height: 94)), for: .normal)
-        view.setThumbImage(UIImage.imageWithImage(image: UIImage(named: "logo-apenas") ?? UIImage(), scaledToSize: CGSize(width: 80, height: 94)), for: .highlighted)
+        view.setThumbImage(UIImage.imageWithImage(image: UIImage(named: Strings.imageLogo) ?? UIImage(), scaledToSize: Constants.imageThumbSize), for: .normal)
+        view.setThumbImage(UIImage.imageWithImage(image: UIImage(named: "logo-apenas") ?? UIImage(), scaledToSize: Constants.imageThumbSize), for: .highlighted)
         view.backgroundColor = ThemeColors.dividerGray.rawValue
         view.tintColor = ThemeColors.dividerGray.rawValue
         view.addTarget(self, action: #selector(didChangeSliderValue), for: .valueChanged)
@@ -27,13 +37,13 @@ public class WCProgressView: WCUIView {
     private lazy var percentageLbl: WCUILabelRobotoRegular16 = {
         let view = WCUILabelRobotoRegular16(frame: .zero)
         view.textAlignment = .center
-        view.text = "\(Int(percentage * 100)) %"
+        view.text = "\(Int(percentage * Constants.hundredPercent)) %"
         return view
     }()
     
     public var percentage: Float = 0.0 {
         didSet {
-            percentageLbl.text = "\(Int(percentage * 100)) %"
+            percentageLbl.text = "\(Int(percentage * Constants.hundredPercent)) %"
             slider.value = percentage
             delegate?.didChangeValue(self, percentage: percentage)
         }
