@@ -47,6 +47,7 @@
 		3FC3CB2926362AAB007DFF99 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB1626362AAB007DFF99 /* Roboto-Bold.ttf */; };
 		3FC3CB2A26362AAB007DFF99 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB1726362AAB007DFF99 /* Roboto-Thin.ttf */; };
 		3FC3CB2B26362AAB007DFF99 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3CB1826362AAB007DFF99 /* Roboto-Black.ttf */; };
+		3FC428CC26DA9E8D00CF5B9F /* WCImageButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC428CB26DA9E8D00CF5B9F /* WCImageButtonController.swift */; };
 		3FCDD4E226BF804700E16DBA /* WCDataTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDD4E126BF804700E16DBA /* WCDataTextFieldViewController.swift */; };
 		3FD79FDE264CB3FF00026340 /* WCOptionsToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD79FDD264CB3FF00026340 /* WCOptionsToolbarController.swift */; };
 		3FD7E06F267EAFFA00D98DE2 /* WCDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E06E267EAFFA00D98DE2 /* WCDialogViewController.swift */; };
@@ -115,6 +116,7 @@
 		3FC3CB1626362AAB007DFF99 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3FC3CB1726362AAB007DFF99 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		3FC3CB1826362AAB007DFF99 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		3FC428CB26DA9E8D00CF5B9F /* WCImageButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCImageButtonController.swift; sourceTree = "<group>"; };
 		3FCDD4E126BF804700E16DBA /* WCDataTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDataTextFieldViewController.swift; sourceTree = "<group>"; };
 		3FD79FDD264CB3FF00026340 /* WCOptionsToolbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCOptionsToolbarController.swift; sourceTree = "<group>"; };
 		3FD7E06E267EAFFA00D98DE2 /* WCDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDialogViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				3FCDD4E126BF804700E16DBA /* WCDataTextFieldViewController.swift */,
 				3F45D8A726C9CF96003A5636 /* WCFeedListErrorViewController.swift */,
 				3F91D93126CB46CA00C19DA4 /* WCInputTextFieldController.swift */,
+				3FC428CB26DA9E8D00CF5B9F /* WCImageButtonController.swift */,
 			);
 			name = "Components ViewControllers";
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				3FC38C72264861C30017599D /* WCBulletEditableItemViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				3F3825EF263F8187006B6DCE /* WCLoadingViewController.swift in Sources */,
+				3FC428CC26DA9E8D00CF5B9F /* WCImageButtonController.swift in Sources */,
 				3F45D8A826C9CF96003A5636 /* WCFeedListErrorViewController.swift in Sources */,
 				3FF94ADC2669B1250032C769 /* WCProfileHeaderViewController.swift in Sources */,
 				3FD7E06F267EAFFA00D98DE2 /* WCDialogViewController.swift in Sources */,

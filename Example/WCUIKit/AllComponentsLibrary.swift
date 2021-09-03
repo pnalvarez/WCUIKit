@@ -35,6 +35,7 @@ enum AllComponentsLibrary: CaseIterable {
     case dataTextFieldView
     case feedListError
     case inputTextField
+    case imageButton
     
     var text: String {
         switch self {
@@ -90,6 +91,8 @@ enum AllComponentsLibrary: CaseIterable {
             return "WCFeedListErrorView"
         case .inputTextField:
             return "WCInputTextField - Normal"
+        case .imageButton:
+            return "Image Button"
         }
     }
     
@@ -147,6 +150,8 @@ enum AllComponentsLibrary: CaseIterable {
             return WCFeedListErrorViewController()
         case .inputTextField:
             return WCInputTextFieldController()
+        case .imageButton:
+            return WCImageButtonController()
         }
     }
 }

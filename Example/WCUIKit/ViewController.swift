@@ -12,13 +12,60 @@ import WCUIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    private lazy var searchBar: UISearchBar = {
+        let view = UISearchBar(frame: .zero)
+        view.barTintColor = ThemeColors.mainRedColor.rawValue
+        view.backgroundColor = .white
+        view.delegate = self
+        view.sizeToFit()
+        return view
+    }()
+    
+    private lazy var searchButton: UIBarButtonItem = {
+        let view = UIBarButtonItem(barButtonSystemItem: .search,
+                                   target: self,
+                                   action: #selector(didTapSearch))
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    private func configureUI() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = ThemeColors.mainRedColor.rawValue
+        navigationController?.navigationBar.backgroundColor = ThemeColors.mainRedColor.rawValue
+        navigationController?.navigationBar.tintColor = .white
+        navigationItem.rightBarButtonItem = searchButton
+        title = "WCUIKit Components"
+    }
+    
+    @objc
+    private func didTapSearch() {
+        navigationItem.titleView = searchBar
+        searchBar.showsCancelButton = true
+        navigationItem.rightBarButtonItem = nil
+        searchBar.becomeFirstResponder()
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = searchButton
+        navigationItem.titleView = nil
     }
 }
 

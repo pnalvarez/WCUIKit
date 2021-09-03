@@ -51,5 +51,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Precisamos de autorização da biblioteca de fotos</string>
 </dict>
 </plist>
