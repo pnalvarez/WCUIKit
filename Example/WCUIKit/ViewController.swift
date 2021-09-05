@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     private lazy var searchBar: UISearchBar = {
         let view = UISearchBar(frame: .zero)
-        view.barTintColor = ThemeColors.mainRedColor.rawValue
+        view.tintColor = ThemeColors.mainRedColor.rawValue
         view.backgroundColor = .white
         view.delegate = self
         view.sizeToFit()
@@ -26,8 +26,11 @@ class ViewController: UIViewController {
         let view = UIBarButtonItem(barButtonSystemItem: .search,
                                    target: self,
                                    action: #selector(didTapSearch))
+        view.tintColor = .blue
         return view
     }()
+    
+    private var components: [AllComponentsLibrary] = AllComponentsLibrary.allCases
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,51 +41,61 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    private func search(shouldShow: Bool) {
+        configureSearchBarButton(shouldShow: !shouldShow)
+        searchBar.showsCancelButton = shouldShow
+        navigationItem.titleView = shouldShow ? searchBar : nil
+    }
+    
     private func configureUI() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = ThemeColors.mainRedColor.rawValue
         navigationController?.navigationBar.backgroundColor = ThemeColors.mainRedColor.rawValue
         navigationController?.navigationBar.tintColor = .white
-        navigationItem.rightBarButtonItem = searchButton
-        title = "WCUIKit Components"
+        search(shouldShow: false)
+        navigationItem.title = "WCUIKit Components"
+        
+    }
+    
+    private func configureSearchBarButton(shouldShow: Bool) {
+        navigationItem.rightBarButtonItem = shouldShow ? searchButton : nil
+        searchBar.showsCancelButton = shouldShow
     }
     
     @objc
     private func didTapSearch() {
-        navigationItem.titleView = searchBar
-        searchBar.showsCancelButton = true
-        navigationItem.rightBarButtonItem = nil
+        search(shouldShow: true)
         searchBar.becomeFirstResponder()
     }
 }
 
 extension ViewController: UISearchBarDelegate {
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        components = AllComponentsLibrary.allCases.filter({ $0.text.hasPrefix(searchBar.text ?? "")})
+        tableView.reloadData()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        navigationItem.rightBarButtonItem = searchButton
-        navigationItem.titleView = nil
+        search(shouldShow: false)
     }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AllComponentsLibrary.allCases.count
+        return components.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
-        cell.textLabel?.text = AllComponentsLibrary.allCases[indexPath.row].text
+        cell.textLabel?.text = components[indexPath.row].text
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = AllComponentsLibrary.allCases[indexPath.row].controller
+        let viewController = components[indexPath.row].controller
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
