@@ -9,7 +9,7 @@
 import UIKit
 import WCUIKit
 
-class ViewController: UIViewController {
+class ComponentLibraryController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,10 +37,6 @@ class ViewController: UIViewController {
         configureUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     private func search(shouldShow: Bool) {
         configureSearchBarButton(shouldShow: !shouldShow)
         searchBar.showsCancelButton = shouldShow
@@ -50,7 +46,6 @@ class ViewController: UIViewController {
     private func configureUI() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = ThemeColors.mainRedColor.rawValue
         navigationController?.navigationBar.backgroundColor = ThemeColors.mainRedColor.rawValue
         navigationController?.navigationBar.tintColor = .white
         search(shouldShow: false)
@@ -70,7 +65,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UISearchBarDelegate {
+extension ComponentLibraryController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         components = AllComponentsLibrary.allCases.filter({ $0.text.hasPrefix(searchBar.text ?? "")})
@@ -82,7 +77,7 @@ extension ViewController: UISearchBarDelegate {
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ComponentLibraryController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return components.count
