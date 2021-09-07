@@ -29,7 +29,7 @@ public class WCImageButton: UIButton {
     }
     
     private enum Strings {
-        static let cameraImage = "photo 1"
+        static let cameraImage = "photo 2"
     }
     
     private enum Constants {
@@ -46,11 +46,12 @@ public class WCImageButton: UIButton {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        contentMode = .scaleAspectFill
+        addTarget(self, action: #selector(didTapImageButton), for: .touchUpInside)
+        imageView?.contentMode = .scaleAspectFit
+        clipsToBounds = true
         layer.borderWidth = Constants.borderWidth
         layer.borderColor = ThemeColors.hexe3e0e0.rawValue.cgColor
-        backgroundColor = .white
-        imageView?.contentMode = .scaleAspectFill
-        addTarget(self, action: #selector(didTapImageButton), for: .touchUpInside)
         setImage(UIImage(named: Strings.cameraImage), for: .normal)
     }
     
@@ -68,7 +69,7 @@ public class WCImageButton: UIButton {
     }
     
     @objc
-    func didTapImageButton() {
+    private func didTapImageButton() {
         delegate?.didChangeButtonImage(self)
     }
 }
