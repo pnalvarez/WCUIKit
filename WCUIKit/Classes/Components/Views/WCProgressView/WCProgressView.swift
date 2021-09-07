@@ -41,23 +41,34 @@ public class WCProgressView: WCUIView {
         return view
     }()
     
-    public var percentage: Float = 0.0 {
+    public private(set) var percentage: Float {
         didSet {
-            percentageLbl.text = "\(Int(percentage * Constants.hundredPercent)) %"
-            slider.value = percentage
-            delegate?.didChangeValue(self, percentage: percentage)
+            setNeedsLayout()
         }
     }
     
     public weak var delegate: WCProgressViewDelegate?
     
-    public override init(frame: CGRect) {
+    public init(frame: CGRect,
+                percentage: Float = 0.0) {
+        self.percentage = percentage
         super.init(frame: frame)
         applyViewCode()
     }
     
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        percentageLbl.text = "\(Int(percentage * Constants.hundredPercent)) %"
+        slider.value = percentage
+        delegate?.didChangeValue(self, percentage: percentage)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func setupProgress(_ progress: Float) {
+        percentage = progress
     }
     
     @objc

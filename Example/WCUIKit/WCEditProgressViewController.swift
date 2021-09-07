@@ -22,7 +22,7 @@ final class WCEditProgressViewController: UIViewController {
                       text: "Como está o seu projeto?",
                       progress: 1.0,
                       doneAction: {
-                        print("Done")
+                        print("Done \(self.testView.progress)")
                       }, cancelAction: {
                         print("Cancel")
                       })

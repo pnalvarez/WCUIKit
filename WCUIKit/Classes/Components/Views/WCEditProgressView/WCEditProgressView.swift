@@ -33,6 +33,7 @@ public class WCEditProgressView: WCBaseModalView {
     
     private lazy var progressView: WCProgressView = {
         let view = WCProgressView(frame: .zero)
+        view.delegate = self
         return view
     }()
     
@@ -45,7 +46,7 @@ public class WCEditProgressView: WCBaseModalView {
     
     public private(set) var progress: Float = 0.0 {
         didSet {
-            progressView.percentage = progress
+            progressView.setupProgress(progress)
         }
     }
     
@@ -66,6 +67,13 @@ public class WCEditProgressView: WCBaseModalView {
         mainLbl.text = text
         setup { applyViewCode() }
         fadeIn(0.1)
+    }
+}
+
+extension WCEditProgressView: WCProgressViewDelegate {
+    
+    public func didChangeValue(_ progressView: WCProgressView, percentage: Float) {
+        progress = percentage
     }
 }
 
