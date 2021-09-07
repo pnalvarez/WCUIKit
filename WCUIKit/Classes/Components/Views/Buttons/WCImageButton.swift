@@ -52,7 +52,7 @@ public class WCImageButton: UIButton {
         clipsToBounds = true
         layer.borderWidth = Constants.borderWidth
         layer.borderColor = ThemeColors.hexe3e0e0.rawValue.cgColor
-        setImage(UIImage(named: Strings.cameraImage), for: .normal)
+        setupDefaultImage()
     }
     
     required init?(coder: NSCoder) {
@@ -66,6 +66,10 @@ public class WCImageButton: UIButton {
     
     public func setState(_ state: State) {
         self.buttonState = state
+    }
+    
+    public func setupDefaultImage() {
+        setImage(UIImage(named: Strings.cameraImage), for: .normal)
     }
     
     @objc
