@@ -148,26 +148,12 @@ public class WCTitleDescriptionEditableView: WCUIView {
 extension WCTitleDescriptionEditableView: UITextViewDelegate {
     
     public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        // Combine the new text with the old
         let combinedText = (textView.text as NSString).replacingCharacters(in: range, with: text)
-
-        // Create a duplicate of the text view with the same frame and font
         let duplicateTextView = UITextView(frame: textView.frame)
         duplicateTextView.font = textView.font
-
-        // Set the text view to contain the tentative new version of the text
         duplicateTextView.text = combinedText
-
-        // Use sizeToFit in order to make the text view's height fit the text exactly
         duplicateTextView.sizeToFit()
-
-        // Then use the duplicate text view's height for the comparison
-        if(duplicateTextView.frame.size.height <= textView.frame.height){
-            return true
-        }
-        else {
-            return false
-        }
+        return duplicateTextView.frame.size.height <= textView.frame.height
     }
 }
 
