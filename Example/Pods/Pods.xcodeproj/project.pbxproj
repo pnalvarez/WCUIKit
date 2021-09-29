@@ -177,6 +177,7 @@
 		AE34B585C58188DCDD6143855DAF4892 /* SDInternalMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F85E9EA7F701467855F93422A238EB /* SDInternalMacros.m */; };
 		B13DF6C52581072CDE880A07270D80C9 /* SDWebImageDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9B2CBA8D8D599BB7A8A488D36E154E /* SDWebImageDefine.m */; };
 		B14EB82CF4A3EA74730C385ECEC1E025 /* SDImageCachesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E27F2A34E92327D26A635588CC1079 /* SDImageCachesManager.m */; };
+		B1B6096926F8FA740045A50A /* WCUILabelRobotoBold16Gray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6096826F8FA740045A50A /* WCUILabelRobotoBold16Gray.swift */; };
 		B2128EFF9529E6966387B59647179684 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BED569B7A3D39DDE67729398C601641D /* SDWebImageManager.m */; };
 		B218212B4CEFEB32491C9F169E778C4B /* WCProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E848CE31A1F8E6D8B29720D242DE7 /* WCProgressView.swift */; };
 		B25DF27CC398820D46B9B493FFC2F41C /* SDImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E42672FAEDF28FFA5AFE975157D9C9C1 /* SDImageGIFCoder.m */; };
@@ -526,6 +527,7 @@
 		AF4A27C9CBD6277FCC164CB3860AB461 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A113A0C081D0641DD16B99E26B1046 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
+		B1B6096826F8FA740045A50A /* WCUILabelRobotoBold16Gray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUILabelRobotoBold16Gray.swift; sourceTree = "<group>"; };
 		B2816A7FE76CF276B1CD904371552587 /* WCRelevantItemImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WCRelevantItemImageView.swift; sourceTree = "<group>"; };
 		B50A2F1C804DA62BBF0284BDB9C443B1 /* SDImageCachesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManager.h; path = SDWebImage/SDImageCachesManager.h; sourceTree = "<group>"; };
 		B6B7BC8DC93246A1E0AE8CCE44F2D4E9 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
@@ -1049,6 +1051,7 @@
 				D02E6F166772D39989E5FCF71840855F /* WCUILabelRobotoRegular16Gray.swift */,
 				E5984B0F141DA29AE7E5F834A6EC205C /* WCUILabelRobotoRegularUnderlined.swift */,
 				3FC428C726DA9B5900CF5B9F /* WCUILabelRobotoBold16GrayUnderlinded.swift */,
+				B1B6096826F8FA740045A50A /* WCUILabelRobotoBold16Gray.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -1859,6 +1862,7 @@
 				4BAE4CB282989DF4615EF9B7CB266E0C /* WCUIConstants.swift in Sources */,
 				95DDC28C4D7BFBF84560378220A877AC /* WCUIKit-dummy.m in Sources */,
 				29941FAF79C31D3FBE20D2FA085FD190 /* WCUILabel.swift in Sources */,
+				B1B6096926F8FA740045A50A /* WCUILabelRobotoBold16Gray.swift in Sources */,
 				E66D75C9CE94272A56F8336CC4415914 /* WCUILabelRobotoBold16Black.swift in Sources */,
 				4CD57AA66C9276F205604B44692D0A50 /* WCUILabelRobotoBold16MainRed.swift in Sources */,
 				3795D7258BCCC22DFF90231B04926D56 /* WCUILabelRobotoBold18Black.swift in Sources */,
