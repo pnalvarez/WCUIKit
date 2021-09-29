@@ -94,7 +94,8 @@ extension WCToastView: ViewCodeProtocol {
         }
         snp.makeConstraints { make in
             make.height.equalTo(Constants.height)
-            make.left.right.bottom.equalToSuperview().inset(88)
+            make.left.right.equalToSuperview().inset(24)
+            make.bottom.equalToSuperview().inset(88)
         }
     }
 }
